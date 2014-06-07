@@ -1,0 +1,550 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.28
+4 verbose node symlink /usr/local/bin/node
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/Users/tatianakerick/Sites/EventAssits',
+6 verbose install   [ 'express',
+6 verbose install     'jade',
+6 verbose install     'mongoose',
+6 verbose install     'grunt',
+6 verbose install     'grunt-develop',
+6 verbose install     'grunt-contrib-watch',
+6 verbose install     'grunt-contrib-compass',
+6 verbose install     'request',
+6 verbose install     'time-grunt',
+6 verbose install     'load-grunt-tasks' ] ]
+7 info preinstall eventassits@0.0.1
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'mongoose@~3.6.14', null ]
+10 verbose cache add name=undefined spec="mongoose@~3.6.14" args=["mongoose@~3.6.14",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'mongoose@~3.6.14',
+11 verbose parsed url   path: 'mongoose@~3.6.14',
+11 verbose parsed url   href: 'mongoose@~3.6.14' }
+12 verbose cache add [ 'express@~3.3.4', null ]
+13 verbose cache add name=undefined spec="express@~3.3.4" args=["express@~3.3.4",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'express@~3.3.4',
+14 verbose parsed url   path: 'express@~3.3.4',
+14 verbose parsed url   href: 'express@~3.3.4' }
+15 verbose cache add [ 'jade@~0.34.0', null ]
+16 verbose cache add name=undefined spec="jade@~0.34.0" args=["jade@~0.34.0",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'jade@~0.34.0',
+17 verbose parsed url   path: 'jade@~0.34.0',
+17 verbose parsed url   href: 'jade@~0.34.0' }
+18 verbose cache add name="mongoose" spec="~3.6.14" args=["mongoose","~3.6.14"]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: '~3.6.14',
+19 verbose parsed url   path: '~3.6.14',
+19 verbose parsed url   href: '~3.6.14' }
+20 verbose addNamed [ 'mongoose', '~3.6.14' ]
+21 verbose addNamed [ null, '>=3.6.14-0 <3.7.0-0' ]
+22 verbose cache add name="express" spec="~3.3.4" args=["express","~3.3.4"]
+23 verbose parsed url { protocol: null,
+23 verbose parsed url   slashes: null,
+23 verbose parsed url   auth: null,
+23 verbose parsed url   host: null,
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: null,
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: '~3.3.4',
+23 verbose parsed url   path: '~3.3.4',
+23 verbose parsed url   href: '~3.3.4' }
+24 verbose addNamed [ 'express', '~3.3.4' ]
+25 verbose addNamed [ null, '>=3.3.4-0 <3.4.0-0' ]
+26 verbose cache add name="jade" spec="~0.34.0" args=["jade","~0.34.0"]
+27 verbose parsed url { protocol: null,
+27 verbose parsed url   slashes: null,
+27 verbose parsed url   auth: null,
+27 verbose parsed url   host: null,
+27 verbose parsed url   port: null,
+27 verbose parsed url   hostname: null,
+27 verbose parsed url   hash: null,
+27 verbose parsed url   search: null,
+27 verbose parsed url   query: null,
+27 verbose parsed url   pathname: '~0.34.0',
+27 verbose parsed url   path: '~0.34.0',
+27 verbose parsed url   href: '~0.34.0' }
+28 verbose addNamed [ 'jade', '~0.34.0' ]
+29 verbose addNamed [ null, '>=0.34.0-0 <0.35.0-0' ]
+30 verbose cache add [ 'grunt@~0.4.1', null ]
+31 verbose cache add name=undefined spec="grunt@~0.4.1" args=["grunt@~0.4.1",null]
+32 verbose parsed url { protocol: null,
+32 verbose parsed url   slashes: null,
+32 verbose parsed url   auth: null,
+32 verbose parsed url   host: null,
+32 verbose parsed url   port: null,
+32 verbose parsed url   hostname: null,
+32 verbose parsed url   hash: null,
+32 verbose parsed url   search: null,
+32 verbose parsed url   query: null,
+32 verbose parsed url   pathname: 'grunt@~0.4.1',
+32 verbose parsed url   path: 'grunt@~0.4.1',
+32 verbose parsed url   href: 'grunt@~0.4.1' }
+33 verbose cache add [ 'grunt-develop@~0.2.2', null ]
+34 verbose cache add name=undefined spec="grunt-develop@~0.2.2" args=["grunt-develop@~0.2.2",null]
+35 verbose parsed url { protocol: null,
+35 verbose parsed url   slashes: null,
+35 verbose parsed url   auth: null,
+35 verbose parsed url   host: null,
+35 verbose parsed url   port: null,
+35 verbose parsed url   hostname: null,
+35 verbose parsed url   hash: null,
+35 verbose parsed url   search: null,
+35 verbose parsed url   query: null,
+35 verbose parsed url   pathname: 'grunt-develop@~0.2.2',
+35 verbose parsed url   path: 'grunt-develop@~0.2.2',
+35 verbose parsed url   href: 'grunt-develop@~0.2.2' }
+36 verbose cache add [ 'grunt-contrib-watch@~0.5.3', null ]
+37 verbose cache add name=undefined spec="grunt-contrib-watch@~0.5.3" args=["grunt-contrib-watch@~0.5.3",null]
+38 verbose parsed url { protocol: null,
+38 verbose parsed url   slashes: null,
+38 verbose parsed url   auth: null,
+38 verbose parsed url   host: null,
+38 verbose parsed url   port: null,
+38 verbose parsed url   hostname: null,
+38 verbose parsed url   hash: null,
+38 verbose parsed url   search: null,
+38 verbose parsed url   query: null,
+38 verbose parsed url   pathname: 'grunt-contrib-watch@~0.5.3',
+38 verbose parsed url   path: 'grunt-contrib-watch@~0.5.3',
+38 verbose parsed url   href: 'grunt-contrib-watch@~0.5.3' }
+39 verbose cache add [ 'grunt-contrib-compass@~0.6.0', null ]
+40 verbose cache add name=undefined spec="grunt-contrib-compass@~0.6.0" args=["grunt-contrib-compass@~0.6.0",null]
+41 verbose parsed url { protocol: null,
+41 verbose parsed url   slashes: null,
+41 verbose parsed url   auth: null,
+41 verbose parsed url   host: null,
+41 verbose parsed url   port: null,
+41 verbose parsed url   hostname: null,
+41 verbose parsed url   hash: null,
+41 verbose parsed url   search: null,
+41 verbose parsed url   query: null,
+41 verbose parsed url   pathname: 'grunt-contrib-compass@~0.6.0',
+41 verbose parsed url   path: 'grunt-contrib-compass@~0.6.0',
+41 verbose parsed url   href: 'grunt-contrib-compass@~0.6.0' }
+42 silly lockFile 5e83c63e-mongoose-3-6-14 mongoose@~3.6.14
+43 verbose lock mongoose@~3.6.14 /Users/tatianakerick/.npm/5e83c63e-mongoose-3-6-14.lock
+44 silly lockFile 09d41e23-express-3-3-4 express@~3.3.4
+45 verbose lock express@~3.3.4 /Users/tatianakerick/.npm/09d41e23-express-3-3-4.lock
+46 silly lockFile 853ff0c8-jade-0-34-0 jade@~0.34.0
+47 verbose lock jade@~0.34.0 /Users/tatianakerick/.npm/853ff0c8-jade-0-34-0.lock
+48 verbose cache add name="grunt" spec="~0.4.1" args=["grunt","~0.4.1"]
+49 verbose parsed url { protocol: null,
+49 verbose parsed url   slashes: null,
+49 verbose parsed url   auth: null,
+49 verbose parsed url   host: null,
+49 verbose parsed url   port: null,
+49 verbose parsed url   hostname: null,
+49 verbose parsed url   hash: null,
+49 verbose parsed url   search: null,
+49 verbose parsed url   query: null,
+49 verbose parsed url   pathname: '~0.4.1',
+49 verbose parsed url   path: '~0.4.1',
+49 verbose parsed url   href: '~0.4.1' }
+50 verbose addNamed [ 'grunt', '~0.4.1' ]
+51 verbose addNamed [ null, '>=0.4.1-0 <0.5.0-0' ]
+52 silly lockFile 766a3bd3-grunt-0-4-1 grunt@~0.4.1
+53 verbose lock grunt@~0.4.1 /Users/tatianakerick/.npm/766a3bd3-grunt-0-4-1.lock
+54 verbose cache add name="grunt-develop" spec="~0.2.2" args=["grunt-develop","~0.2.2"]
+55 verbose parsed url { protocol: null,
+55 verbose parsed url   slashes: null,
+55 verbose parsed url   auth: null,
+55 verbose parsed url   host: null,
+55 verbose parsed url   port: null,
+55 verbose parsed url   hostname: null,
+55 verbose parsed url   hash: null,
+55 verbose parsed url   search: null,
+55 verbose parsed url   query: null,
+55 verbose parsed url   pathname: '~0.2.2',
+55 verbose parsed url   path: '~0.2.2',
+55 verbose parsed url   href: '~0.2.2' }
+56 verbose addNamed [ 'grunt-develop', '~0.2.2' ]
+57 verbose addNamed [ null, '>=0.2.2-0 <0.3.0-0' ]
+58 silly lockFile 383fe0d0-grunt-develop-0-2-2 grunt-develop@~0.2.2
+59 verbose lock grunt-develop@~0.2.2 /Users/tatianakerick/.npm/383fe0d0-grunt-develop-0-2-2.lock
+60 verbose cache add name="grunt-contrib-watch" spec="~0.5.3" args=["grunt-contrib-watch","~0.5.3"]
+61 verbose parsed url { protocol: null,
+61 verbose parsed url   slashes: null,
+61 verbose parsed url   auth: null,
+61 verbose parsed url   host: null,
+61 verbose parsed url   port: null,
+61 verbose parsed url   hostname: null,
+61 verbose parsed url   hash: null,
+61 verbose parsed url   search: null,
+61 verbose parsed url   query: null,
+61 verbose parsed url   pathname: '~0.5.3',
+61 verbose parsed url   path: '~0.5.3',
+61 verbose parsed url   href: '~0.5.3' }
+62 verbose addNamed [ 'grunt-contrib-watch', '~0.5.3' ]
+63 verbose addNamed [ null, '>=0.5.3-0 <0.6.0-0' ]
+64 silly lockFile b469febc-grunt-contrib-watch-0-5-3 grunt-contrib-watch@~0.5.3
+65 verbose lock grunt-contrib-watch@~0.5.3 /Users/tatianakerick/.npm/b469febc-grunt-contrib-watch-0-5-3.lock
+66 verbose cache add [ 'request@~2.27.0', null ]
+67 verbose cache add name=undefined spec="request@~2.27.0" args=["request@~2.27.0",null]
+68 verbose parsed url { protocol: null,
+68 verbose parsed url   slashes: null,
+68 verbose parsed url   auth: null,
+68 verbose parsed url   host: null,
+68 verbose parsed url   port: null,
+68 verbose parsed url   hostname: null,
+68 verbose parsed url   hash: null,
+68 verbose parsed url   search: null,
+68 verbose parsed url   query: null,
+68 verbose parsed url   pathname: 'request@~2.27.0',
+68 verbose parsed url   path: 'request@~2.27.0',
+68 verbose parsed url   href: 'request@~2.27.0' }
+69 verbose cache add [ 'time-grunt@~0.1.1', null ]
+70 verbose cache add name=undefined spec="time-grunt@~0.1.1" args=["time-grunt@~0.1.1",null]
+71 verbose parsed url { protocol: null,
+71 verbose parsed url   slashes: null,
+71 verbose parsed url   auth: null,
+71 verbose parsed url   host: null,
+71 verbose parsed url   port: null,
+71 verbose parsed url   hostname: null,
+71 verbose parsed url   hash: null,
+71 verbose parsed url   search: null,
+71 verbose parsed url   query: null,
+71 verbose parsed url   pathname: 'time-grunt@~0.1.1',
+71 verbose parsed url   path: 'time-grunt@~0.1.1',
+71 verbose parsed url   href: 'time-grunt@~0.1.1' }
+72 verbose cache add [ 'load-grunt-tasks@~0.2.0', null ]
+73 verbose cache add name=undefined spec="load-grunt-tasks@~0.2.0" args=["load-grunt-tasks@~0.2.0",null]
+74 verbose parsed url { protocol: null,
+74 verbose parsed url   slashes: null,
+74 verbose parsed url   auth: null,
+74 verbose parsed url   host: null,
+74 verbose parsed url   port: null,
+74 verbose parsed url   hostname: null,
+74 verbose parsed url   hash: null,
+74 verbose parsed url   search: null,
+74 verbose parsed url   query: null,
+74 verbose parsed url   pathname: 'load-grunt-tasks@~0.2.0',
+74 verbose parsed url   path: 'load-grunt-tasks@~0.2.0',
+74 verbose parsed url   href: 'load-grunt-tasks@~0.2.0' }
+75 verbose cache add name="grunt-contrib-compass" spec="~0.6.0" args=["grunt-contrib-compass","~0.6.0"]
+76 verbose parsed url { protocol: null,
+76 verbose parsed url   slashes: null,
+76 verbose parsed url   auth: null,
+76 verbose parsed url   host: null,
+76 verbose parsed url   port: null,
+76 verbose parsed url   hostname: null,
+76 verbose parsed url   hash: null,
+76 verbose parsed url   search: null,
+76 verbose parsed url   query: null,
+76 verbose parsed url   pathname: '~0.6.0',
+76 verbose parsed url   path: '~0.6.0',
+76 verbose parsed url   href: '~0.6.0' }
+77 verbose addNamed [ 'grunt-contrib-compass', '~0.6.0' ]
+78 verbose addNamed [ null, '>=0.6.0-0 <0.7.0-0' ]
+79 silly lockFile 385c909a-grunt-contrib-compass-0-6-0 grunt-contrib-compass@~0.6.0
+80 verbose lock grunt-contrib-compass@~0.6.0 /Users/tatianakerick/.npm/385c909a-grunt-contrib-compass-0-6-0.lock
+81 verbose cache add name="request" spec="~2.27.0" args=["request","~2.27.0"]
+82 verbose parsed url { protocol: null,
+82 verbose parsed url   slashes: null,
+82 verbose parsed url   auth: null,
+82 verbose parsed url   host: null,
+82 verbose parsed url   port: null,
+82 verbose parsed url   hostname: null,
+82 verbose parsed url   hash: null,
+82 verbose parsed url   search: null,
+82 verbose parsed url   query: null,
+82 verbose parsed url   pathname: '~2.27.0',
+82 verbose parsed url   path: '~2.27.0',
+82 verbose parsed url   href: '~2.27.0' }
+83 verbose addNamed [ 'request', '~2.27.0' ]
+84 verbose addNamed [ null, '>=2.27.0-0 <2.28.0-0' ]
+85 silly lockFile 999b8a1d-request-2-27-0 request@~2.27.0
+86 verbose lock request@~2.27.0 /Users/tatianakerick/.npm/999b8a1d-request-2-27-0.lock
+87 verbose cache add name="time-grunt" spec="~0.1.1" args=["time-grunt","~0.1.1"]
+88 verbose parsed url { protocol: null,
+88 verbose parsed url   slashes: null,
+88 verbose parsed url   auth: null,
+88 verbose parsed url   host: null,
+88 verbose parsed url   port: null,
+88 verbose parsed url   hostname: null,
+88 verbose parsed url   hash: null,
+88 verbose parsed url   search: null,
+88 verbose parsed url   query: null,
+88 verbose parsed url   pathname: '~0.1.1',
+88 verbose parsed url   path: '~0.1.1',
+88 verbose parsed url   href: '~0.1.1' }
+89 verbose addNamed [ 'time-grunt', '~0.1.1' ]
+90 verbose addNamed [ null, '>=0.1.1-0 <0.2.0-0' ]
+91 silly lockFile e8d3c500-time-grunt-0-1-1 time-grunt@~0.1.1
+92 verbose lock time-grunt@~0.1.1 /Users/tatianakerick/.npm/e8d3c500-time-grunt-0-1-1.lock
+93 verbose cache add name="load-grunt-tasks" spec="~0.2.0" args=["load-grunt-tasks","~0.2.0"]
+94 verbose parsed url { protocol: null,
+94 verbose parsed url   slashes: null,
+94 verbose parsed url   auth: null,
+94 verbose parsed url   host: null,
+94 verbose parsed url   port: null,
+94 verbose parsed url   hostname: null,
+94 verbose parsed url   hash: null,
+94 verbose parsed url   search: null,
+94 verbose parsed url   query: null,
+94 verbose parsed url   pathname: '~0.2.0',
+94 verbose parsed url   path: '~0.2.0',
+94 verbose parsed url   href: '~0.2.0' }
+95 verbose addNamed [ 'load-grunt-tasks', '~0.2.0' ]
+96 verbose addNamed [ null, '>=0.2.0-0 <0.3.0-0' ]
+97 silly lockFile 2a94459b-load-grunt-tasks-0-2-0 load-grunt-tasks@~0.2.0
+98 verbose lock load-grunt-tasks@~0.2.0 /Users/tatianakerick/.npm/2a94459b-load-grunt-tasks-0-2-0.lock
+99 silly addNameRange { name: 'mongoose',
+99 silly addNameRange   range: '>=3.6.14-0 <3.7.0-0',
+99 silly addNameRange   hasData: false }
+100 silly addNameRange { name: 'jade', range: '>=0.34.0-0 <0.35.0-0', hasData: false }
+101 silly addNameRange { name: 'express', range: '>=3.3.4-0 <3.4.0-0', hasData: false }
+102 silly addNameRange { name: 'grunt', range: '>=0.4.1-0 <0.5.0-0', hasData: false }
+103 silly addNameRange { name: 'grunt-develop',
+103 silly addNameRange   range: '>=0.2.2-0 <0.3.0-0',
+103 silly addNameRange   hasData: false }
+104 silly addNameRange { name: 'grunt-contrib-watch',
+104 silly addNameRange   range: '>=0.5.3-0 <0.6.0-0',
+104 silly addNameRange   hasData: false }
+105 silly addNameRange { name: 'grunt-contrib-compass',
+105 silly addNameRange   range: '>=0.6.0-0 <0.7.0-0',
+105 silly addNameRange   hasData: false }
+106 silly addNameRange { name: 'request',
+106 silly addNameRange   range: '>=2.27.0-0 <2.28.0-0',
+106 silly addNameRange   hasData: false }
+107 silly addNameRange { name: 'time-grunt',
+107 silly addNameRange   range: '>=0.1.1-0 <0.2.0-0',
+107 silly addNameRange   hasData: false }
+108 silly addNameRange { name: 'load-grunt-tasks',
+108 silly addNameRange   range: '>=0.2.0-0 <0.3.0-0',
+108 silly addNameRange   hasData: false }
+109 verbose url raw mongoose
+110 verbose url resolving [ 'https://registry.npmjs.org/', './mongoose' ]
+111 verbose url resolved https://registry.npmjs.org/mongoose
+112 info trying registry request attempt 1 at 15:51:19
+113 verbose etag "CPM3N5F5M4CGO3USWIYOSNOA8"
+114 http GET https://registry.npmjs.org/mongoose
+115 verbose url raw jade
+116 verbose url resolving [ 'https://registry.npmjs.org/', './jade' ]
+117 verbose url resolved https://registry.npmjs.org/jade
+118 info trying registry request attempt 1 at 15:51:19
+119 verbose etag "DM0IPZMFTZ48GN03KBFEFHMVF"
+120 http GET https://registry.npmjs.org/jade
+121 verbose url raw grunt
+122 verbose url resolving [ 'https://registry.npmjs.org/', './grunt' ]
+123 verbose url resolved https://registry.npmjs.org/grunt
+124 info trying registry request attempt 1 at 15:51:19
+125 verbose etag "10XCZLKP2K2FYM5VEEER6S8CW"
+126 http GET https://registry.npmjs.org/grunt
+127 verbose url raw grunt-develop
+128 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-develop' ]
+129 verbose url resolved https://registry.npmjs.org/grunt-develop
+130 info trying registry request attempt 1 at 15:51:19
+131 verbose etag "ETO11TNPDG7YF3JWSKPSVYHXP"
+132 http GET https://registry.npmjs.org/grunt-develop
+133 verbose url raw express
+134 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+135 verbose url resolved https://registry.npmjs.org/express
+136 info trying registry request attempt 1 at 15:51:19
+137 verbose etag "4IYIYO0T0AB8PJT8JE8H3NERG"
+138 http GET https://registry.npmjs.org/express
+139 verbose url raw grunt-contrib-watch
+140 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-watch' ]
+141 verbose url resolved https://registry.npmjs.org/grunt-contrib-watch
+142 info trying registry request attempt 1 at 15:51:19
+143 verbose etag "7HUXMCHTAFE26MGZ6GE0YOHFU"
+144 http GET https://registry.npmjs.org/grunt-contrib-watch
+145 verbose url raw grunt-contrib-compass
+146 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-compass' ]
+147 verbose url resolved https://registry.npmjs.org/grunt-contrib-compass
+148 info trying registry request attempt 1 at 15:51:19
+149 verbose etag "3W303V98Q18881VHVM11HUZD3"
+150 http GET https://registry.npmjs.org/grunt-contrib-compass
+151 verbose url raw request
+152 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+153 verbose url resolved https://registry.npmjs.org/request
+154 info trying registry request attempt 1 at 15:51:19
+155 verbose etag "4PM7X88BNBMAKO1FG3MYKODE8"
+156 http GET https://registry.npmjs.org/request
+157 verbose url raw time-grunt
+158 verbose url resolving [ 'https://registry.npmjs.org/', './time-grunt' ]
+159 verbose url resolved https://registry.npmjs.org/time-grunt
+160 info trying registry request attempt 1 at 15:51:19
+161 verbose etag "7XGIIQSBWPXZMQCTY1ATWTUXF"
+162 http GET https://registry.npmjs.org/time-grunt
+163 verbose url raw load-grunt-tasks
+164 verbose url resolving [ 'https://registry.npmjs.org/', './load-grunt-tasks' ]
+165 verbose url resolved https://registry.npmjs.org/load-grunt-tasks
+166 info trying registry request attempt 1 at 15:51:19
+167 verbose etag "4CWEQIZ9E104NJO8OZS01GGE3"
+168 http GET https://registry.npmjs.org/load-grunt-tasks
+169 http 304 https://registry.npmjs.org/grunt
+170 silly registry.get cb [ 304,
+170 silly registry.get   { date: 'Sat, 07 Jun 2014 19:51:17 GMT',
+170 silly registry.get     server: 'Apache',
+170 silly registry.get     via: '1.1 varnish',
+170 silly registry.get     'last-modified': 'Sat, 07 Jun 2014 19:51:17 GMT',
+170 silly registry.get     'cache-control': 'max-age=1',
+170 silly registry.get     etag: '"10XCZLKP2K2FYM5VEEER6S8CW"',
+170 silly registry.get     'x-served-by': 'cache-v42-ASH',
+170 silly registry.get     'x-cache': 'HIT',
+170 silly registry.get     'x-cache-hits': '1',
+170 silly registry.get     'x-timer': 'S1402170677.883304,VS0,VE112',
+170 silly registry.get     vary: 'Accept',
+170 silly registry.get     'content-length': '0',
+170 silly registry.get     'keep-alive': 'timeout=10, max=50',
+170 silly registry.get     connection: 'Keep-Alive' } ]
+171 verbose etag grunt from cache
+172 http 304 https://registry.npmjs.org/grunt-develop
+173 silly registry.get cb [ 304,
+173 silly registry.get   { date: 'Sat, 07 Jun 2014 19:51:17 GMT',
+173 silly registry.get     server: 'Apache',
+173 silly registry.get     via: '1.1 varnish',
+173 silly registry.get     'last-modified': 'Sat, 07 Jun 2014 19:51:17 GMT',
+173 silly registry.get     'cache-control': 'max-age=1',
+173 silly registry.get     etag: '"ETO11TNPDG7YF3JWSKPSVYHXP"',
+173 silly registry.get     'x-served-by': 'cache-v37-ASH',
+173 silly registry.get     'x-cache': 'MISS',
+173 silly registry.get     'x-cache-hits': '0',
+173 silly registry.get     'x-timer': 'S1402170677.889655,VS0,VE107',
+173 silly registry.get     vary: 'Accept',
+173 silly registry.get     'content-length': '0',
+173 silly registry.get     'keep-alive': 'timeout=10, max=50',
+173 silly registry.get     connection: 'Keep-Alive' } ]
+174 verbose etag grunt-develop from cache
+175 silly addNameRange number 2 { name: 'grunt-develop',
+175 silly addNameRange   range: '>=0.2.2-0 <0.3.0-0',
+175 silly addNameRange   hasData: true }
+176 silly addNameRange versions [ 'grunt-develop',
+176 silly addNameRange   [ '0.0.1',
+176 silly addNameRange     '0.0.2',
+176 silly addNameRange     '0.0.3',
+176 silly addNameRange     '0.0.4',
+176 silly addNameRange     '0.1.0',
+176 silly addNameRange     '0.1.1',
+176 silly addNameRange     '0.2.0',
+176 silly addNameRange     '0.2.1',
+176 silly addNameRange     '0.2.2',
+176 silly addNameRange     '0.3.0',
+176 silly addNameRange     '0.4.0' ] ]
+177 verbose addNamed [ 'grunt-develop', '0.2.2' ]
+178 verbose addNamed [ '0.2.2', '0.2.2' ]
+179 silly lockFile 81748411-grunt-develop-0-2-2 grunt-develop@0.2.2
+180 verbose lock grunt-develop@0.2.2 /Users/tatianakerick/.npm/81748411-grunt-develop-0-2-2.lock
+181 silly addNameRange number 2 { name: 'grunt', range: '>=0.4.1-0 <0.5.0-0', hasData: true }
+182 silly addNameRange versions [ 'grunt',
+182 silly addNameRange   [ '0.1.0',
+182 silly addNameRange     '0.1.1',
+182 silly addNameRange     '0.1.2',
+182 silly addNameRange     '0.2.0',
+182 silly addNameRange     '0.2.1',
+182 silly addNameRange     '0.2.2',
+182 silly addNameRange     '0.2.3',
+182 silly addNameRange     '0.2.4',
+182 silly addNameRange     '0.2.5',
+182 silly addNameRange     '0.2.6',
+182 silly addNameRange     '0.2.7',
+182 silly addNameRange     '0.2.8',
+182 silly addNameRange     '0.2.9',
+182 silly addNameRange     '0.2.10',
+182 silly addNameRange     '0.2.11',
+182 silly addNameRange     '0.2.12',
+182 silly addNameRange     '0.2.13',
+182 silly addNameRange     '0.2.14',
+182 silly addNameRange     '0.2.15',
+182 silly addNameRange     '0.3.0',
+182 silly addNameRange     '0.3.1',
+182 silly addNameRange     '0.3.2',
+182 silly addNameRange     '0.3.3',
+182 silly addNameRange     '0.3.4',
+182 silly addNameRange     '0.3.5',
+182 silly addNameRange     '0.3.6',
+182 silly addNameRange     '0.3.7',
+182 silly addNameRange     '0.3.8',
+182 silly addNameRange     '0.3.9',
+182 silly addNameRange     '0.3.10',
+182 silly addNameRange     '0.3.11',
+182 silly addNameRange     '0.3.12',
+182 silly addNameRange     '0.3.13',
+182 silly addNameRange     '0.3.14',
+182 silly addNameRange     '0.3.15',
+182 silly addNameRange     '0.3.16',
+182 silly addNameRange     '0.3.17',
+182 silly addNameRange     '0.4.0',
+182 silly addNameRange     '0.4.1',
+182 silly addNameRange     '0.4.2',
+182 silly addNameRange     '0.4.3',
+182 silly addNameRange     '0.4.4',
+182 silly addNameRange     '0.4.5',
+182 silly addNameRange     '0.3.13-a',
+182 silly addNameRange     '0.4.0-a',
+182 silly addNameRange     '0.4.0-rc1',
+182 silly addNameRange     '0.4.0-rc2',
+182 silly addNameRange     '0.4.0-rc3',
+182 silly addNameRange     '0.4.0-rc4',
+182 silly addNameRange     '0.4.0-rc5',
+182 silly addNameRange     '0.4.0-rc6',
+182 silly addNameRange     '0.4.0-rc7',
+182 silly addNameRange     '0.4.0-rc8' ] ]
+183 verbose addNamed [ 'grunt', '0.4.5' ]
+184 verbose addNamed [ '0.4.5', '0.4.5' ]
+185 silly lockFile 81abf7ad-grunt-0-4-5 grunt@0.4.5
+186 verbose lock grunt@0.4.5 /Users/tatianakerick/.npm/81abf7ad-grunt-0-4-5.lock
+187 silly lockFile 81748411-grunt-develop-0-2-2 grunt-develop@0.2.2
+188 silly lockFile 81748411-grunt-develop-0-2-2 grunt-develop@0.2.2
+189 silly lockFile 383fe0d0-grunt-develop-0-2-2 grunt-develop@~0.2.2
+190 silly lockFile 383fe0d0-grunt-develop-0-2-2 grunt-develop@~0.2.2
+191 silly lockFile 81abf7ad-grunt-0-4-5 grunt@0.4.5
+192 silly lockFile 81abf7ad-grunt-0-4-5 grunt@0.4.5
+193 silly lockFile 766a3bd3-grunt-0-4-1 grunt@~0.4.1
+194 silly lockFile 766a3bd3-grunt-0-4-1 grunt@~0.4.1
+195 error Error: EACCES, open '/Users/tatianakerick/.npm/grunt/0.4.5/package/package.json'
+195 error  { [Error: EACCES, open '/Users/tatianakerick/.npm/grunt/0.4.5/package/package.json']
+195 error   errno: 3,
+195 error   code: 'EACCES',
+195 error   path: '/Users/tatianakerick/.npm/grunt/0.4.5/package/package.json',
+195 error   parent: 'eventassits' }
+196 error Please try running this command again as root/Administrator.
+197 error System Darwin 13.1.0
+198 error command "node" "/usr/local/bin/npm" "install"
+199 error cwd /Users/tatianakerick/Sites/EventAssits
+200 error node -v v0.10.28
+201 error npm -v 1.4.14
+202 error path /Users/tatianakerick/.npm/grunt/0.4.5/package/package.json
+203 error code EACCES
+204 error errno 3
+205 error stack Error: EACCES, open '/Users/tatianakerick/.npm/grunt/0.4.5/package/package.json'
+206 verbose exit [ 3, true ]
