@@ -1,21 +1,21 @@
 <div ng-include="'partials/navbar'"></div>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo <span ng-show="currentUser">{{ currentUser.name }}</span>!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
+<div class="wrapper">
+
+<div id="section1">
+
+  <img src="images/logo_white.png">
+
+  <p id="appInfo">
+    Est Schlitz shoreditch fashion axe. Messenger bag cupidatat Williamsburg sustainable aliqua, artisan duis pickled pitchfork. Semiotics Banksy ad roof party, jean shorts selvage mollit vero consectetur hashtag before they sold out blue bottle qui nihil aute. Aliquip artisan retro squid ullamco. Vegan enim Williamsburg, eu umami shabby chic single-origin coffee et.
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
-</div>
 
-<div class="row marketing">
-  <div ng-repeat="thing in awesomeThings">
-      <h4>{{thing.name}}</h4>
-      <p>{{thing.info}}</p>
-  </div>
-</div>
+  <button id="home_reg" ng-class="{active: isActive('/signup')}">
+    Register
+  </button>
 
-<div class="footer">
-  <p>♥ from the Yeoman team</p>
-</div>
+</div><!-- wrapper -->
+
+</div><!-- section1 -->
+
+<div ng-include="'partials/footer'"></div>

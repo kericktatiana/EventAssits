@@ -1,0 +1,7 @@
+Sunday June 8th
+--------------------------
+-Initally installed express generator with yo
+-Removed files and Installed Angular Fullstack running on express server
+-Using bootstrap, removed default style of main.css
+-Background image, working on home page
+
