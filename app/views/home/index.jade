@@ -1,4 +1,23 @@
 extends ../layout
 
 block content
-  h1 I'm changing up content
+  h1 Welcome to Jade 
+
+  p.
+   This is the shortest way to add text and one that doesnt get funky with the word 'text'
+
+  h1(id="title") Welcome to Jade
+  button(class="btn", data-action="bea").
+   Be awesome
+
+  h1#title Welcome to Jade
+  button.btn(data-action="bea") Awesome
+
+  var jade = require('jade');
+  var fn = jade.compile(jadeTemplate);
+  var htmlOutput = fn({
+   maintiner: {
+    name: 'Tatiana Kerick',
+    twitter: '@MissTatianax',
+   }
+  });

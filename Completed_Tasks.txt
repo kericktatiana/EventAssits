@@ -1,0 +1,7 @@
+Sunday June 8
+-------------------------
+
+-Install express
+-favicon changed
+
+Saturday June 7 - May change to Anugular full stack
