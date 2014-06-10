@@ -5,3 +5,8 @@ Sunday June 8th
 -Using bootstrap, removed default style of main.css
 -Background image, working on home page
 
+
+Monday June 9 - Sunday June 15
+----------------------------------
+-Rasterized feature graphic
+

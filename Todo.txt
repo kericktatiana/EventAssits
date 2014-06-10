@@ -1,0 +1,15 @@
+User
+----------------------------------
+-Dash board
+-create, read, update, delete events
+-calaendar widget
+-user settings
+
+Events
+----------------------------------
+-event view
+-"play" view of event
+-create, read, update, delete, flag segments
+-crew of the event
+-semi preproduction portion
+

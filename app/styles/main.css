@@ -9,6 +9,14 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
+/* FONT
+-----------------------------*/
+
+h1, h2, h3, h4, h5 {
+  color: #7f8dac;
+  font-family: font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 /* HEADER
 ----------------------------*/
 
@@ -16,4 +24,20 @@ body {
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
   padding: 0 10px 0 10px;
+}
+
+/* LANDING 
+------------------------------*/
+
+#landingLeft {
+  float: left;
+  width: 500px;
+  margin: 50px 0 0 30px;
+}
+
+p#appInfo {
+  color: #cecece;
+  font-size: 18px;
+  line-height: 22px;
+  width: 400px;
 }
