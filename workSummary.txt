@@ -13,3 +13,7 @@ Monday June 9 - Sunday June 15
 -removed my custome css, added default
 -user log in and goes to dashboard
 -Made new database specific for Event Assits
+-Did my own documentation for this entire thing (proven to be useful within the first hour)
+-created a new controlled and view for dashboard
+-modified the route so a user is taken to dashboard once logged in
+-user data submitting to the dashboard
