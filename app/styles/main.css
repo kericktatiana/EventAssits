@@ -6,7 +6,7 @@ body {
 }
 
 .wrapper {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 /* FONT
@@ -22,22 +22,17 @@ h1, h2, h3, h4, h5 {
 
 .header {
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   padding: 0 10px 0 10px;
 }
 
 /* LANDING 
 ------------------------------*/
 
-#landingLeft {
-  float: left;
-  width: 500px;
-  margin: 50px 0 0 30px;
+#section1 {
+  margin: 50px 0 0 20px;
 }
 
-p#appInfo {
-  color: #cecece;
-  font-size: 18px;
-  line-height: 22px;
-  width: 400px;
+#section2 {
+  background: rbga(0, 0, 0, 0.4);
 }

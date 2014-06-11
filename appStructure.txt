@@ -1,0 +1,209 @@
+This is here because this framework doesn't have documentation for how everything all interacts and I need to figure it out for myself. 
+
+APP: the main folder for the functionality/display/routing of the application
+———————————————————————————
+-FONTS:DIR
+----------------
+     -bootstap glyicons
+
+-IMAGES:DIR
+----------------
+     -the images that are used throughout the application
+
+-SCRIPTS:DIR
+----------------
+     -controllers:dir
+	-login.js
+	     -calls FullApp module
+	     -calls LoginCtrl (find out where this is located)
+	     -scope login function  
+		-valid logs in and send to main
+		-I need to send it to user’s dashboard 
+	-main.js
+	     -calls FullApp module
+	     -calls MainCtrl (find out)
+	     -scope and http to access things (literally)
+	-navbar.js
+	     -calls FullApp module
+	     -calls NavbarCtrl (find out)
+	     -scope, location, auth
+		-creates menu text (already removed the settings)
+		-logout function for isActive:function sends the path to /login
+	-settings.js
+	     -calls FullApp module
+	     -calls SettingsCtrl (find out)
+	     -scope, user, auth
+		-change password function
+		-if valid form auth.change password
+		-catch the form if not valid
+	-signup.js
+	     -calls FullApp module
+	     -calls SignupCtrl (find out)
+	     -scope, auth, location
+		-register function
+		-if valid form send name, email, password to db and location to /dashboard (<<what I need it to do)
+     -directives:dir
+	-mongooseError.js
+     -services:dir
+	-auth.js
+	     -calls FullApp module
+	     -factory: location, rootscope, session, user, cookiestore
+	     -store the session into the cookies of the current user
+	     -login callback function
+		-save email and password to session
+		-rootScope current user = user
+	     -logout call back function
+	     -createUser call back function
+		-rootScope current user = user
+	     -change password callback
+		-update the password
+	     -currentUser:function
+		-return user with get
+	     -isLoggenIn:function
+		-checking to see if a user is logged in then returning the user (rootScope.currentUser)
+	-session.js
+	     -FullApp module
+	     -return resource of api/session
+	-user.js
+	     -FullApp module
+	     -resource of api/users/:id return
+	     -update with put method
+	     -get with get method
+     -app.js
+	-FullApp module with ng cookies, resource, sanitize and route
+	-configuration of the routes
+	-location provider for html5
+	-httpProvider if response is rejected
+	-.run function for rootScope, location and Auth
+	     -requires one to login if the route requires
+
+-STYLES:DIR
+----------------
+     -The home for all the css
+
+
+VIEWS:DIR
+----------------
+     -partials: dir
+	-footer, navbar, main, login, signup
+	-users: dir
+	     -settings
+	     -dashboard (trying to get this work, currently)
+	-404: error page for link not being found
+	-index.html
+	     -containing actual index stuff
+	     -initialize ng-app for FullApp
+	     -ng-view for all partials
+	     -google analytics stuff
+	     -bower components
+	     -build:js
+		-script links for controllers and services
+		-THIS IS WHERE YOU WANT TO PUT YOUR CONTROLLERS!!!!
+
+
+LIB
+———————————————————————————
+     -congif:dir
+	-env:dir
+	    -all.js
+		-requires path
+		-normalized root path
+		-module exports for ip, port (set to 9000), mongo (and mongo options)	
+	    -development.js
+		-module exports for env, and mongo uri (mongodb://localhost/eventAssits)
+	    -production.js
+		-module exports for production
+		-ip: 0.0.0.0
+		-port: node port 8080 (I think for mongo)
+		-mongo uri
+	    -test.js
+		-module exports for mongo on testing
+	-config.js
+	    -merging stuff?
+	-dummydata.js
+	    -requiring mongoose for user and thing model
+	    -function to clear all and add the data for Thing
+	    -function to clear all and and add test user to Users 
+	-express.js
+	    -requiring express, favicon, moran, compression, bodyParser, methodOverride, cookieParser, session, errorHandler, path, config, passport, mongoStore
+	    -module function for exports for different types (i.e. development)
+	    -adding sessions to the db with MongoStore
+		-secrete for hashing
+		-new mongoSotre
+		-adding to collection ‘session’
+		-function to console log the connection
+		-THIS MAY BE WHERE I WANT TO LOOK TO ADD EVENTS/SEGMENTS TO THE DB
+		-passport for intiialize and sessions
+		-error handling for development  
+	-passport.js
+	    -requiring mongo, user, passport, and passport local
+	    -serializing/de-serializing the user
+	    -other strategies for authentication flexibility
+     -controllers:dir
+	-api.js
+	    -requiring mongo and thing model
+	    -exports for awesomeThing with req/res
+	-index.js
+	    -requiring path
+	    -exports partials function with req/res
+		-split req url
+		-join ./ and split from ^^
+		-function to send 404 error if partial is not found/error rendering
+	-session.js
+	    -requiring mongoos and password
+	    -if logged out send 200 req
+	    -exports login function with req, res, net
+		-authentical password with local
+		-if error send 401
+	-users.js
+	    -requiring mongoose, user, passport
+	    -exports create function with req, res, next
+		-create a new user
+	    -exports show function 
+		-get the profile of specified user
+	    -exports changePassword function
+		-var for user id (where is that coming from specifically)
+		-find user by id, confirm old password and change out with new
+	    -exports me function 
+		-res for req user
+     -models:dir
+	-thing.js
+	    -require mongoose and scheme
+	    - var for creating new scheme
+	    -validation for thing 
+	    -mongoose model call for thing and thing schema
+	-user.js
+	    -require mongoose, scheme, crypto
+	    -various auth types
+	    -var for new use schema
+	    -user schema virtual password to salt and has the password
+	    -user schema to id the current auth user is the app
+	    -user schema for public profile
+	    -validations
+		-email cannot be blank 
+		-password cannot be blank
+		-email already taken
+	    -presave the the data if password is invalid
+	    -user schema methods
+		-auth plain text 
+		-make salt the password
+		-encrypt the password
+	    -module exports for mongoose model for users, users schema
+     -middleware.js
+	-this is what sets the user data into the cookies
+     -routes.js
+	-requiring controllers for api, controllers, users, sessions and middleware
+	-module exports function for app
+	    -api routing for users and awesomethings
+	    -api routing to send 404 for api pages being access
+	    -routing to get the partials and set data into cookies
+
+
+NODE_MODULES
+———————————————————————————	
+THE MODULES REQUIRED BY NODE, EXPRESS, and Angular
+
+TEST
+———————————————————————————
+-client:dir
+-server:dir

@@ -8,5 +8,8 @@ Sunday June 8th
 
 Monday June 9 - Sunday June 15
 ----------------------------------
--Rasterized feature graphic
-
+-Rasterized feature graphics
+-attempted stylizing of landing and failed with floating
+-removed my custome css, added default
+-user log in and goes to dashboard
+-Made new database specific for Event Assits

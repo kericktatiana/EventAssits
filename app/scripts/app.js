@@ -21,9 +21,14 @@ angular.module('angularFullApp', [
         controller: 'SignupCtrl'
       })
       .when('/settings', {
-        templateUrl: 'partials/settings',
+        templateUrl: 'partials/user/settings',
         controller: 'SettingsCtrl',
         authenticate: true
+      })
+      .when('/dashboard', {
+        templateUrl: 'partials/user/dashboard',
+        controller: 'DashboardCtrl',
+        authenticate: true 
       })
       .otherwise({
         redirectTo: '/'

@@ -1,72 +1,21 @@
 <div ng-include="'partials/navbar'"></div>
 
-<div class="wrapper">
-
-<div id="section1">
-
-  <div id="landingLeft">
-    <h3>We are EventAssits</h3>
-
-    <img src="images/logo_white.png">
-  </div>
-
-  <h3>We are EventAssits</h3>
-
-  <p id="appInfo">
-    Est Schlitz shoreditch fashion axe. Messenger bag cupidatat Williamsburg sustainable aliqua, artisan duis pickled pitchfork. Semiotics Banksy ad roof party, jean shorts selvage mollit vero consectetur hashtag before they sold out blue bottle qui nihil aute. Aliquip artisan retro squid ullamco. Vegan enim Williamsburg, eu umami shabby chic single-origin coffee et.
+<div class="jumbotron">
+  <h1>'Allo, 'Allo <span ng-show="currentUser">{{ currentUser.name }}</span>!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
   </p>
-
-  <a href="/signup">
-    <button class="btn btn-info" id="home_reg">
-    Register
-  </button>
-  </a>
-
-</div><!-- section1 -->
-
-<div id="section1">
-
-  <h1>Features</h1>
-
-  <div class="feature">
-    <div class="featureImg">
-      <img src="images/features/calendar.png">
-    </div>
-    <p class="featureText">
-      Something highly informtative about this particular feature, filler words and filler words.
-    </p>
-  </div><!-- feature -->
-
-  <div class="feature">
-    <div class="featureImg">
-      <img src="images/features/forum.png">
-    </div>
-    <p class="featureText">
-      Something highly informtative about this particular feature, filler words and filler words.
-    </p>
-  </div><!-- feature -->
-
-  <div class="feature">
-    <div class="featureImg">
-      <img src="images/features/technology.png">
-    </div>
-    <p class="featureText">
-      Something highly informtative about this particular feature, filler words and filler words.
-    </p>
-  </div><!-- feature -->
-
-</div><!-- section2 -->
-
-<div id="section3">
-
-
+  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
 </div>
-<a href="www.tatianakerick.com"><img src="images/my_logowhite.png" alt="developer"></a>
 
-<span id="copyright">
-Tatiana Kerick     |     Web Final Project 2014&copy;
-</span>
+<div class="row marketing">
+  <div ng-repeat="thing in awesomeThings">
+      <h4>{{thing.name}}</h4>
+      <p>{{thing.info}}</p>
+  </div>
+</div>
 
-</div><!-- wrapper -->
-
-<div ng-include="'partials/footer'"></div>
+<div class="footer">
+  <p>♥ from the Yeoman team</p>
+</div>
