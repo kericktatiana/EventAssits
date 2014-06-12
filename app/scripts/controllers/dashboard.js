@@ -1,4 +1,4 @@
-'user strict';
+'use strict';
 
 angular.module('angularFullApp')
   .controller('DashboardCtrl', function ($scope, $http) {

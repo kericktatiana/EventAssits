@@ -20,15 +20,15 @@ angular.module('angularFullApp', [
         templateUrl: 'partials/signup',
         controller: 'SignupCtrl'
       })
+      .when('/dashboard', {
+        templateUrl: 'partials/user/dashboard',
+        controller: 'DashboardCtrl',
+        authenticate: true
+      })
       .when('/settings', {
         templateUrl: 'partials/user/settings',
         controller: 'SettingsCtrl',
         authenticate: true
-      })
-      .when('/dashboard', {
-        templateUrl: 'partials/user/dashboard',
-        controller: 'DashboardCtrl',
-        authenticate: true 
       })
       .otherwise({
         redirectTo: '/'
@@ -59,5 +59,9 @@ angular.module('angularFullApp', [
       if (next.authenticate && !Auth.isLoggedIn()) {
         $location.path('/login');
       }
-    });
-  });
+
+      if (Auth.isLoggedIn()) {
+        $location.path('/dashboard');
+      }
+    });//rootScope
+  });//run
