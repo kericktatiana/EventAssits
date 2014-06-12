@@ -17,4 +17,3 @@ Monday June 9 - Sunday June 15
 -created a new controlled and view for dashboard
 -modified the route so a user is taken to dashboard once logged in
 -user data submitting to the dashboard
--if a user is logged in, they'll always be routed to their dashbaord

@@ -207,3 +207,15 @@ TEST
 ———————————————————————————
 -client:dir
 -server:dir
+
+
+
+
+NEW DATA SCHEMA
+—————————————————————————————————————
+-new js file in lib/models to define the schema and validation
+-new js file (plural) in lib/controllers to creating basic api for collection
+
+
+
+

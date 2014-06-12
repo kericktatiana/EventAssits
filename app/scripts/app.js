@@ -25,6 +25,11 @@ angular.module('angularFullApp', [
         controller: 'DashboardCtrl',
         authenticate: true
       })
+      .when('/addEvent', {
+        templateUrl: 'partials/user/event',
+        controller: 'EventCtrl',
+        authenticate: true
+      })
       .when('/settings', {
         templateUrl: 'partials/user/settings',
         controller: 'SettingsCtrl',
@@ -59,9 +64,12 @@ angular.module('angularFullApp', [
       if (next.authenticate && !Auth.isLoggedIn()) {
         $location.path('/login');
       }
-
+      
       if (Auth.isLoggedIn()) {
-        $location.path('/dashboard');
+        location.path('/dashboard');
+        location.path('/settings');
+        location.path('/addEvent');
       }
+
     });//rootScope
   });//run
