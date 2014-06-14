@@ -25,4 +25,6 @@ Events
 -the user collection need to be modified to display/add the events, or the events need to include the userid and be called that way
 -how ever the users is getting the thing/awesome/dummy data is how you need to get the events data, and from the event, the same to get the segments
 
+-need to create a schema for events-
+-create a function to gather the addEvent form and send it to the database
 -new event needs to become the current event
