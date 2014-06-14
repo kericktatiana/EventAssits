@@ -24,3 +24,5 @@ Events
 
 -the user collection need to be modified to display/add the events, or the events need to include the userid and be called that way
 -how ever the users is getting the thing/awesome/dummy data is how you need to get the events data, and from the event, the same to get the segments
+
+-new event needs to become the current event

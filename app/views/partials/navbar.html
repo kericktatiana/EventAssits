@@ -8,5 +8,6 @@
 
   </ul>
 
-  <a href="/"><img id="logo" src="images/logo_white.png" width=95 height=40 alt="Event Assits Logo"></a>
+  <span ng-hide="currentUser" ng-class="{active: isActive('/')}"><a href="/"><img id="logo" src="images/logo_white.png" width=95 height=40 alt="Event Assits Logo"></a></span>
+  <span ng-show="currentUser" ng-class="{active: isActive('/dashboard')}"><a href="/dashboard"><img id="logo" src="images/logo.png" width=95 height=40 alt="Event Assits Logo"></a></span>
 </div>

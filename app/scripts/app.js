@@ -36,7 +36,7 @@ angular.module('angularFullApp', [
         authenticate: true
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/dashboard'
       });
       
     $locationProvider.html5Mode(true);
@@ -63,12 +63,6 @@ angular.module('angularFullApp', [
       
       if (next.authenticate && !Auth.isLoggedIn()) {
         $location.path('/login');
-      }
-      
-      if (Auth.isLoggedIn()) {
-        location.path('/dashboard');
-        location.path('/settings');
-        location.path('/addEvent');
       }
 
     });//rootScope

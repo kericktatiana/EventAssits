@@ -45,7 +45,7 @@ APP: the main folder for the functionality/display/routing of the application
      -directives:dir
 	-mongooseError.js
      -services:dir
-	-auth.js
+	-auth.js (this is where the function exist that are called in the controllers then)
 	     -calls FullApp module
 	     -factory: location, rootscope, session, user, cookiestore
 	     -store the session into the cookies of the current user
@@ -215,6 +215,7 @@ NEW DATA SCHEMA
 —————————————————————————————————————
 -new js file in lib/models to define the schema and validation
 -new js file (plural) in lib/controllers to creating basic api for collection
+-app/scripts/controllers/whatever.js is where you create the function to call out in the view to submit the form to the db or data schema
 
 
 
