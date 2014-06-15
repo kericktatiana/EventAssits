@@ -28,3 +28,5 @@ Events
 -need to create a schema for events-
 -create a function to gather the addEvent form and send it to the database
 -new event needs to become the current event
+
+-need to look to see how awesome things are originally being added to the database and its schema
