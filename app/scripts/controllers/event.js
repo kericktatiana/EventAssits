@@ -17,8 +17,8 @@ angular.module('angularFullApp')
 					Event.createEvent({
 						title: $scope.event.title,
 						date: $scope.event.date,
-						set_up: $scope.event.set_up,
-						start_time: $scope.event.start_time,
+						setUp: $scope.event.setUp,
+						startTime: $scope.event.startTime,
 						strike: $scope.event.strike,
 						description: $scope.event.description
 					})

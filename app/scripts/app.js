@@ -65,10 +65,5 @@ angular.module('angularFullApp', [
         $location.path('/login');
       }
 
-      else if (Auth.isLoggedIn()) {
-        $location.path('/dashboard');
-        $location.path('/createEvent');
-      }
-
     });//rootScope
   });//run
