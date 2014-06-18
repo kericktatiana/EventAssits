@@ -27,7 +27,7 @@ angular.module('angularFullApp', [
       })
       .when('/createEvent', {
         templateUrl: 'partials/user/event/createEvent',
-        controller: 'EventCtrl',
+        controller: 'CreateEventCtrl',
         authenticate: true
       })
       .when('/settings', {
