@@ -15,7 +15,7 @@ angular.module('angularFullApp')
           password: $scope.user.password
         })
         .then( function() {
-          // Account created, redirect to home
+          // Account created, redirect to user's dash
           $location.path('/dashboard');
         })
         .catch( function(err) {

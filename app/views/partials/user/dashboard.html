@@ -1,0 +1,14 @@
+<div ng-include="'partials/navbar.html'"></div>
+
+<h1>Hello, <span ng-show="currentUser">{{ currentUser.name }}</span>, this is your dashboard</h1>	
+
+<a href="/createEvent">Create Event</a>
+
+<h3>This is just here to make sure its in the api</h3>
+
+<div class="row marketing">
+  <div ng-repeat="thing in awesomeThings">
+      <h4>{{thing.name}}</h4>
+      <p>{{thing.info}}</p>
+  </div>
+</div>
