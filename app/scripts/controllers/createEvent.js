@@ -6,38 +6,40 @@
 **/
 
 angular.module('angularFullApp')
-	.controller('EventCtrl', function ($scope, $http) {
-		$http.get('/api/awesomeThings').success(
+	.controller('CreateEventCtrl', function ($scope, $http) {
 			
-			$scope.createEvent = function(form) {
-				$scope.submitted = true;
+		$scope.event = {};
+		$scope.errors = {};
 
-				if(form.$valid) {
-					//need to create event service?
-					Event.createEvent({
-						title: $scope.event.title,
-						date: $scope.event.date,
-						setUp: $scope.event.setUp,
-						startTime: $scope.event.startTime,
-						strike: $scope.event.strike,
-						description: $scope.event.description
-					})
-					.then( function() {
-						//Event created, redirect them to event page
-						$location.path('/event');
-					})
-					.catch( function(err) {
-						err = err.data;
-						$scope.error = {};
+		$scope.createEvent = function(form) {
+			$scope.submitted = true;
 
-						//update validity of form fields that match the mongoose errors
-						angular.forEach(err.errors, function(error, field) {
-							form[field].$setValidity('mongoose', false);
-							$scope.errors[field] = error.message;
-						});
+			if(form.$valid) {
+				//need to create event service?
+				Event.createEvent({
+					title: $scope.event.title,
+					date: $scope.event.date,
+					setUp: $scope.event.setUp,
+					startTime: $scope.event.startTime,
+					strike: $scope.event.strike,
+					description: $scope.event.description
+				})
+				.then( function() {
+					//Event created, redirect them to event page
+					$location.path('/event');
+				})
+				.catch( function(err) {
+					err = err.data;
+					$scope.error = {};
+
+					//update validity of form fields that match the mongoose errors
+					angular.forEach(err.errors, function(error, field) {
+						form[field].$setValidity('mongoose', false);
+						$scope.errors[field] = error.message;
 					});
-				}
-			});//createEvent
+				});
+			}
+		};//createEvent
 
 
 
