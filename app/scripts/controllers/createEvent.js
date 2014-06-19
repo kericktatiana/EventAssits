@@ -1,22 +1,23 @@
 'use strict';
 
 /**
- * Event.js 
- * controls the events and gathers segments
+ * createEvent.js 
+ * creates the events
 **/
 
 angular.module('angularFullApp')
-	.controller('CreateEventCtrl', function ($scope, $http) {
+	.controller('CreateEventCtrl', function ($scope, Eventing, $location) {
 			
 		$scope.event = {};
 		$scope.errors = {};
+
+		/* 6/12 1:13am I have a new error, unknown provider */
 
 		$scope.createEvent = function(form) {
 			$scope.submitted = true;
 
 			if(form.$valid) {
-				//need to create event service?
-				Event.createEvent({
+				Eventing.createEvent({
 					title: $scope.event.title,
 					date: $scope.event.date,
 					setUp: $scope.event.setUp,

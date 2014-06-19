@@ -17,3 +17,16 @@ Monday June 9 - Sunday June 15
 -created a new controlled and view for dashboard
 -modified the route so a user is taken to dashboard once logged in
 -user data submitting to the dashboard
+
+
+
+Monday June 16 - Sunday June 22
+-------------------------------------
+-removed all existing event functionality and routing
+-included a last name with the user creation
+-create event:
+	-view
+	-controller
+	-mongoose module
+	-backend controller
+	-service for event and eventing
