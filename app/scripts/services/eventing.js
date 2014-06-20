@@ -16,27 +16,6 @@ angular.module('angularFullApp')
 
 
 			/**
-			 * 'Authenticate' event (lack of better desc)
-			 *
-			 * @param {Object} event - event info
-			 * @param {Function} callback - optional
-			 * @return {Promise}
-			 */
-			evented: function(event, callback) {
-				var cb = callback || angular.noop;
-
-				return Session.save({
-					title: event.title
-				}, function(event) {
-					$rootScope.currentEvent = event;
-					return cb();
-				}, function(err) {
-					return cb(err);
-				}).$promise;
-			},
-
-
-			/**
 			 * Create a new Event
 			 *
 			 * @param {object} event - event info
