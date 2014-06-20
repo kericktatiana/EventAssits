@@ -30,3 +30,4 @@ Monday June 16 - Sunday June 22
 	-mongoose module
 	-backend controller
 	-service for event and eventing
+-Events sending to the database

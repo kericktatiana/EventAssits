@@ -11,14 +11,13 @@ angular.module('angularFullApp')
 		$scope.event = {};
 		$scope.errors = {};
 
-		/* 6/12 1:13am I have a new error, unknown provider */
-
 		$scope.createEvent = function(form) {
 			$scope.submitted = true;
 
 			if(form.$valid) {
 				Eventing.createEvent({
 					title: $scope.event.title,
+					userId: $scope.user.id,
 					date: $scope.event.date,
 					setUp: $scope.event.setUp,
 					startTime: $scope.event.startTime,
