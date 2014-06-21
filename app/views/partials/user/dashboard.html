@@ -1,14 +1,21 @@
+<!-- 
+  * Dashboard - View
+  * Only accessable when user is logged in
+ -->
+
 <div ng-include="'partials/navbar.html'"></div>
 
 <h1>Hello, <span ng-show="currentUser">{{ currentUser.firstName }} {{ currentUser.lastName }}</span>. this is your dashboard</h1>	
 
 <a href="/createEvent">Create Event</a>
 
-<h3>This is just here to make sure its in the api</h3>
+<h3>Your events</h3>
 
 <div class="row marketing">
-  <div ng-repeat="thing in awesomeThings">
-      <h4>{{thing.name}}</h4>
-      <p>{{thing.info}}</p>
+  <div ng-repeat="event in getEvents">
+  	<a href="/event/{{event._id}}">
+    	<h4>{{event.title}}</h4>
+    	<p>{{event.date}}</p>
+  	</a>
   </div>
 </div>

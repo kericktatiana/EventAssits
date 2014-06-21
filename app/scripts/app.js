@@ -1,3 +1,8 @@
+/**
+ * app.js - angular router
+ * 
+**/
+
 'use strict';
 
 angular.module('angularFullApp', [
@@ -30,7 +35,7 @@ angular.module('angularFullApp', [
         controller: 'CreateEventCtrl',
         authenticate: true
       })
-      .when('/event', {
+      .when('/event/:id', {
         templateUrl: 'partials/user/event/event',
         controller: 'EventCtrl',
         authenticate: true

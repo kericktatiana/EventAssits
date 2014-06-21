@@ -1,3 +1,8 @@
+/**
+ * user.js - Service
+ * Get and put methods for users
+**/
+
 'use strict';
 
 angular.module('angularFullApp')

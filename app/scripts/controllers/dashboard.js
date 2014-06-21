@@ -1,14 +1,14 @@
-'use strict';
-
 /*
- * Dashboard.js
- * controlls the dashboard of the user, gets the user info and listing of events
+ * Dashboard.js - Controller 
+ * Specific to the currentUser, display the events
 **/
+
+'use strict';
 
 angular.module('angularFullApp')
 	.controller('DashboardCtrl', function ($scope, $http) {
-		$http.get('/api/awesomeThings').success(
-			function(awesomeThings) {
-				$scope.awesomeThings = awesomeThings;
+		$http.get('/api/getEvents').success(
+			function(getEvents) {
+				$scope.getEvents = getEvents;
 			});
 	});

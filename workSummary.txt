@@ -31,3 +31,5 @@ Monday June 16 - Sunday June 22
 	-backend controller
 	-service for event and eventing
 -Events sending to the database
+-Events being displayed on the dashboard, not user specific
+-Routing to a specified event

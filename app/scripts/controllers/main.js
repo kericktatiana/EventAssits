@@ -1,3 +1,8 @@
+/**
+ * main.js - Controller
+ * Main controller, already existed. May be deleted
+**/
+
 'use strict';
 
 angular.module('angularFullApp')

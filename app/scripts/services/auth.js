@@ -1,3 +1,8 @@
+/**
+ * auth.js - service
+ * Factory functions for User functionality
+**/
+
 'use strict';
 
 angular.module('angularFullApp')

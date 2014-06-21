@@ -1,3 +1,8 @@
+/**
+ * navbar.js - Controller
+ * to determin display regarding user login
+**/
+
 'use strict';
 
 angular.module('angularFullApp')

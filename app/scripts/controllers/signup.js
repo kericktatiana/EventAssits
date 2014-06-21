@@ -1,3 +1,8 @@
+/**
+ * signup.js - Controller
+ * Register function, called Auth
+**/
+
 'use strict';
 
 angular.module('angularFullApp')

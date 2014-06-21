@@ -1,3 +1,8 @@
+/**
+ * login.js - Controller
+ * called Auth to log user in
+**/
+
 'use strict';
 
 angular.module('angularFullApp')

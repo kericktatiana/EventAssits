@@ -1,9 +1,9 @@
-'use strict';
-
 /**
- * createEvent.js 
- * creates the events
+ * createEvent.js - controller
+ * controller for form creating events
 **/
+
+'use strict';
 
 angular.module('angularFullApp')
 	.controller('CreateEventCtrl', function ($scope, Eventing, $location) {

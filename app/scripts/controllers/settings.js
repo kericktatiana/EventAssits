@@ -1,4 +1,10 @@
+/**
+ * settings.js - Controller
+ * Specific to currentUser, to edit information
+**/
+
 'use strict';
+
 
 angular.module('angularFullApp')
   .controller('SettingsCtrl', function ($scope, User, Auth) {

@@ -1,3 +1,8 @@
+/**
+ * event.js - Service
+ * put and get methods for events
+**/
+
 'use strict';
 
 angular.module('angularFullApp')

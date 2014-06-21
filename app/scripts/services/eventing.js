@@ -1,9 +1,9 @@
-'use strict';
-
 /*
- * Eventing.js
- * Service middle man between event and functionality
+ * Eventing.js - Service
+ * Factory methods for event functionality
  */
+
+'use strict';
 
 angular.module('angularFullApp')
 	.factory('Eventing', function Eventing($location, $rootScope, Session, Event, $cookieStore) {

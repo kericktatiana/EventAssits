@@ -1,3 +1,8 @@
+/**
+ * sessions.js - Service 
+ * Factory methods to save sessions
+**/
+
 'use strict';
 
 angular.module('angularFullApp')
