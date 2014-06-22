@@ -1,4 +1,4 @@
-<!-- 
+<!--
   * create event - View
   * Only accessable when user is logged in
  -->
@@ -10,11 +10,12 @@
 		<h1>Create Event</h1>
 	</div><!-- col12 -->
 
+
 	<div class="col-sm-12">
 		<form class="form" name="form" ng-submit="createEvent(form)" novalidate>
 
 			<!-- Title -->
-			<div class="form-group" ng-class="{ 'has success': form.title.$valid && submitted, 'has-error': form.title.$invalid && submitted }">
+			<div class="form-group" ng-class="{ 'has-success': form.title.$valid && submitted, 'has-error': form.title.$invalid && submitted }">
 
 				<label>Event Title:</label>
 
@@ -26,7 +27,7 @@
 			</div><!-- form-group -->
 
 			<!-- Date -->
-			<div class="form-group" ng-class="{ 'has success': form.date.$valid && submitted, 'has-error': form.date.$invalid && submitted }">
+			<div class="form-group" ng-class="{ 'has-success': form.date.$valid && submitted, 'has-error': form.date.$invalid && submitted }">
 
 				<label>Event Date:</label>
 
@@ -38,7 +39,7 @@
 			</div><!-- form-group -->
 
 			<!-- set up -->
-			<div class="form-group" ng-class="{ 'has success': form.setUp.$valid && submitted, 'has-error': form.setUp.$invalid && submitted }">
+			<div class="form-group" ng-class="{ 'has-success': form.setUp.$valid && submitted, 'has-error': form.setUp.$invalid && submitted }">
 
 				<label>Set Up:</label>
 
@@ -50,7 +51,7 @@
 			</div><!-- form-group -->			
 
 			<!-- startTime -->
-			<div class="form-group" ng-class="{ 'has success': form.startTime.$valid && submitted, 'has-error': form.startTime.$invalid && submitted }">
+			<div class="form-group" ng-class="{ 'has-success': form.startTime.$valid && submitted, 'has-error': form.startTime.$invalid && submitted }">
 
 				<label>Start Time:</label>
 
@@ -62,7 +63,7 @@
 			</div><!-- form-group -->
 
 			<!-- Strike -->
-			<div class="form-group" ng-class="{ 'has success': form.strike.$valid && submitted, 'has-error': form.strike.$invalid && submitted }">
+			<div class="form-group" ng-class="{ 'has-success': form.strike.$valid && submitted, 'has-error': form.strike.$invalid && submitted }">
 
 				<label>Strike:</label>
 
@@ -74,7 +75,7 @@
 			</div><!-- form-group -->
 
 			<!-- description -->
-			<div class="form-group" ng-class="{ 'has success': form.description.$valid && submitted, 'has-error': form.description.$invalid && submitted }">
+			<div class="form-group" ng-class="{ 'has-success': form.description.$valid && submitted, 'has-error': form.description.$invalid && submitted }">
 
 				<label>Description:</label>
 
@@ -85,4 +86,4 @@
 
 		</form>
 	</div><!-- col12 -->
-</div><!-- row -->
+</div><!-- row

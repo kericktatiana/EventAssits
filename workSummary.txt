@@ -33,3 +33,4 @@ Monday June 16 - Sunday June 22
 -Events sending to the database
 -Events being displayed on the dashboard, not user specific
 -Routing to a specified event
+-UserId being sent with the createEvent

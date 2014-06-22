@@ -6,10 +6,12 @@
 'use strict';
 
 angular.module('angularFullApp')
-	.controller('CreateEventCtrl', function ($scope, Eventing, $location) {
+	.controller('CreateEventCtrl', function ($scope, Eventing, $location, $rootScope) {
 			
 		$scope.event = {};
 		$scope.errors = {};
+
+		console.log($rootScope.currentUser.id);
 
 		$scope.createEvent = function(form) {
 			$scope.submitted = true;
@@ -17,7 +19,7 @@ angular.module('angularFullApp')
 			if(form.$valid) {
 				Eventing.createEvent({
 					title: $scope.event.title,
-					userId: $scope.user.id,
+					userId: $rootScope.currentUser.id,
 					date: $scope.event.date,
 					setUp: $scope.event.setUp,
 					startTime: $scope.event.startTime,
