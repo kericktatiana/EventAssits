@@ -32,7 +32,7 @@ angular.module('angularFullApp')
 				})
 				.catch( function(err) {
 					err = err.data;
-					$scope.error = {};
+					$scope.errors = {};
 
 					//update validity of form fields that match the mongoose errors
 					angular.forEach(err.errors, function(error, field) {
