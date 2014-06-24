@@ -10,6 +10,9 @@ angular.module('angularFullApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    }, {
+      'title': 'Account Settigs',
+      'link': '/settings'
     }];
     
     $scope.logout = function() {

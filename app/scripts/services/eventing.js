@@ -43,6 +43,16 @@ angular.module('angularFullApp')
 			currentEvent: function() {
 				return Event.get();
 			},
+
+			/**
+			 * Check to see if the current event is current
+			 *
+			 * @return {Boolean}
+			 */
+			isEvent: function() {
+				var event = $rootScope.currentEvent;
+				return !!event;
+			},
 		};//return
 
 	});//factory
