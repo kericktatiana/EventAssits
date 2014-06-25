@@ -25,11 +25,15 @@ angular.module('angularFullApp', [
         templateUrl: 'partials/signup',
         controller: 'SignupCtrl'
       })
+
+      //When user is logged in
       .when('/dashboard', {
         templateUrl: 'partials/user/dashboard',
         controller: 'DashboardCtrl',
         authenticate: true
       })
+
+      //Events
       .when('/createEvent', {
         templateUrl: 'partials/user/event/createEvent',
         controller: 'CreateEventCtrl',
@@ -40,6 +44,15 @@ angular.module('angularFullApp', [
         controller: 'EventCtrl',
         authenticate: true
       })
+
+      //Categories
+      .when('/categories', {
+        templateUrl: 'partials/user/event/category',
+        controller: 'CategoryCtrl',
+        authenticate: true
+      })
+
+      //Accoutn settings
       .when('/settings', {
         templateUrl: 'partials/user/settings',
         controller: 'SettingsCtrl',

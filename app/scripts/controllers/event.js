@@ -11,10 +11,10 @@ angular.module('angularFullApp')
 		var currentEvent = $routeParams.id;
 
 		$http.get('/api/events/' + currentEvent).success(
-			function(event) {
-				$scope.event = event.shape;
+			function(showEvent) {
+				$scope.showEvent = showEvent.shape;
 
-				console.log($scope.event);
+				console.log(showEvent.shape);
 
 			});
 	});

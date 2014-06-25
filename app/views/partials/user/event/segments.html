@@ -1,0 +1,72 @@
+<!--
+  * segments.html
+  * segement form, only accessable when: 
+  * a. user is logged in
+  * b. user is on specific event
+  * on the event.html page
+ -->
+
+
+<div class="row">
+
+<div class="col-sm-12">
+	<h3>Add a Segment</h3>
+</div><!-- col12 -->
+
+<div class="col-sm-12">
+<form class="form" name="form" ng-submit="createSegment(form)" novalidate>
+
+	<!-- Time -->
+	<div class="form-group" ng-class="{ 'has-success': form.time.$valid && submitted, 'has-error': form.time.$invalid && submited }">
+
+		<label>Segment Start Time:</label>
+
+		<input type="time" name="time" class="form-control" required />
+
+		<p class="help-block" ng-show="form.time.$error.required && submitted">
+			A time for the segment is required
+		</p>
+	</div><!-- form-group -->
+
+	<!-- Duration -->
+	<div class="form-group" ng-class="{ 'has-success': form.duration.$valid && submitted, 'has-error': form.duration.$invalid && submited }">
+
+		<label>Segment Duration:</label>
+
+		<input type="text" name="duration" class="form-control" required />
+
+		<p class="help-block" ng-show="form.duration.$error.required && submitted">
+			A duration for the segment is required
+		</p>
+	</div><!-- form-group -->
+
+	<!-- Category -->
+	<div class="form-group" ng-class="{ 'has-success': form.category.$valid && submitted, 'has-error': form.category.$invalid && submited }">
+
+		<label>Segment Category:</label>
+
+		<input type="text" name="category" class="form-control" required />
+
+		<p class="help-block" ng-show="form.category.$error.required && submitted">
+			A category for the segment is required
+		</p>
+	</div><!-- form-group -->
+
+	<!-- Task -->
+	<div class="form-group" ng-class="{ 'has-success': form.task.$valid && submitted, 'has-error': form.task.$invalid && submited }">
+
+		<label>Segment Category Task:</label>
+
+		<input type="text" name="task" class="form-control" required />
+
+		<p class="help-block" ng-show="form.task.$error.required && submitted">
+			A task for the segment is required
+		</p>
+	</div><!-- form-group -->
+
+	<button class="btn btn-lg btn-primary" type="submit">Add Segments</button>
+
+</form>
+</div><!-- col12 -->
+
+</div><!-- row -->

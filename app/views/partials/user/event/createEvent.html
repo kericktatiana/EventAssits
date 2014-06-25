@@ -12,78 +12,78 @@
 
 
 	<div class="col-sm-12">
-		<form class="form" name="form" ng-submit="createEvent(form)" novalidate>
+	<form class="form" name="form" ng-submit="createEvent(form)" novalidate>
 
-			<!-- Title -->
-			<div class="form-group" ng-class="{ 'has-success': form.title.$valid && submitted, 'has-error': form.title.$invalid && submitted }">
+		<!-- Title -->
+		<div class="form-group" ng-class="{ 'has-success': form.title.$valid && submitted, 'has-error': form.title.$invalid && submitted }">
 
-				<label>Event Title:</label>
+			<label>Event Title:</label>
 
-				<input type="text" name="title" class="form-control" ng-model="event.title" required />
+			<input type="text" name="title" class="form-control" ng-model="event.title" required />
 
-				<p class="help-block" ng-show="form.title.$error.required && submitted">
-					A title for the event is required
-				</p>
-			</div><!-- form-group -->
+			<p class="help-block" ng-show="form.title.$error.required && submitted">
+				A title for the event is required
+			</p>
+		</div><!-- form-group -->
 
-			<!-- Date -->
-			<div class="form-group" ng-class="{ 'has-success': form.date.$valid && submitted, 'has-error': form.date.$invalid && submitted }">
+		<!-- Date -->
+		<div class="form-group" ng-class="{ 'has-success': form.date.$valid && submitted, 'has-error': form.date.$invalid && submitted }">
 
-				<label>Event Date:</label>
+			<label>Event Date:</label>
 
-				<input type="date" name="date" class="form-control" ng-model="event.date" required />
+			<input type="date" name="date" class="form-control" ng-model="event.date" required />
 
-				<p class="help-block" ng-show="form.date.$error.required && submitted">
-					A date for the event is required
-				</p>
-			</div><!-- form-group -->
+			<p class="help-block" ng-show="form.date.$error.required && submitted">
+				A date for the event is required
+			</p>
+		</div><!-- form-group -->
 
-			<!-- set up -->
-			<div class="form-group" ng-class="{ 'has-success': form.setUp.$valid && submitted, 'has-error': form.setUp.$invalid && submitted }">
+		<!-- set up -->
+		<div class="form-group" ng-class="{ 'has-success': form.setUp.$valid && submitted, 'has-error': form.setUp.$invalid && submitted }">
 
-				<label>Set Up:</label>
+			<label>Set Up:</label>
 
-				<input type="time" name="setUp" class="form-control" ng-model="event.setUp" required />
+			<input type="time" name="setUp" class="form-control" ng-model="event.setUp" required />
 
-				<p class="help-block" ng-show="form.setUp.$error.required && submitted">
-					A set up time for the event is required
-				</p>
-			</div><!-- form-group -->			
+			<p class="help-block" ng-show="form.setUp.$error.required && submitted">
+				A set up time for the event is required
+			</p>
+		</div><!-- form-group -->			
 
-			<!-- startTime -->
-			<div class="form-group" ng-class="{ 'has-success': form.startTime.$valid && submitted, 'has-error': form.startTime.$invalid && submitted }">
+		<!-- startTime -->
+		<div class="form-group" ng-class="{ 'has-success': form.startTime.$valid && submitted, 'has-error': form.startTime.$invalid && submitted }">
 
-				<label>Start Time:</label>
+			<label>Start Time:</label>
 
-				<input type="time" name="startTime" class="form-control" ng-model="event.startTime" required />
+			<input type="time" name="startTime" class="form-control" ng-model="event.startTime" required />
 
-				<p class="help-block" ng-show="form.startTime.$error.required && submitted">
-					A start time for the event is required
-				</p>
-			</div><!-- form-group -->
+			<p class="help-block" ng-show="form.startTime.$error.required && submitted">
+				A start time for the event is required
+			</p>
+		</div><!-- form-group -->
 
-			<!-- Strike -->
-			<div class="form-group" ng-class="{ 'has-success': form.strike.$valid && submitted, 'has-error': form.strike.$invalid && submitted }">
+		<!-- Strike -->
+		<div class="form-group" ng-class="{ 'has-success': form.strike.$valid && submitted, 'has-error': form.strike.$invalid && submitted }">
 
-				<label>Strike:</label>
+			<label>Strike:</label>
 
-				<input type="time" name="strike" class="form-control" ng-model="event.strike" required />
+			<input type="time" name="strike" class="form-control" ng-model="event.strike" required />
 
-				<p class="help-block" ng-show="form.strike.$error.required && submitted">
-					A strike time for the event is required
-				</p>
-			</div><!-- form-group -->
+			<p class="help-block" ng-show="form.strike.$error.required && submitted">
+				A strike time for the event is required
+			</p>
+		</div><!-- form-group -->
 
-			<!-- description -->
-			<div class="form-group" ng-class="{ 'has-success': form.description.$valid && submitted, 'has-error': form.description.$invalid && submitted }">
+		<!-- description -->
+		<div class="form-group" ng-class="{ 'has-success': form.description.$valid && submitted, 'has-error': form.description.$invalid && submitted }">
 
-				<label>Description:</label>
+			<label>Description:</label>
 
-				<textarea name="title" class="form-control" ng-model="event.description" required></textarea>
-			</div><!-- form-group -->
+			<textarea name="title" class="form-control" ng-model="event.description" required></textarea>
+		</div><!-- form-group -->
 
-			<button class="btn btn-lg btn-primary" type="submit">Create Event</button>
+		<button class="btn btn-lg btn-primary" type="submit">Create Event</button>
 
-		</form>
+	</form>
 	</div><!-- col12 -->
 </div><!-- row

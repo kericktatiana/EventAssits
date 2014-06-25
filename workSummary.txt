@@ -34,3 +34,24 @@ Monday June 16 - Sunday June 22
 -Events being displayed on the dashboard, not user specific
 -Routing to a specified event
 -UserId being sent with the createEvent
+
+
+
+Monday June 23 - Sunday June 29
+---------------------------------------
+-Event information loaded on event specific page
+-Schemas for Category and Segements
+-View for segement form
+-Categories:
+	-Schema
+	-Form
+	-View
+	-front end controller
+	-backend controller
+	-routing in the app
+	-routing in backend
+	-recieveing default categories from db
+
+
+
+

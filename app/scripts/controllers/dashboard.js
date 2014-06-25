@@ -7,6 +7,8 @@
 
 angular.module('angularFullApp')
 	.controller('DashboardCtrl', function ($scope, $http) {
+		
+		//get events from Broute
 		$http.get('/api/getEvents').success(
 			function(getEvents) {
 				$scope.getEvents = getEvents;
