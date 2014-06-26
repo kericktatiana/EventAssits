@@ -7,7 +7,7 @@
 
  <div ng-include="'partials/navbar.html'"></div>
 
- <h1>Categories</h1>
+<h1>Categories</h1>
 
 <div class="col-sm-12">
 	<h3>Add New Category</h3>
@@ -31,4 +31,25 @@
 	<button class="btn btn-sm btn-primary" type="submit">Add Category</button>	
 </form>
 </div><!-- col12 -->
+
+<br />
+
+<h3>Your Categories</h3>
+
+<div class="row marketing">
+
+	<div ng-repeat="category in getCategories">
+		<h5>{{category.categoryName}}</h5>
+		<!-- trash and delete function -->
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
 

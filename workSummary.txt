@@ -51,6 +51,7 @@ Monday June 23 - Sunday June 29
 	-routing in the app
 	-routing in backend
 	-recieveing default categories from db
+	-sending categories to db with user id
 
 
 

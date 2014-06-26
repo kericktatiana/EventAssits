@@ -1,6 +1,7 @@
 /*
  * Eventing.js - Service
- * Factory methods for event functionality
+ * Factory methods for event functionality 
+ * dependent on event.js service
  */
 
 'use strict';
