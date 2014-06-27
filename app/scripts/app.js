@@ -45,6 +45,14 @@ angular.module('angularFullApp', [
         authenticate: true
       })
 
+      //Categories
+      .when('/categories', {
+        templateUrl: 'partials/user/event/category/category',
+        controller: 'CategoryCtrl',
+        authenticate: true
+      })
+      
+
       //Accoutn settings
       .when('/settings', {
         templateUrl: 'partials/user/settings',

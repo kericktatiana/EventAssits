@@ -7,7 +7,7 @@
 'use strict';
 
 angular.module('angularFullApp')
-	.factory('Eventing', function Eventing($location, $rootScope, Category) {
+	.factory('Categoring', function Categoring($location, $rootScope, Category) {
 
 		return {
 
@@ -24,7 +24,6 @@ angular.module('angularFullApp')
 
 				return Category.save(category,
 					function(category) {
-						$rootScope.currentCategory = category;
 						return cb(category);
 					},
 					function(err) {

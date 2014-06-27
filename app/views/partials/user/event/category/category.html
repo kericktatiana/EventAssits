@@ -1,0 +1,41 @@
+<!-- 
+  * Category - View
+  * Only accessable through event
+  * Display of defauly categoires and user's
+  * Form to create new categories
+ -->
+
+<div ng-include="'partials/navbar.html'"></div>
+
+<h1>Categories</h1>
+
+<!-- <div ng-include="'partials/user/event/category/categoryForm.html'"></div> -->
+
+<div class="row">
+<div class="col-sm-12">
+	<h3>Add Category</h3>
+</div><!-- col12 -->
+
+<div class="col-sm-12">
+<form class="form" name="form" ng-submit="createCategory(form)" novalidate>
+
+	<!-- Category name -->
+	<div class="form-group" ng-class="{ 'has-success': form.categoryName.$valid && submitted, 'has-error': form.categoryName.$invalid && submitted }">
+
+		<label>Category:</label>
+
+		<input type="text" name="categoryName" class="form-control" ng-model="category.categoryName" required />
+	</div><!-- form-group -->
+
+	<button class="btn btn-sm btn-primary" type="submit">Add Category</button>
+
+</form>
+</div><!-- col12 -->
+</div><!-- row -->
+
+<h3>Your Categories</h3>
+<div class="row marketing">
+	<div ng-repeat="category in getCategorys">
+		<h5>{{category.categoryName}}</h5>
+	</div>
+</div>

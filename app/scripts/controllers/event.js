@@ -14,8 +14,6 @@ angular.module('angularFullApp')
 			function(showEvent) {
 				$scope.showEvent = showEvent.shape;
 
-				console.log(showEvent.shape);
-
 			});
 	});
 
