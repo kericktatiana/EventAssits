@@ -54,6 +54,14 @@ Monday June 23 - Sunday June 29
 	-sending categories to db with user id
 	-errors for required, and existing category
 	-takes input and makes all lower case
-
+-Segments: 
+	-Schema
+	-Form
+	-View
+	-front end controller
+	-back end controller
+	-routing in the app (front end)
+	-backend routing
+	
 
 
