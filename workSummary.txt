@@ -52,7 +52,8 @@ Monday June 23 - Sunday June 29
 	-routing in backend
 	-recieveing default categories from db
 	-sending categories to db with user id
-
+	-errors for required, and existing category
+	-takes input and makes all lower case
 
 
 

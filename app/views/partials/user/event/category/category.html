@@ -25,6 +25,13 @@
 		<label>Category:</label>
 
 		<input type="text" name="categoryName" class="form-control" ng-model="category.categoryName" required />
+
+		<p class="help-block" ng-show="form.categoryName.$error.required && submitted">
+			A name for the category is required
+		</p>
+		<p class="help-block" ng-show="form.categoryName.$error.mongoose">
+			{{ errors.categoryName }}
+		</p>
 	</div><!-- form-group -->
 
 	<button class="btn btn-sm btn-primary" type="submit">Add Category</button>
@@ -37,5 +44,8 @@
 <div class="row marketing">
 	<div ng-repeat="category in getCategorys">
 		<h5>{{category.categoryName}}</h5>
+	</div>
+	<div ng-repeat="userCategory in getUserCategorys">
+		<h5>{{userCategory.categoryName}}</h5>
 	</div>
 </div>
