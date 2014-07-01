@@ -8,7 +8,7 @@
 'use strict';
 
 angular.module('angularFullApp')
-	.controller('EventCtrl', function ($scope, $http, $routeParams, Segmenting, $location) {
+	.controller('EventCtrl', function ($scope, $http, $routeParams) {
 
 		//get the id of current event
 		var currentEvent = $routeParams.id;
@@ -20,36 +20,9 @@ angular.module('angularFullApp')
 
 			});
 
-		//create segment
-		$scope.createSegment = function(form) {
-			$scope.submitted = true;
+		
 
-			if(form.$valid) {
-				Segmenting.createSegment({
-					eventId: currentEvent,
-					time: $scope.segment.time,
-					duration: $scope.segment.duration,
-					category: $scope.segment.category,
-					task: $scope.segment.task
-				})
-				.then( function() {
-					//this may not work
-					$location.reload();
-				})
-				.catch( function(err) {
-					err = err.data;
-					$scope.errors = {};
-
-					//update validity of form fields that match the mongoose errors
-					angular.forEach(err.errors, function(error, field) {
-						form[field].$setValidity('mongoose', false);
-						$scope.errors[field] = error.message;
-					});
-				});
-			}
-		};
-
-	});
+	}); //controller
 
 // this is where I want to call segments and loop through
 
