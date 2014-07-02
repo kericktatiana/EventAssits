@@ -6,6 +6,9 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* HEADER - navigation
+-----------------------------*/
+
 .header {
 	background: rgba(0, 0, 0, 0.7);
 	padding: 5px 5px 10px 5px;
@@ -21,10 +24,15 @@ ul.nav a:hover {
 	background-color: #5f465b;
 }
 
+/* MAIN CONTENT - wrapper
+-----------------------------------*/
+
 .wrapper {
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
+
+/* SECTION 1 - introduction content */
 #section1 {
 	height: 300px;
 }
@@ -69,17 +77,57 @@ ul.nav a:hover {
 	text-decoration: none;
 }
 
+
+/* SECTION 2, 3, 4 - with background color */
 #bgcolor {
 	background: rgba(0, 0, 0, 0.8);
 	clear: left;
 }
 
-#section2 h1, #section3 h1 {
+#section2 h2, 
+#section3 h2, 
+#section4 h2 {
 	color: #5f465b;
 }
 
+#section2,
+#section3,
+#section4 {
+	padding: 15px 0 0 60px;
+}
+
+#section2 p,
+#section3 p,
+#section4 p {
+	color: #aeaeae;
+	font-size: 15px;
+}
+
+/* SECTION 2 - additional information */
 #section2 {
-	padding: 0 0 0 10px;
+	height: 250px;
+}
+
+#section2 li {
+	color: #aeaeae;
+	font-size: 18px;
+}
+
+#section2 li a {
+	color: #aeaeae;
+	transition: color 0.5s ease;
+	font-weight: bold;
+}
+
+#section2 li a:hover {
+	color: #5f465b;
+	text-decoration: none;
+	border-bottom: 1px solid #5f465b;
+}
+
+/* SECTION 3 - features */
+#section3 {
+	height: 350px;
 }
 
 .featureImg {
@@ -89,6 +137,7 @@ ul.nav a:hover {
 	border-radius: 5px;
 	width: 250px;
 	height: 200px;
+	margin-bottom: 7px;
 }
 
 .featureImg img {
@@ -97,5 +146,32 @@ ul.nav a:hover {
 
 p.featureText {
 	width: 250px;
+	text-align: center;
 }
+
+/* SECTION 4 - plans */
+#section4 {
+	clear: left;
+}
+
+#section4 span {
+	font-size: 16px;
+	padding: 20px 0 0 260px;
+	letter-spacing: 2px;
+}
+
+#section4 a {
+	color: #333333;
+	transition: color 0.5 ease;
+}
+
+#section4 a:hover {
+	color: #5f465b;
+	text-decoration: none;
+}
+
+
+
+
+
 

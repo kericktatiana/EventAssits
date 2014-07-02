@@ -62,6 +62,10 @@ Monday June 23 - Sunday June 29
 	-back end controller
 	-routing in the app (front end)
 	-backend routing
+
+Monday June 30 - Sunday July 6th
+-------------------------------------------
+-Reformatted thing and dummy data with my content
 	
 
 
