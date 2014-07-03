@@ -7,27 +7,25 @@
 
 <div class="userFuncBG">
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-8">
     <h1>Login</h1>
   </div>
 </div><!-- row -->
 
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-8">
     <form class="form" name="form" id="loginForm" ng-submit="login(form)" novalidate>
 
       <!-- Email -->
       <div class="form-group row">
-        <label>Email</label>
 
-        <input type="text" name="email" class="form-control" ng-model="user.email" required>
+        <input type="text" name="email" class="form-control" ng-model="user.email" required placeholder="Email">
       </div><!-- form-group -->
 
       <!-- Password -->
       <div class="form-group row">
-        <label>Password</label>
         
-        <input type="password" name="password" class="form-control" ng-model="user.password" required>
+        <input type="password" name="password" class="form-control" ng-model="user.password" required placeholder="Password">
       </div><!-- form-group -->
 
 
@@ -38,20 +36,17 @@
         <p class="help-block">{{ errors.other }}</p>
       </div><!-- form-group -->
 
-      <button type="submit" class="btn btn-lg btn-primary col-md-2"> Sign in </button>
-    
-      <span class="col-md-4">Not registered? 
-        <br />
+      <button type="submit" class="btn btn-lg"> Sign in </button>
+
+      <hr />
+      <div class="row" id="regLink">
+        <span>Not registered? 
         <a href="/signup" class="text-center new-account">Create an account.</a></span>
+      </div>
 
     </form>
     
   </div><!-- col6 -->
 </div><!-- row -->
 
-<div class="col-sm-4 pull-right">
-  testing
-</div>
-
-    
 </div><!-- userFuncBG -->

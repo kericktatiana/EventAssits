@@ -178,20 +178,47 @@ p.featureText {
 ----------------------------------------*/
 .userFuncBG {
 	background: rgba(0, 0, 0, 0.7);
-}
-
-h1 {
-	color: #5f465b;
-	padding: 15px 0 0 30px;
-}
-
-#loginForm {
-	padding: 15px 0 0 50px;
+	text-align: center;
 	height: 400px;
 }
 
-label {
-	color: #58647f;
+.userFuncBG h1 {
+	color: #aeaeae;
+	padding: 15px 0 0 390px;
 }
+
+#loginForm {
+	padding: 15px 0 0 390px;
+	height: 250px;
+}
+
+
+#loginForm button {
+	background-color: #5f465b;
+	color: #aeaeae;
+	padding: 7px 40px 7px 40px;
+	transition: background-color 0.5s ease;
+}
+
+#loginForm button:hover {
+	background-color: #4c3849;
+}
+
+#regLink span {
+	color: #aeaeae;
+	font-size: 18px;
+}
+
+#regLink a {
+	color: #aeaeae;
+	transition: color 0.5s ease;
+}
+
+#regLink a:hover {
+	color: #5f465b;
+	text-decoration: none; 
+	border-bottom: 1px solid #4c3849;
+}
+
 
 
