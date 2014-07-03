@@ -1,44 +1,57 @@
 <!-- 
   * login - View
+  * To log a user in
  -->
 
 <div ng-include="'partials/navbar.html'"></div>
 
+<div class="userFuncBG">
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col-md-6">
     <h1>Login</h1>
-    <p>Accounts are reset on server restart from <code>dummydata.js</code>. Default account is <code>test@test.com</code> / <code>test</code></p>
   </div>
-  <div class="col-sm-12">
-    <form class="form" name="form" ng-submit="login(form)" novalidate>
+</div><!-- row -->
 
-      <div class="form-group">
+<div class="row">
+  <div class="col-md-6">
+    <form class="form" name="form" id="loginForm" ng-submit="login(form)" novalidate>
+
+      <!-- Email -->
+      <div class="form-group row">
         <label>Email</label>
 
         <input type="text" name="email" class="form-control" ng-model="user.email" required>
-      </div>
+      </div><!-- form-group -->
 
-      <div class="form-group">
+      <!-- Password -->
+      <div class="form-group row">
         <label>Password</label>
         
         <input type="password" name="password" class="form-control" ng-model="user.password" required>
-      </div>
+      </div><!-- form-group -->
+
 
       <div class="form-group has-error">
         <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && submitted">
            Please enter your email and password.
         </p>              
         <p class="help-block">{{ errors.other }}</p>
-      </div>
+      </div><!-- form-group -->
 
-      <button type="submit" class="btn btn-lg btn-primary"> Sign in </button>
+      <button type="submit" class="btn btn-lg btn-primary col-md-2"> Sign in </button>
+    
+      <span class="col-md-4">Not registered? 
+        <br />
+        <a href="/signup" class="text-center new-account">Create an account.</a></span>
+
     </form>
-  </div>
+    
+  </div><!-- col6 -->
+</div><!-- row -->
+
+<div class="col-sm-4 pull-right">
+  testing
 </div>
 
-<div class="row">
-  <div class="col-sm-12">
-    <hr>
-    Not registered? <a href="/signup" class="text-center new-account">Create an account.</a>
-  </div>
-</div>
+    
+</div><!-- userFuncBG -->

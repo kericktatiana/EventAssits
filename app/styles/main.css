@@ -24,6 +24,10 @@ ul.nav a:hover {
 	background-color: #5f465b;
 }
 
+ul.nav a:active {
+	background-color: #5f456b;
+}
+
 /* MAIN CONTENT - wrapper
 -----------------------------------*/
 
@@ -170,8 +174,24 @@ p.featureText {
 	text-decoration: none;
 }
 
+/* LOGIN VIEW 
+----------------------------------------*/
+.userFuncBG {
+	background: rgba(0, 0, 0, 0.7);
+}
 
+h1 {
+	color: #5f465b;
+	padding: 15px 0 0 30px;
+}
 
+#loginForm {
+	padding: 15px 0 0 50px;
+	height: 400px;
+}
 
+label {
+	color: #58647f;
+}
 
 
