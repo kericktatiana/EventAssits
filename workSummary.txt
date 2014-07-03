@@ -67,5 +67,8 @@ Monday June 30 - Sunday July 6th
 -------------------------------------------
 -Reformatted thing and dummy data with my content
 -Landing css done
+-Login css done
+-Sign up css done
+
 
 
