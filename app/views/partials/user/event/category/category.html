@@ -7,16 +7,17 @@
 
 <div ng-include="'partials/navbar.html'"></div>
 
+<div class="appBG">
 <h1>Categories</h1>
 
 <!-- <div ng-include="'partials/user/event/category/categoryForm.html'"></div> -->
 
 <div class="row">
-<div class="col-sm-12">
+<div class="col-md-8">
 	<h3>Add Category</h3>
 </div><!-- col12 -->
 
-<div class="col-sm-12">
+<div class="col-md-8">
 <form class="form" name="form" ng-submit="createCategory(form)" novalidate>
 
 	<!-- Category name -->
@@ -49,3 +50,5 @@
 		<h5>{{userCategory.categoryName}}</h5>
 	</div>
 </div>
+
+</div><!-- appBG -->

@@ -226,5 +226,44 @@ p.featureText {
 	border-bottom: 1px solid #4c3849;
 }
 
+/* THE APPLICATION
+--------------------------------------------*/
+.appBG {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* CREATE EVENT 
+--------------------------------*/
+#createEvent h1 {
+	color: #aeaeae;
+	padding: 10px 0 10px 450px;
+}
+
+#createEventForm {
+	padding: 0 0 0 380px;
+	height: 700px;
+}
+
+#createEventForm label {
+	color: #aeaeae;
+	font-size: 17px;
+	padding: 0 0 0 7px;
+	letter-spacing: 2px;
+	font-weight: normal;
+}
+
+#createEventForm button {
+	background-color: #5f465b;
+	color: #aeaeae;
+	margin-left: 85px;
+	padding: 7px 40px 7px 40px;
+	transition: background-color 0.5s ease;
+}
+
+#createEventForm button:hover {
+	background-color: #4c3849;
+}
+
+
 
 

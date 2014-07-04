@@ -1,18 +1,23 @@
 <!--
   * create event - View
   * Only accessable when user is logged in
+  * Form to create an event
  -->
 
 <div ng-include="'partials/navbar.html'"></div>
 
+<div class="appBG">
+
+<div id="createEvent">
 <div class="row">
-	<div class="col-sm-12">
-		<h1>Create Event</h1>
-	</div><!-- col12 -->
+<div class="col-md-8">
+	<h1>Create Event</h1>
+</div><!-- col8 -->
+</div><!-- row -->
 
-
-	<div class="col-sm-12">
-	<form class="form" name="form" ng-submit="createEvent(form)" novalidate>
+<div class="row">
+<div class="col-md-8">
+	<form class="form" name="form" id="createEventForm" ng-submit="createEvent(form)" novalidate>
 
 		<!-- Title -->
 		<div class="form-group" ng-class="{ 'has-success': form.title.$valid && submitted, 'has-error': form.title.$invalid && submitted }">
@@ -79,11 +84,15 @@
 
 			<label>Description:</label>
 
-			<textarea name="title" class="form-control" ng-model="event.description" required></textarea>
+			<textarea name="title" class="form-control" ng-model="event.description" rows="5" required></textarea>
 		</div><!-- form-group -->
 
 		<button class="btn btn-lg btn-primary" type="submit">Create Event</button>
 
 	</form>
-	</div><!-- col12 -->
-</div><!-- row
+</div><!-- col8 -->
+
+</div><!-- createEvent -->
+</div><!-- row -->
+
+</div><!-- appBG -->
