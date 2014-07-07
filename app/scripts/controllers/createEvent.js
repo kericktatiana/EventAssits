@@ -11,8 +11,6 @@ angular.module('angularFullApp')
 		$scope.event = {};
 		$scope.errors = {};
 
-		console.log($rootScope.currentUser.id);
-
 		$scope.createEvent = function(form) {
 			$scope.submitted = true;
 
@@ -29,6 +27,7 @@ angular.module('angularFullApp')
 				.then( function() {
 					//Event created, redirect them to event page
 					$location.path('/event');
+					console.log('does then even run?');
 				})
 				.catch( function(err) {
 					err = err.data;

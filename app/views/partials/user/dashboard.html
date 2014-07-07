@@ -1,23 +1,43 @@
-<!-- 
+<!--
   * Dashboard - View
   * Only accessable when user is logged in
  -->
 
 <div ng-include="'partials/navbar.html'"></div>
 
-<div class="appBG">
-<h1>Hello, <span ng-show="currentUser">{{ currentUser.firstName }} {{ currentUser.lastName }}</span>. this is your dashboard</h1>	
+<div class="appBG" id="dashboard">
 
-<a href="/createEvent">Create Event</a>
+<div class="row">
+	<div class="col-md-8">
+		<h1>
+			Hello, <span ng-show="currentUser">{{ currentUser.firstName }}</span>.
+		</h1>	
+	</div><!-- col8 -->
+	</div><!-- row -->
 
-<h3>Your events</h3>
+	<div class="row" id="eventsTop">
+		<h2 class="pull-left">Your Events</h2>
 
-<div class="row marketing">
-  <div ng-repeat="event in getEvents">
-  	<a href="/event/{{event._id}}">
-    	<h4>{{event.title}}</h4>
-    	<p>{{event.date}}</p>
-  	</a>
-  </div>
-</div>
+		<a href="/createEvent" id="createEventLink">Create Event</a>
+	</div>
+
+	<div class="col-md-8">
+	<hr />
+	</div>
+
+	<div id="events" class="row">
+	<div class="col-md-8">
+
+	<div class="col-md-6" ng-repeat="event in getEvents">
+		<div class="row">
+			<h4>{{ event.title }}</h4>
+		</div>
+		<div class="row">
+			<p>{{ event.date }}</p>
+		</div>
+	</div><!-- col6 -->
+
+	</div><!-- col8 -->
+</div><!-- row -->
+
 </div><!-- appBG -->

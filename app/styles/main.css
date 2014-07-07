@@ -232,10 +232,34 @@ p.featureText {
 	background-color: rgba(0, 0, 0, 0.7);
 }
 
+.appBG h1 {
+	color: #755670;
+}
+
+.appBG h3 {
+	color: #6f526a;
+}
+
+/* DASHBOARD
+-------------------------------*/
+#dashboard {
+	padding: 0 0 0 50px;
+}
+
+#eventsTop {
+	padding: 0 0 0 30px;
+}
+
+#createEventLink {
+	padding: 10px 0 0 50px;
+	position: relative;
+	top: 25px;
+}
+
+
 /* CREATE EVENT 
 --------------------------------*/
 #createEvent h1 {
-	color: #aeaeae;
 	padding: 10px 0 10px 450px;
 }
 

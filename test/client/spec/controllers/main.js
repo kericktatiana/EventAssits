@@ -6,6 +6,7 @@ describe('Controller: MainCtrl', function () {
   beforeEach(module('angularFullApp'));
 
   var MainCtrl,
+    DashboardCtrl,
     scope,
     $httpBackend;
 
@@ -14,10 +15,21 @@ describe('Controller: MainCtrl', function () {
     $httpBackend = _$httpBackend_;
     $httpBackend.expectGET('/api/awesomeThings')
       .respond(['HTML5 Boilerplate', 'AngularJS', 'Karma', 'Express']);
+    
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
-      $scope: scope
-    });
+    var currentUser = scope.$root.currentUser;
+
+    if(currentUser === null) {
+      MainCtrl = $controller('MainCtrl', {
+        $scope: scope
+      });
+    } else {
+      DashboardCtrl = $controller('DashboardCtrl', {
+        $scope: scope
+      });
+    }
+
+    
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {

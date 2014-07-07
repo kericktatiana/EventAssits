@@ -13,6 +13,9 @@ angular.module('angularFullApp')
     }, {
       'title': 'Account Settigs',
       'link': '/settings'
+    }, {
+      'title': 'Users Name',
+      'link': '/dashboard'
     }];
     
     $scope.logout = function() {

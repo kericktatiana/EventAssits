@@ -11,6 +11,8 @@ angular.module('angularFullApp')
 		//get events from Broute
 		$http.get('/api/getEvents').success(
 			function(getEvents) {
+
 				$scope.getEvents = getEvents;
+
 			});
 	});
