@@ -73,6 +73,7 @@ Monday June 30 - Sunday July 6th
 
 Monday July 7th - Sunday July 13
 ------------------------------------------- 
-
+-Dashboard some what finished
+-Event jumpbotron done
 
 

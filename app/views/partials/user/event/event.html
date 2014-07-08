@@ -7,18 +7,41 @@
 <div ng-include="'partials/navbar.html'"></div>
 
 <div class="appBG">
-<h1>This is the view for a created event</h1>
 
-<p>Event information needs to go here</p>
+<div class="row" id="jumbotron">
 
-<div ng-modle="showEvent">
-	<h3>{{ showEvent.title }}</h3>
-	<h5>{{ showEvent.description}}</h5>
-	<p>{{ showEvent.date }}</p>
-	<p>{{ showEvent.setUp }}</p>
-	<p>{{ showEvent.startTime }}</p>
-	<p>{{ showEvent.strike }}</p>
-</div>
+	<div class="pull-right" id="icons">
+		<a href="/categories" alt="View Categories"><span  class="glyphicon glyphicon-th-list"></span></a>
+		<br />
+		<a href="/users" alt="Crew"><span class="glyphicon glyphicon-user"></span></a>
+		<br />
+		<a href="/eventSettings" alt="Event Settings"><span class="glyphicon glyphicon-cog"></span></a>
+	</div><!-- icons -->
 
-<a href="/categories">View Categories</a>
+	<h1>{{ showEvent.title }}</h1>
+
+	<div id="details">
+		<h3>{{ showEvent.date }}</h3>
+
+		<h4 class="pull-left" id="times">
+			Set up: {{ showEvent.setUp }}
+			&nbsp;
+			&nbsp;
+			Show Time: {{ showEvent.startTime }}
+			<br />
+			Estimated Break Down Time: {{ showEvent.strike }}
+		</h4>
+
+	</div><!-- details -->
+
+	<p id="desc">
+		{{ showEvent.description }}
+	</p>
+
+</div><!-- jumbotron -->
+
+
+
+
+
 </div><!-- appBG -->

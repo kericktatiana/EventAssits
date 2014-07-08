@@ -302,5 +302,50 @@ h2 {
 }
 
 
+/* EVENT VIEW
+--------------------------------*/
+#jumbotron {
+	background-color: rgba(96, 121, 130, 0.5);
+	border-radius: 3px;
+	width: 900px;
+	padding: 0 0 0 20px;
+	margin: 0 0 0 120px;
+}
+
+#icons {
+	padding: 10px 5px 0 0;
+	font-size: 20px;
+	display: block;
+}
+
+#icons a {
+	color: #303030;
+}
+
+#icons a:hover {
+	color: #638490;
+}
+
+#jumbotron h1,
+#jumbotron h3,
+#jumbotron h4 {
+	color: #303030;
+}
+
+#details {
+	padding: 0 0 0 20px;
+}
+
+#desc {
+	padding: 0 0 0 400px;
+}
+
+
+
+
+
+
+
+
 
 
