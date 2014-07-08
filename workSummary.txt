@@ -69,6 +69,10 @@ Monday June 30 - Sunday July 6th
 -Landing css done
 -Login css done
 -Sign up css done
+-Started Dashboard css
+
+Monday July 7th - Sunday July 13
+------------------------------------------- 
 
 
 

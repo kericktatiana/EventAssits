@@ -230,6 +230,7 @@ p.featureText {
 --------------------------------------------*/
 .appBG {
 	background-color: rgba(0, 0, 0, 0.7);
+	height: 500px;
 }
 
 .appBG h1 {
@@ -246,14 +247,26 @@ p.featureText {
 	padding: 0 0 0 50px;
 }
 
+#eventsBox {
+	padding: 0 0 0 200px;
+}
+
 #eventsTop {
 	padding: 0 0 0 30px;
 }
 
+h2 {
+	color: #607982;
+}
+
 #createEventLink {
-	padding: 10px 0 0 50px;
+	padding: 10px 0 0 300px;
 	position: relative;
 	top: 25px;
+}
+
+#events {
+	padding: 0 0 0 50px;
 }
 
 
