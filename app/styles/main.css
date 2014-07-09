@@ -326,7 +326,10 @@ h2 {
 	color: #638490;
 }
 
-#jumbotron h1,
+#jumbotron h1 {
+	color: #a590a2;
+}
+
 #jumbotron h3,
 #jumbotron h4 {
 	color: #303030;
@@ -340,8 +343,31 @@ h2 {
 	padding: 0 0 0 400px;
 }
 
+#segments {
+	background-color: rgba(96, 121, 130, 0.5);
+	padding: 0 0 0 20px;
+	margin: 50px 0 0 120px;
+	width: 900px;
+	border-radius: 3px;
+}
 
+#segments h1 {
+	color: #a590a2;
+}
 
+#addSegmentForm {
+	margin: 0 0 20px 100px;
+}
+
+#addSegmentForm label {
+	color: #909090;
+}
+
+#addSegmentForm button {
+	margin: 0 0 10px 100px;
+	background-color: #5f465b;
+	color: #909090;	
+}
 
 
 

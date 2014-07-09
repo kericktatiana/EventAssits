@@ -20,6 +20,13 @@ angular.module('angularFullApp')
 
 			});
 
+		$http.get('/api/getCategorys').success(
+			function(getCategorys) {
+				$scope.getCategorys = getCategorys;
+
+				console.log('testing');
+			});
+
 		
 
 	}); //controller

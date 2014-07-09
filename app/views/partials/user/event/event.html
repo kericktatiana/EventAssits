@@ -40,8 +40,86 @@
 
 </div><!-- jumbotron -->
 
+<div id="segments">
+
+	<div id="addSegment">
+	<div class="row">
+		<div class="col-md-8">
+			<h1>Add Segment</h1>
+		</div><!-- col8 -->
+	</div><!-- row -->
+
+	<div class="row">
+		<div class="col-md-8">
+			<form class="form" name="form" id="addSegmentForm" ng-submit="addSegment(form)" novalidate>
+
+				<!-- time -->
+				<div class="form-group col-md-6" ng-class="{ 'has-success': form.time.$valid && submitted, 'has-error': form.time.$invalid && submitted }">
+
+					<label>Time:</label>
+
+					<input type="time" name="time" class="form-control" ng-model="segment.time" required />
+
+					<p class="help-block" ng-show="form.time.$error.required && submitted">
+						A time for the segment is required
+					</p>
+
+				</div><!-- form-group -->
+
+				<!-- duration -->
+				<div class="form-group col-md-6" ng-class="{ 'has-success': form.duration.$valid && submitted, 'has-error': form.duration.$invalid && submitted }">
+
+					<label>Duration:</label>
+
+					<select type="time" name="duration" class="form-control" ng-model="segment.duration" required>
+						<option>15 min</option>
+						<option>30 min</option>
+						<option>45 min</option>
+						<option>1 hr</option>
+						<option>1 hr 15 min</option>
+						<option>1 hr 30 min</option>
+						<option>1 hr 45 min</option>
+						<option>2 hrs</option>
+					</select>
+
+					<p class="help-block" ng-show="form.duration.$error.required && submitted">
+						A duration of the segment is required
+					</p>
+				</div><!-- form-group -->
 
 
+				<!-- category -->
+				<div class="form-group col-md-12" ng-class="{ 'has-success': form.category.$valid && submitted, 'has-error': form.category.$invalid && submitted }">
+
+					<label>Category:</label>
+
+					<select type="text" name="category" class="form-control" ng-model="segment.category" required>
+						<option ng-repeat="category in getCategorys">
+							{{ category.categoryName }}
+						</option>
+					</select>
+
+					<p class="help-block" ng-show="form.time.$error.required && submitted">
+						A category for the segment is required
+					</p>
+				</div><!-- form-group -->
+
+				<!-- task -->
+				<div class="form-group col-md-12" ng-class="{ 'has-success': form.task.$valid && submitted, 'has-error': form.task.$invalid && submitted }">
+
+					<label>Task:</label>
+
+					<textarea name="task" class="form-control" ng-model="segment.task"></textarea>
+				</div><!-- form-group -->
+
+				<button class="btn btn-sm col-md-6" type="submit">Add Segment</button>
+			</form>
+
+		</div><!-- col8 -->
+	</div>
+	</div><!-- addSegment -->
+
+</div><!-- segements -->
 
 
 </div><!-- appBG -->
