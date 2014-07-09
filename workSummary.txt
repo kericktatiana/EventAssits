@@ -75,5 +75,9 @@ Monday July 7th - Sunday July 13
 ------------------------------------------- 
 -Dashboard some what finished
 -Event jumpbotron done
+-segment form created and some what styled
+-Segments:
+	-schema
+
 
 
