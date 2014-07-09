@@ -8,7 +8,7 @@
 'use strict';
 
 angular.module('angularFullApp')
-	.controller('EventCtrl', function ($scope, $http, $routeParams) {
+	.controller('EventCtrl', function ($scope, $http, $location, $routeParams) {
 
 		//get the id of current event
 		var currentEvent = $routeParams.id;
@@ -27,6 +27,7 @@ angular.module('angularFullApp')
 				console.log('testing');
 			});
 
+		
 		
 
 	}); //controller

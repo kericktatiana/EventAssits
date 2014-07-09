@@ -78,6 +78,8 @@ Monday July 7th - Sunday July 13
 -segment form created and some what styled
 -Segments:
 	-schema
+	-backend controller
+	-route in api
 
 
 

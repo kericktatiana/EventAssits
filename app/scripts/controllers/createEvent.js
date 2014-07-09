@@ -27,7 +27,6 @@ angular.module('angularFullApp')
 				.then( function() {
 					//Event created, redirect them to event page
 					$location.path('/event');
-					console.log('does then even run?');
 				})
 				.catch( function(err) {
 					err = err.data;

@@ -1,6 +1,7 @@
 /*
  * Eventing.js - Service
  * Factory methods for event functionality 
+ * Also includes segment functionality
  * dependent on event.js service
  */
 
@@ -54,6 +55,7 @@ angular.module('angularFullApp')
 				var event = $rootScope.currentEvent;
 				return !!event;
 			},
+
 		};//return
 
 	});//factory

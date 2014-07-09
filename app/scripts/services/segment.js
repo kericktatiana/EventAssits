@@ -1,13 +1,13 @@
 /**
- * event.js - Service
- * put and get methods for events
+ * category.js - Service
+ * put and get methods for categories
 **/
 
 'use strict';
 
 angular.module('angularFullApp')
-	.factory('Event', function ($resource) {
-		return $resource('/api/events/:id', {
+	.factory('Segment', function ($resource) {
+		return $resource('/api/segments/:id', {
 			id: '@id'
 		}, { //parameters default
 			update: {
@@ -17,9 +17,8 @@ angular.module('angularFullApp')
 			get: {
 				method: 'GET',
 				params: {
-					id:'me'
+					id: 'me'
 				}
 			}
 		});
 	});
-
