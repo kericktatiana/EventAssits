@@ -27,10 +27,5 @@ angular.module('angularFullApp')
 				console.log('testing');
 			});
 
-		
-		
-
 	}); //controller
-
-// this is where I want to call segments and loop through
 

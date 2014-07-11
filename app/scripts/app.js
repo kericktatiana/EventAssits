@@ -47,11 +47,11 @@ angular.module('angularFullApp', [
 
       //Categories
       .when('/categories', {
-        templateUrl: 'partials/user/event/category/category',
+        templateUrl: 'partials/user/event/links/category',
         controller: 'CategoryCtrl',
         authenticate: true
       })
-      
+
 
       //Accoutn settings
       .when('/settings', {

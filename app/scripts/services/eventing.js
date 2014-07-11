@@ -59,3 +59,4 @@ angular.module('angularFullApp')
 		};//return
 
 	});//factory
+
