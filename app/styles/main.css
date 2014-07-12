@@ -312,17 +312,24 @@ h2 {
 	margin: 0 0 0 120px;
 }
 
-#icons {
+#icons,
+#addSegmentsLink {
 	padding: 10px 5px 0 0;
 	font-size: 20px;
 	display: block;
 }
 
-#icons a {
+#addSegmentsLink {
+	padding: 20px 25px 0 0;
+}
+
+#icons a,
+#addSegmentsLink a {
 	color: #303030;
 }
 
-#icons a:hover {
+#icons a:hover,
+#addSegmentsLink a:hover {
 	color: #638490;
 }
 

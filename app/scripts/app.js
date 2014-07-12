@@ -52,8 +52,7 @@ angular.module('angularFullApp', [
         authenticate: true
       })
 
-
-      //Accoutn settings
+      //Account settings
       .when('/settings', {
         templateUrl: 'partials/user/settings',
         controller: 'SettingsCtrl',
