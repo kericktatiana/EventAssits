@@ -46,6 +46,8 @@ angular.module('angularFullApp')
 		$http.get('/api/events/' + currentEvent).success(
 			function(showEvent) {
 				$scope.showEvent = showEvent.shape;
+
+				console.log(showEvent.segments);
 			});
 
 		//get the categories for drop down
