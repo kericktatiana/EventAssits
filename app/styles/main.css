@@ -1,384 +1,140 @@
-/* BODY
-----------------------------*/
+/* COLORS
+-----------------
+* blue: 45505d
 
+*/
+
+
+/* Space out content a bit */
 body {
+  padding: 0 0 20px 0;
   background: #000 url(../images/main_bg.jpg) center center fixed no-repeat;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #aeaeae;
+  font-size: 15px;
 }
 
-/* HEADER - navigation
------------------------------*/
+h1 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
 
 .header {
-	background: rgba(0, 0, 0, 0.7);
-	padding: 5px 5px 10px 5px;
+  height: 55px;
+}
+
+/* Everything but the jumbotron get side spacing for mobile first views */
+.header,
+.footer {
+  padding: 0 15px 0 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #aeaeae;
+}
+
+.header #logo {
+  margin: 8px 0 0 0;
 }
 
 ul.nav a {
-	color: #cecece;
-	font-size: 15px;
-	transition: background-color 0.3s ease;
+  color: #746080;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 ul.nav a:hover {
-	background-color: #5f465b;
+  background-color: #746080;
+  color: #aeaeae;
 }
 
-ul.nav a:active {
-	background-color: #5f456b;
+ul.nav a.active {
+  background-color: #5f456b;
 }
 
-/* MAIN CONTENT - wrapper
------------------------------------*/
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, 
+.nav-pills > li.active > a:focus {
+  color: #d6d6d6;
+  background-color: #5f456b;
+}
 
 .wrapper {
-	background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-
-/* SECTION 1 - introduction content */
-#section1 {
-	height: 300px;
+/* Mae the masthead heading the same height at the navigation */
+.header h3 {
+  margin: 0 0 0 0;
+  line-height: 40px;
+  padding: 0 0 0 19px;
 }
 
-#intro {
-	padding: 0 0 0 100px;
+/* Custom page footer */
+.footer {
+  padding: 10px 0 0 20px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+  clear: left;
+  text-align: center;
 }
 
-#intro h3 {
-	color: #000;
-	font-weight: bold;
-	padding-left: 50px;
+.footer a {
+  color: #746080;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1000px;
+    background-color: rgba(27, 27, 27, 0.9);
+  }
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* MAIN 
+-------------------------*/
+
+#section2 {
+  text-align: left;
+  margin: 15px 0 0 100px;
 }
 
 #appInfo {
-	padding: 80px 40px 0 0;
+  width: 400px;
 }
 
-#appInfo p {
-	width: 430px;
-	font-size: 16px;
-	line-height: 22px;
-	color: #000;
-	font-weight: bold;
+#itemul {
+  margin-left: 10px;
 }
 
-#appInfo a {
-	color: #5f465b;
-	font-size: 22px;
-	font-weight: bold;
-	padding: 7px 10px;
-	margin: 0 0 0 280px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	transition: background-color 0.5s ease;
+#itemul a {
+  margin: 25px 0 0 210px;
+  color: #746080;
+  font-size: 16px;
 }
 
-#appInfo a:hover {
-	color: #000;
-	background-color: #5f465b;
-	text-decoration: none;
+#itemul a:hover {
+  color: #aeaeae;
+  background-color: #746080;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-decoration: none;
 }
 
 
-/* SECTION 2, 3, 4 - with background color */
-#bgcolor {
-	background: rgba(0, 0, 0, 0.8);
-	clear: left;
-}
-
-#section2 h2, 
-#section3 h2, 
-#section4 h2 {
-	color: #5f465b;
-}
-
-#section2,
-#section3,
-#section4 {
-	padding: 15px 0 0 60px;
-}
-
-#section2 p,
-#section3 p,
-#section4 p {
-	color: #aeaeae;
-	font-size: 15px;
-}
-
-/* SECTION 2 - additional information */
-#section2 {
-	height: 250px;
-}
-
-#section2 li {
-	color: #aeaeae;
-	font-size: 18px;
-}
-
-#section2 li a {
-	color: #aeaeae;
-	transition: color 0.5s ease;
-	font-weight: bold;
-}
-
-#section2 li a:hover {
-	color: #5f465b;
-	text-decoration: none;
-	border-bottom: 1px solid #5f465b;
-}
-
-/* SECTION 3 - features */
 #section3 {
-	height: 350px;
+  padding: 30px 0 0 0;
+  margin-bottom: 50px;
+  clear: left;
 }
-
-.featureImg {
-	background-color: rgba(95, 70, 91, 0.5);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	width: 250px;
-	height: 200px;
-	margin-bottom: 7px;
-}
-
-.featureImg img {
-	padding: 10px 0 0 12px;
-}
-
-p.featureText {
-	width: 250px;
-	text-align: center;
-}
-
-/* SECTION 4 - plans */
-#section4 {
-	clear: left;
-}
-
-#section4 span {
-	font-size: 16px;
-	padding: 20px 0 0 260px;
-	letter-spacing: 2px;
-}
-
-#section4 a {
-	color: #333333;
-	transition: color 0.5 ease;
-}
-
-#section4 a:hover {
-	color: #5f465b;
-	text-decoration: none;
-}
-
-/* LOGIN VIEW 
-----------------------------------------*/
-.userFuncBG {
-	background: rgba(0, 0, 0, 0.7);
-	text-align: center;
-	height: 400px;
-}
-
-.userFuncBG h1 {
-	color: #aeaeae;
-	padding: 15px 0 0 390px;
-}
-
-#loginForm,
-#regForm {
-	padding: 15px 0 0 390px;
-	height: 250px;
-}
-
-
-#loginForm button,
-#regForm button {
-	background-color: #5f465b;
-	color: #aeaeae;
-	padding: 7px 40px 7px 40px;
-	transition: background-color 0.5s ease;
-}
-
-#loginForm button:hover,
-#regForm button:hover {
-	background-color: #4c3849;
-}
-
-#regLink span, 
-#loginLink span{
-	color: #aeaeae;
-	font-size: 18px;
-}
-
-#regLink a,
-#loginLink a, {
-	color: #aeaeae;
-	transition: color 0.5s ease;
-}
-
-#regLink a:hover,
-#loginLink a:hover {
-	color: #5f465b;
-	text-decoration: none; 
-	border-bottom: 1px solid #4c3849;
-}
-
-/* THE APPLICATION
---------------------------------------------*/
-.appBG {
-	background-color: rgba(0, 0, 0, 0.7);
-	height: 900px;
-}
-
-.appBG h1 {
-	color: #755670;
-}
-
-.appBG h3 {
-	color: #6f526a;
-}
-
-/* DASHBOARD
--------------------------------*/
-#dashboard {
-	padding: 0 0 0 50px;
-}
-
-#eventsBox {
-	padding: 0 0 0 200px;
-}
-
-#eventsTop {
-	padding: 0 0 0 30px;
-}
-
-h2 {
-	color: #607982;
-}
-
-#createEventLink {
-	padding: 10px 0 0 300px;
-	position: relative;
-	top: 25px;
-}
-
-#events {
-	padding: 0 0 0 50px;
-}
-
-
-/* CREATE EVENT 
---------------------------------*/
-#createEvent h1 {
-	padding: 10px 0 10px 450px;
-}
-
-#createEventForm {
-	padding: 0 0 0 380px;
-	height: 700px;
-}
-
-#createEventForm label {
-	color: #aeaeae;
-	font-size: 17px;
-	padding: 0 0 0 7px;
-	letter-spacing: 2px;
-	font-weight: normal;
-}
-
-#createEventForm button {
-	background-color: #5f465b;
-	color: #aeaeae;
-	margin-left: 85px;
-	padding: 7px 40px 7px 40px;
-	transition: background-color 0.5s ease;
-}
-
-#createEventForm button:hover {
-	background-color: #4c3849;
-}
-
-
-/* EVENT VIEW
---------------------------------*/
-#jumbotron {
-	background-color: rgba(96, 121, 130, 0.5);
-	border-radius: 3px;
-	width: 900px;
-	padding: 0 0 0 20px;
-	margin: 0 0 0 120px;
-}
-
-#icons,
-#addSegmentsLink {
-	padding: 10px 5px 0 0;
-	font-size: 20px;
-	display: block;
-}
-
-#addSegmentsLink {
-	padding: 20px 25px 0 0;
-}
-
-#icons a,
-#addSegmentsLink a {
-	color: #303030;
-}
-
-#icons a:hover,
-#addSegmentsLink a:hover {
-	color: #638490;
-}
-
-#jumbotron h1 {
-	color: #a590a2;
-}
-
-#jumbotron h3,
-#jumbotron h4 {
-	color: #303030;
-}
-
-#details {
-	padding: 0 0 0 20px;
-}
-
-#desc {
-	padding: 0 0 0 400px;
-}
-
-#segments {
-	background-color: rgba(96, 121, 130, 0.5);
-	padding: 0 0 0 20px;
-	margin: 50px 0 0 120px;
-	width: 900px;
-	border-radius: 3px;
-}
-
-#segments h1 {
-	color: #a590a2;
-}
-
-#addSegmentForm {
-	margin: 0 0 20px 100px;
-}
-
-#addSegmentForm label {
-	color: #909090;
-}
-
-#addSegmentForm button {
-	margin: 0 0 10px 100px;
-	background-color: #5f465b;
-	color: #909090;	
-}
-
-
-
-
-
-
 
