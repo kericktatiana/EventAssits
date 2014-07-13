@@ -9,9 +9,13 @@
 
 <div class="row">
 	<div class="col-md-8">
-		<h1>
+		<h1 class="pull-left">
 			Hello, <span ng-show="currentUser">{{ currentUser.firstName }}</span>.
-		</h1>	
+		</h1>
+
+		<h3 id="today">
+
+		</h3>	
 	</div><!-- col8 -->
 	</div><!-- row -->
 
@@ -46,4 +50,84 @@
 		</div><!-- row -->
 	</div><!-- eventsBox --> 
 
-</div><!-- appBG 
+</div><!-- appBG -->
+
+
+<script type="text/javascript">
+	var d = new Date();
+
+	var day = d.getDate();
+	var month = "";
+	var weekDay = "";
+	var year = d.getFullYear();
+
+	//week day
+	switch (new Date().getDay()) {
+	    case 0:
+	        weekDay = "Sunday";
+	        break;
+	    case 1:
+	        weekDay = "Monday";
+	        break;
+	    case 2:
+	        weekDay = "Tuesday";
+	        break;
+	    case 3:
+	        weekDay = "Wednesday";
+	        break;
+	    case 4:
+	        weekDay = "Thursday";
+	        break;
+	    case 5:
+	        weekDay = "Friday";
+	        break;
+	    case 6:
+	        weekDay = "Saturday";
+	        break;
+	}
+
+	//month
+	switch (new Date().getMonth()) {
+		case 0:
+			month = "Janurary"
+			break;
+		case 1:
+			month = "Feburary"
+			break;
+		case 2:
+			month = "March"
+			break;
+		case 3:
+			month = "April"
+			break;
+		case 4:
+			month = "May"
+			break;
+		case 5:
+			month = "June"
+			break;
+		case 6:
+			month = "July"
+			break;
+		case 7:
+			month = "August"
+			break;
+		case 8:
+			month = "September"
+			break;
+		case 9:
+			month = "October"
+			break;
+		case 10:
+			month = "November"
+			break;
+		case 11:
+			month = "December"
+			break;
+	}
+
+	var today = weekDay + " " + day + " "+ month + " " + year;
+
+	document.getElementById("today").innerHTML = today;
+
+</script>

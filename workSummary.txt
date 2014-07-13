@@ -85,6 +85,8 @@ Monday July 7th - Sunday July 13
 -Segment now being pulled by EventCtrl
 -Segments sending to the db
 -Segments being pulled from the db
+-landing, login, signup redesign
+-convert time and dates to human readable
 
 
 
