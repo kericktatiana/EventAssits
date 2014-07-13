@@ -95,7 +95,7 @@
 				<label>Category:</label>
 
 				<select type="text" name="category" class="form-control" ng-model="segment.category" required>
-					<option ng-repeat="category in getCategorys">
+					<option ng-repeat="category in getCategorys" value="{{ category.categoryName }}">
 						{{ category.categoryName }}
 					</option>
 				</select>
@@ -119,6 +119,20 @@
 	</div><!-- col8 -->
 	</div>
 	</div><!-- addSegment -->
+
+	<div id="segmentsList">
+
+		<div class="segment" ng-repeat="segment in getSegments">
+			<div class="time pull-left">
+				<p>{{ segment.time }}</p>
+				<p>{{ segment.duration }}</p>
+			</div>
+
+			<span>{{ segment.category }}</span>
+			<p>{{ segment.task }}</p>
+		</div>
+
+	</div><!-- segmentsList -->
 
 </div><!-- segements -->
 

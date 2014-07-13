@@ -118,7 +118,7 @@ angular.module('angularFullApp')
 				    time[0] = +time[0] % 12 || 12; // Adjust hours
 				  }
 				  return time.join (''); // return adjusted time or original string
-				}
+				}//tConvert
 
 				//mongo times now human form
 				showEvent.shape.setUp = tConvert(setUp);
@@ -138,7 +138,28 @@ angular.module('angularFullApp')
 		//get the event's segments
 		$http.get('/api/getSegments/').success( function(getSegments) {
 			$scope.getSegments = getSegments;
-			console.log(getSegments);
+
+			function tConvert (time) {
+				// Check correct time format and split into components
+				time = time.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+
+				if (time.length > 1) { // If time format correct
+					time = time.slice (1);  // Remove full string match value
+					time[5] = +time[0] < 12 ? 'AM' : 'PM'; // Set AM/PM
+					time[0] = +time[0] % 12 || 12; // Adjust hours
+				}
+				return time.join (''); // return adjusted time or original string
+			}//tConvert
+
+			for(var i = 0; i < getSegments.length; i++) {
+				var segment = getSegments[i];
+
+				var time = segment.time;
+
+				segment.time = tConvert(time);
+			}
+
+
 		});
 
 	}); //controller
