@@ -46,9 +46,23 @@ angular.module('angularFullApp', [
       })
 
       //Categories
-      .when('/categories', {
+      .when('/event/:id/categories', {
         templateUrl: 'partials/user/event/links/category',
         controller: 'CategoryCtrl',
+        authenticate: true
+      })
+
+      //Crew
+      .when('/event/:id/crew', {
+        templateUrl: 'partials/user/event/links/crew',
+        controller: 'CrewCtrl',
+        authenticate: true
+      })
+
+      //Event Settings
+      .when('/event/:id/eventSettings', {
+        templateUrl: 'partials/user/event/link/eventSettings',
+        controller: 'EventSettingsCtrl',
         authenticate: true
       })
 
