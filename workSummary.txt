@@ -88,5 +88,9 @@ Monday July 7th - Sunday July 13
 -landing, login, signup redesign
 -convert time and dates to human readable
 
+Monday July 14 - Sunday July 20
+-------------------------------------------
+-Event css
+-segment form toggle
 
 

@@ -66,6 +66,10 @@ angular.module('angularFullApp')
 
 					//set mongo date to human
 					event.date = month + ' ' + day + ' ' + year;
+
+					var futureDate = new Date();
+					var numberOfDaysToAdd = 6;
+					futureDate.setDate(futureDate.getDate() + numberOfDaysToAdd);
 				}
 
 			});

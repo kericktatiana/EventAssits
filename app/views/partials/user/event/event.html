@@ -21,7 +21,7 @@
 	<h1>{{ showEvent.title }}</h1>
 
 	<div id="details">
-		<h3>{{ showEvent.date }}</h3>
+		<h4>{{ showEvent.date }}</h4>
 
 		<h4 class="pull-left" id="times">
 			Set up: {{ showEvent.setUp }}
@@ -29,7 +29,8 @@
 			&nbsp;
 			Show Time: {{ showEvent.startTime }}
 			<br />
-			Estimated Break Down Time: {{ showEvent.strike }}
+			<br />
+			Break Down: {{ showEvent.strike }}
 
 		</h4>
 
@@ -45,13 +46,22 @@
 
 	<div id="addSegment">
 	<div class="row">
-		<div class="col-md-8">
-			<h1>Add Segment</h1>
+		<div class="col-md-12">
+			<h1>
+				<span class="pull-right" id="plus"><a>+ Add Segment</a></span>
+				Segments
+				
+			</h1>
+
 		</div><!-- col8 -->
 	</div><!-- row -->
 
+	<div class="col8">
+		<hr /> 
+	</div>
+
 	<div class="row">
-	<div class="col-md-8">
+	<div class="col-md-12">
 		<form class="form" name="form" id="addSegmentForm" ng-submit="addSegment(form)" novalidate>
 
 			<!-- time -->
@@ -138,3 +148,26 @@
 
 
 </div><!-- appBG -->
+
+<script type="text/javascript">
+
+	var plus = document.getElementById("plus");
+
+	var form = document.getElementById("addSegmentForm");
+
+	var clicked = 0
+
+	plus.onclick = function (e) {
+		clicked++;
+
+		if ( clicked % 2 ) {
+			form.style.visibility = "visible";
+			form.style.display = "block";
+		}
+		else {
+			form.style.visibility = "hidden";
+			form.style.display = "none";
+		}
+	}
+	
+</script>

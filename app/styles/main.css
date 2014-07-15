@@ -1,10 +1,14 @@
 /* COLORS
 -----------------
 * blue: 45505d
+  purple: 746080
+  purple active: 5f456b 
+  grey: aeaeae
 
 */
 
-
+/* BODY STYLES AND FONT
+---------------------------------------------*/
 /* Space out content a bit */
 body {
   padding: 0 0 20px 0;
@@ -21,6 +25,15 @@ h1 {
 h3 {
   font-size: 25px;
 }
+
+
+/* Application wrapper */
+.wrapper {
+  text-align: center;
+}
+
+/* HEADER NAVIGATION & FOOTER
+---------------------------------------------*/
 
 .header {
   height: 55px;
@@ -57,14 +70,11 @@ ul.nav a.active {
   background-color: #5f456b;
 }
 
+/* Nav pills active state */
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, 
 .nav-pills > li.active > a:focus {
   color: #d6d6d6;
   background-color: #5f456b;
-}
-
-.wrapper {
-  text-align: center;
 }
 
 /* Mae the masthead heading the same height at the navigation */
@@ -102,7 +112,7 @@ ul.nav a.active {
 }
 
 /* MAIN 
--------------------------*/
+-----------------------------------------------*/
 #section2 {
   text-align: left;
   margin: 15px 0 0 100px;
@@ -139,7 +149,7 @@ ul.nav a.active {
 
 
 /* LOGIN/SIGNUP
-----------------------------*/
+-----------------------------------------------*/
 .userFuncBG {
   text-align: center;
   padding: 0 0 20px 31%;
@@ -162,6 +172,77 @@ ul.nav a.active {
 
 /* DASHBOARD
 -------------------------------*/
+#jumbotron {
+  background-color: rgba(27, 27, 27, 1);
+  width: 900px;
+  margin: 10px 0 0 30px;
+  padding: 10px 12px 10px 8px;
+}
+
+#jumbotron h1 {
+  color: #45505d;
+}
+
+#icons a {
+  color: #746080;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+#icons a:hover {
+  color: #5f4e68;
+}
+
+#details {
+  padding-left: 10px;
+}
+
+#desc {
+  padding-left: 420px;
+}
+
+#segments {
+  background-color: rgba(27, 27, 27, 1);
+  width: 900px;
+  margin: 10px 0 0 30px;
+  padding: 10px 50px 10px 50px;
+}
+
+#segments h1 {
+  color: #45505d;
+}
+
+
+#segments a {
+  font-size: 18px;
+  color: #746080;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+#segments a:hover {
+  color: #5f4e68;
+  text-decoration: none;
+}
+
+#addSegmentForm {
+  visibility: hidden;
+  display: none;
+}
+
+#addSegmentForm .btn {
+  padding: 3px 0 3px 0;
+  margin-bottom: 20px;
+  margin-left: 200px;
+}
+
+.segment {
+  margin: 20px 0 5px 0;
+}
+
+.time {
+  padding: 0 0 0 0;
+}
 
 
 
