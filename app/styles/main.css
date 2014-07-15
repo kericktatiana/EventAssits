@@ -238,13 +238,31 @@ ul.nav a.active {
 
 .segment {
   margin: 20px 0 5px 0;
+  padding: 0 0 7px 0;
+  width: 100%;
+  height: 100px;
+}
+
+.segment:nth-child(odd) {
+  background-color: rgba(60, 60, 60, 0.9);
 }
 
 .time {
-  padding: 0 0 0 0;
+  padding: 11px 7px 0 7px;
+  margin-right: 20px;
+  background-color: rgba(69, 93, 90, 0.5);
+  height: 100px;
 }
 
+.segmentCat {
+  font-weight: bold;
+  font-size: 20px;
+  color: #616e7c;
+}
 
+#helpIcons {
+  padding: 5px 5px 0 0;
+}
 
 
 

@@ -124,6 +124,10 @@
 			</div><!-- form-group -->
 
 			<button class="btn btn-sm col-md-6" type="submit">Add Segment</button>
+
+			<div class="col-md-12">
+				<hr />
+			</div>
 		</form>
 
 	</div><!-- col8 -->
@@ -135,11 +139,20 @@
 		<div class="segment" ng-repeat="segment in getSegments">
 			<div class="time pull-left">
 				<p>{{ segment.time }}</p>
+				<hr />
 				<p>{{ segment.duration }}</p>
 			</div>
 
-			<span>{{ segment.category }}</span>
+			<div class="pull-right" id="helpIcons">
+				<a href="#" alt="Delete Segment"><span class="glyphicon glyphicon-cog"></span></a>
+				<br />
+				<br />
+				<a href="#" alt="Segment Settings"><span class="glyphicon glyphicon-trash"></span></a>
+			</div>
+
+			<span class="segmentCat">{{ segment.category }}</span>
 			<p>{{ segment.task }}</p>
+
 		</div>
 
 	</div><!-- segmentsList -->
