@@ -8,8 +8,8 @@
 <div class="appBG" id="dashboard">
 
 <div class="row">
-	<div class="col-md-8">
-		<h1 class="pull-left">
+	<div class="col-md-12">
+		<h1 class="pull-left" id="greeting">
 			Hello, <span ng-show="currentUser">{{ currentUser.firstName }}</span>.
 		</h1>
 
@@ -19,34 +19,45 @@
 	</div><!-- col8 -->
 	</div><!-- row -->
 
-	<div class="eventsBox">
-		<div class="row" id="eventsTop">
-			<h2 class="pull-left">Your Events</h2>
+	<div class="row col-md-12">
+		<div class="row">
+			<h2>Upcoming Events</h2>
 
-			<a href="/createEvent" id="createEventLink">Create Event</a>
+			<div id="upcomingEvents" class="row" ng-repeat="event in getEvents">
+				<script type="text/javascript">
+
+					var title = "{{ event.title }}";
+
+					console.log(title);
+				
+
+				</script>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12" id="eventsBox">
+		<div class="row" id="eventsTop">
+			<h2 class="col-md-4">Your Events</h2>
+
+			<a href="/createEvent" id="createEventLink"><span class="glyphicon glyphicon-plus"></span>&nbsp;Create Event</a>
 		</div>
 
-		<div class="col-md-8">
+		<div class="col-md-12">
 			<hr />
 		</div>
 
 		<div class="events" class="row">
-			<div class="col-md-8">
-
+			<div class="col-md-12">
 				
 				<div class="col-md-6" ng-repeat="event in getEvents">
 					<a href="/event/{{event._id}}">
-					<div class="row">
 						<h4>{{ event.title }}</h4>
-					</div>
-					<div class="row">
 						<p>{{ event.date }}</p>
-					</div>
+					</a>
 				</div><!-- col6 -->
-			</a>
 
-
-			</div><!-- col8 -->
+			</div><!-- col12 -->
 		</div><!-- row -->
 	</div><!-- eventsBox --> 
 
@@ -55,6 +66,13 @@
 
 <script type="text/javascript">
 	var d = new Date();
+
+	if(d.getHours() >= 0 && d.getHours() < 14) {
+		document.getElementById("greeting").innerHTML = "Hello, {{ currentUser.firstName }}"; 
+	} 
+	else {
+		document.getElementById("greeting").innerHTML = "Good evening, {{ currentUser.firstName }}"; 
+	} 
 
 	var day = d.getDate();
 	var month = "";

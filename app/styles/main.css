@@ -171,7 +171,35 @@ ul.nav a.active {
 
 
 /* DASHBOARD
--------------------------------*/
+-------------------------------------------*/
+#greeting {
+  padding-left: 10px;
+}
+
+#today {
+  padding: 3px 0 0 680px;
+}
+
+#eventsBox h2 {
+  padding-left: 40px;
+}
+
+#createEventLink {
+  position: absolute;
+  top: 25px;
+  left: 700px;
+  font-size: 18px;
+}
+
+.events {
+  margin: 0 0 0 120px;
+  padding-bottom: 50px;
+}
+
+
+
+/* EVENT PAGE/SHAPE
+-------------------------------------------*/
 #jumbotron {
   background-color: rgba(27, 27, 27, 1);
   width: 900px;
