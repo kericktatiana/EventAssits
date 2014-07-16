@@ -8,24 +8,21 @@
 <div ng-include="'partials/navbar.html'"></div>
 
 <div class="appBG">
-<h1>Categories</h1>
 
-<!-- <div ng-include="'partials/user/event/category/categoryForm.html'"></div> -->
+<a href="/event/{{showEvent.id}}" id="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back</a>
 
-<div class="row">
+<div class="row" id="cateForm">
 <div class="col-md-8">
 	<h3>Add Category</h3>
 </div><!-- col12 -->
 
-<div class="col-md-8">
+<div class="col-md-12">
 <form class="form" name="form" ng-submit="createCategory(form)" novalidate>
 
 	<!-- Category name -->
 	<div class="form-group" ng-class="{ 'has-success': form.categoryName.$valid && submitted, 'has-error': form.categoryName.$invalid && submitted }">
 
-		<label>Category:</label>
-
-		<input type="text" name="categoryName" class="form-control" ng-model="category.categoryName" required />
+		<input type="text" name="categoryName" class="form-control" ng-model="category.categoryName" required placeholder="Category Name"/>
 
 		<p class="help-block" ng-show="form.categoryName.$error.required && submitted">
 			A name for the category is required
@@ -35,20 +32,23 @@
 		</p>
 	</div><!-- form-group -->
 
-	<button class="btn btn-sm btn-primary" type="submit">Add Category</button>
+	<button class="btn btn-sm col-md-6" type="submit">Add Category</button>
 
 </form>
 </div><!-- col12 -->
 </div><!-- row -->
 
-<h3>Your Categories</h3>
-<div class="row marketing">
-	<div ng-repeat="category in getCategorys">
+
+<div id="categoryList">
+	<h3>Your Categories</h3>
+	<div class="categoryName" ng-repeat="category in getCategorys">
+		<a href="#" class="pull-right"><span class="glyphicon glyphicon-trash"></span>&nbsp; &nbsp;</a>
 		<h5>{{category.categoryName}}</h5>
 	</div>
-	<div ng-repeat="userCategory in getUserCategorys">
-		<h5>{{userCategory.categoryName}}</h5>
-	</div>
-</div>
+</div><!-- categoryList -->
+
 
 </div><!-- appBG -->
+
+
+<div ng-include="'partials/footer.html'"></div>

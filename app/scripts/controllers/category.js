@@ -9,7 +9,9 @@
 'use strict';
 
 angular.module('angularFullApp')
-	.controller('CategoryCtrl', function ($scope, $http, Categoring, $location, $rootScope) {
+	.controller('CategoryCtrl', function ($scope, $http, Categoring, $location, $routeParams) {
+
+		var currentEvent = $routeParams.id;
 
 		$scope.category = {};
 		$scope.errors = {};
@@ -19,7 +21,7 @@ angular.module('angularFullApp')
 
 			if(form.$valid) {
 				Categoring.createCategory({
-					userId: $rootScope.currentUser.id,
+					eventId: currentEvent,
 					categoryName: $scope.category.categoryName
 				})
 				.then( function() {
@@ -39,12 +41,23 @@ angular.module('angularFullApp')
 			}
 		};
 
+		//get default categories
 		$http.get('/api/getCategorys').success(function(getCategorys) {
 				$scope.getCategorys = getCategorys;
 			});
 
-		$http.get('/api/getUserCategorys').success(function(getUserCategorys) {
-				$scope.getUserCategorys = getUserCategorys;
+		//get event specific categoires
+		$http.get('/api/getEventCategorys').success(function(getEventCategorys) {
+				$scope.getEventCategorys = getEventCategorys;
+
+				console.log(getEventCategorys);
 			});
+
+		//get event info for back btn
+		$http.get('/api/events/' + currentEvent).success(
+			function(showEvent) {
+				$scope.showEvent = showEvent.shape;
+			});
+
 
 	});//controller

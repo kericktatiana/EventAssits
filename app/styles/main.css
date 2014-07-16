@@ -197,7 +197,6 @@ ul.nav a.active {
 }
 
 
-
 /* EVENT PAGE/SHAPE
 -------------------------------------------*/
 #jumbotron {
@@ -291,6 +290,69 @@ ul.nav a.active {
 #helpIcons {
   padding: 5px 5px 0 0;
 }
+
+
+/* EVENT LINKS - CATEGORY CREW and EDIT
+-------------------------------------------*/
+#back {
+  margin: 50px 0 0 35px;
+  font-size: 18px;
+  color: #746080;
+  transition: color 0.3s ease;
+}
+
+#back:hover {
+  color: #5f4e68;
+  text-decoration: none;
+}
+
+/* CATEGORIES
+----------------*/
+#cateForm,
+#categoryList {
+  background-color: rgba(27, 27, 27, 1);
+  width: 900px;
+  margin: 10px 0 0 30px;
+  padding: 10px 12px 10px 8px;
+}
+
+#cateForm h1,
+#categoryList h3 {
+  color: #45505d;
+}
+
+#cateForm .btn {
+  padding: 3px 0 3px 0;
+  margin: 0 0 20px 215px;
+}
+
+#categoryList {
+  padding: 10px 0 20px 15px;
+}
+
+.categoryName {
+  margin: 0 15px 0 3px;
+  padding: 3px 0 3px 7px; 
+}
+
+.categoryName:nth-child(even) {
+  background-color: rgba(60, 60, 60, 0.9);
+}
+
+.categoryName a {
+  color: #746080;
+  font-size: 16px;
+  padding: 8px 0 0 0;
+  transition: color 0.3s ease;
+}
+
+.categoryName a:hover {
+  color: #5f4e68;
+  text-decoration: none;
+}
+
+
+
 
 
 
