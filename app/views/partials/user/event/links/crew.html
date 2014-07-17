@@ -7,6 +7,48 @@
 <div ng-include="'partials/navbar.html'"></div>
 
 <div class="appBG">
-<h1>Crew</h1>
+
+<a href="/event/{{showEvent.id}}" id="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back</a>
+
+<div class="row" id="crewForm">
+	<h1>Event Crew</h1>
+
+	<div class="col-md-12">
+	<form class="form" name="form" id="addCrewForm" ng-submit="addCrew(form)" novalidate>
+
+		<!-- Category -->
+		<div class="form-group" ng-class="{ 'has-success': form.category.$valid && submitted, 'has-error': form.category.$invalid && submitted }">
+
+			<label>Category:</label>
+
+			<select name="category" class="form-control" ng-model="crew.category" required>
+				<option ng-repeat="category in getCategorys" value="{{ category.categoryName }}">
+					{{ category.categoryName }}
+				</option>
+			</select>
+
+		</div>
+
+		<!-- Crew Member -->
+		<div class="form-group" ng-class="{ 'has-success': form.crewMember.$valid && submitted, 'has-error': form.crewMember.$invalid && submitted }">
+
+			<label>Crew Member:</label>
+
+			<textarea name="crewMember" class="form-control" ng-model="crew.crewMember"></textarea>
+
+			<p class="help-block" ng-show="form.crewMember.$error.required" && submitted>
+				Crew member(s) are required
+			</p>
+		</div>
+
+		<button class="btn btn-sm" type="submit">Add Crew</button>
+
+	</form>
+	</div>
+</div><!-- crewForm -->
+
+
 
 </div><!-- appBG -->
+
+<div ng-include="'partials/footer.html'"></div>

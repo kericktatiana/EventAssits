@@ -9,7 +9,9 @@
 'use strict';
 
 angular.module('angularFullApp')
-	.controller('CrewCtrl', function ($http, $scope, $location, Crewing) {
+	.controller('CrewCtrl', function ($http, $scope, $location, Crewing, $routeParams) {
+
+		var currentEvent = $routeParams.id;
 
 		$scope.crew = {};
 		$scope.errors = {};
@@ -20,7 +22,9 @@ angular.module('angularFullApp')
 			if(form.$valid) {
 				Crewing.addCrew({
 					//need event id
-					crewName: $scope.crew.crewName
+					eventId: currentEvent,
+					category: $scope.crew.category,
+					crewMember: $scope.crew.crewMember
 				})
 				.then( function() {
 					$location.reload();
@@ -37,5 +41,24 @@ angular.module('angularFullApp')
 				});
 			}
 		};
+
+		//get crew
+		$http.get('/api/getCrew').success(
+			function(getCrew) {
+				$scope.getCrew = getCrew;
+
+				console.log(getCrew);
+			});
+
+		//get categories for crew
+		$http.get('/api/getCategorys').success(function(getCategorys) {
+				$scope.getCategorys = getCategorys;
+			});
+
+		//get event info for back btn
+		$http.get('/api/events/' + currentEvent).success(
+			function(showEvent) {
+				$scope.showEvent = showEvent.shape;
+			});
 
 	});//controller

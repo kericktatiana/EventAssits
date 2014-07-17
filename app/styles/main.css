@@ -352,7 +352,29 @@ ul.nav a.active {
 }
 
 
+/* CREW
+-----------*/
+#crewForm,
+#crewList {
+  background-color: rgba(27, 27, 27, 1);
+  width: 900px;
+  margin: 10px 0 0 30px;
+  padding: 10px 12px 10px 8px;
+}
 
+#crewForm h1,
+#crewList h3 {
+  color: #45505d;
+}
+
+#crewForm .form {
+  padding: 5px 0 0 100px;
+}
+
+#crewForm .btn {
+  padding: 3px 0 3px 0;
+  margin-bottom: 20px;
+}
 
 
 

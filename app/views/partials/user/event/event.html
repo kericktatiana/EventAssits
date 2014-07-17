@@ -104,7 +104,7 @@
 
 				<label>Category:</label>
 
-				<select type="text" name="category" class="form-control" ng-model="segment.category" required>
+				<select name="category" class="form-control" ng-model="segment.category" required>
 					<option ng-repeat="category in getCategorys" value="{{ category.categoryName }}">
 						{{ category.categoryName }}
 					</option>
@@ -136,7 +136,7 @@
 
 	<div id="segmentsList">
 
-		<div class="segment" ng-repeat="segment in getSegments">
+		<div class="segment" ng-repeat="segment in getSegments track by $index">
 			<div class="time pull-left">
 				<p>{{ segment.time }}</p>
 				<hr />

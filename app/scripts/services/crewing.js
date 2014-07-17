@@ -19,7 +19,7 @@ angular.module('angularFullApp')
 			 * @param {function} callback - optional
 			 * return {Promise}
 			 */
-			createCategory: function(crew, callback) {
+			addCrew: function(crew, callback) {
 				var cb = callback || angular.noop;
 
 				return Crew.save(crew,
