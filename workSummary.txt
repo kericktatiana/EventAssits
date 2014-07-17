@@ -92,5 +92,9 @@ Monday July 14 - Sunday July 20
 -------------------------------------------
 -Event css
 -segment form toggle
+-category styled
+-category fixed to take event id
+-crew schema
+-crew backend controller
 
 
