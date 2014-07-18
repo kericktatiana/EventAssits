@@ -50,8 +50,8 @@ angular.module('angularFullApp')
 				console.log(getCrew);
 			});
 
-		//get categories for crew
-		$http.get('/api/getCategorys').success(function(getCategorys) {
+		//get event's categories for crew
+		$http.get('/api/getCategorys/' + currentEvent).success(function(getCategorys) {
 				$scope.getCategorys = getCategorys;
 			});
 
