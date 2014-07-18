@@ -43,11 +43,10 @@ angular.module('angularFullApp')
 		};
 
 		//get crew
-		$http.get('/api/getCrew').success(
+		$http.get('/api/getCrew/' + currentEvent).success(
 			function(getCrew) {
 				$scope.getCrew = getCrew;
 
-				console.log(getCrew);
 			});
 
 		//get event's categories for crew

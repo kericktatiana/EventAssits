@@ -11,7 +11,7 @@
 <a href="/event/{{showEvent.id}}" id="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back</a>
 
 <div class="row" id="crewForm">
-	<h1>Event Crew</h1>
+	<h1>Add Crew Members</h1>
 
 	<div class="col-md-12">
 	<form class="form" name="form" id="addCrewForm" ng-submit="addCrew(form)" novalidate>
@@ -32,7 +32,7 @@
 		<!-- Crew Member -->
 		<div class="form-group" ng-class="{ 'has-success': form.crewMember.$valid && submitted, 'has-error': form.crewMember.$invalid && submitted }">
 
-			<label>Crew Member:</label>
+			<label>Crew Member(s):</label>
 
 			<textarea name="crewMember" class="form-control" ng-model="crew.crewMember"></textarea>
 
@@ -46,6 +46,16 @@
 	</form>
 	</div>
 </div><!-- crewForm -->
+
+<div id="crewList">
+	<h3>Event Crew</h3>
+
+	<div class="crewMember" ng-repeat="crew in getCrew | filter:category:audio">
+		{{ crew.category }} - 
+		{{ crew.crewMember }}
+	</div><!-- crew member -->
+
+</div>
 
 
 
