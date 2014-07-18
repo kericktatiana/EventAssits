@@ -41,16 +41,9 @@ angular.module('angularFullApp')
 			}
 		};
 
-		//get default categories
-		$http.get('/api/getCategorys').success(function(getCategorys) {
+		//get event's categories
+		$http.get('/api/getCategorys/' + currentEvent).success(function(getCategorys) {
 				$scope.getCategorys = getCategorys;
-			});
-
-		//get event specific categoires
-		$http.get('/api/getEventCategorys').success(function(getEventCategorys) {
-				$scope.getEventCategorys = getEventCategorys;
-
-				console.log(getEventCategorys);
 			});
 
 		//get event info for back btn
