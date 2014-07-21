@@ -23,10 +23,12 @@ angular.module('angularFullApp')
 					startTime: $scope.event.startTime,
 					strike: $scope.event.strike,
 					description: $scope.event.description
+				}, function(event) {
+					var eventId = event._id;
+					$location.path('/event/' + eventId);
 				})
 				.then( function() {
-					//Event created, redirect them to event page
-					$location.path('/event');
+					
 				})
 				.catch( function(err) {
 					err = err.data;

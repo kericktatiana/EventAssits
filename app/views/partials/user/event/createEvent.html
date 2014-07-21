@@ -16,7 +16,7 @@
 </div><!-- row -->
 
 <div class="row">
-<div class="col-md-8">
+<div class="col-md-12">
 	<form class="form" name="form" id="createEventForm" ng-submit="createEvent(form)" novalidate>
 
 		<!-- Title -->
@@ -44,7 +44,7 @@
 		</div><!-- form-group -->
 
 		<!-- set up -->
-		<div class="form-group" ng-class="{ 'has-success': form.setUp.$valid && submitted, 'has-error': form.setUp.$invalid && submitted }">
+		<div class="form-group col-md-4" ng-class="{ 'has-success': form.setUp.$valid && submitted, 'has-error': form.setUp.$invalid && submitted }">
 
 			<label>Set Up:</label>
 
@@ -56,7 +56,7 @@
 		</div><!-- form-group -->			
 
 		<!-- startTime -->
-		<div class="form-group" ng-class="{ 'has-success': form.startTime.$valid && submitted, 'has-error': form.startTime.$invalid && submitted }">
+		<div class="form-group col-md-4" ng-class="{ 'has-success': form.startTime.$valid && submitted, 'has-error': form.startTime.$invalid && submitted }">
 
 			<label>Start Time:</label>
 
@@ -68,7 +68,7 @@
 		</div><!-- form-group -->
 
 		<!-- Strike -->
-		<div class="form-group" ng-class="{ 'has-success': form.strike.$valid && submitted, 'has-error': form.strike.$invalid && submitted }">
+		<div class="form-group col-md-4" ng-class="{ 'has-success': form.strike.$valid && submitted, 'has-error': form.strike.$invalid && submitted }">
 
 			<label>Strike:</label>
 
@@ -87,7 +87,7 @@
 			<textarea name="title" class="form-control" ng-model="event.description" rows="5" required></textarea>
 		</div><!-- form-group -->
 
-		<button class="btn btn-lg btn-primary" type="submit">Create Event</button>
+		<button class="btn btn-lg col-md-12" type="submit">Create Event</button>
 
 	</form>
 </div><!-- col8 -->

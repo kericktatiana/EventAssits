@@ -29,7 +29,6 @@ angular.module('angularFullApp')
 					$scope.getSegments.push(segment);
 				})
 				.then(function(){
-					// $location.reload();
 				})
 				.catch( function(err) {
 					err = err.data;

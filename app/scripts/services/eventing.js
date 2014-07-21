@@ -30,6 +30,7 @@ angular.module('angularFullApp')
 				return Event.save(event,
 					function(event) {
 						$rootScope.currentEvent = event;
+						console.log(event);
 						return cb(event);
 					},
 					function(err) {
