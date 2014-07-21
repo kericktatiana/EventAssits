@@ -87,9 +87,9 @@ ul.nav a.active {
 
 /* Custom page footer */
 .footer {
-  padding: 15px 0 0 20px;
+  padding: 30px 0 0 20px;
   margin-bottom: 20px;
-  margin-top: 10px;
+  margin-top: 30px;
   color: #777;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   clear: left;
@@ -198,9 +198,27 @@ ul.nav a.active {
   font-size: 18px;
 }
 
-.events {
-  margin: 0 0 0 120px;
+.eventList {
+  margin: 0 20px 0 20px;
   padding-bottom: 50px;
+}
+
+.events h4 {
+  color: #746080;
+  font-weight: bold;
+}
+
+.mainInfo p {
+  color: #a3a3a3;
+}
+
+.events p {
+  color: #a3a3a3;
+  padding-top: 8px;
+}
+
+.events:nth-child(even) {
+  background-color: rgba(60, 60, 60, 0.9);
 }
 
 
