@@ -96,5 +96,7 @@ Monday July 14 - Sunday July 20
 -category fixed to take event id
 -crew schema
 -crew backend controller
+-Segments, categories, and crew specific to currentEvent
+-crew sending/receiving from db
 
 

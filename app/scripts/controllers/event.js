@@ -25,10 +25,12 @@ angular.module('angularFullApp')
 					duration: $scope.segment.duration,
 					category: $scope.segment.category,
 					task: $scope.segment.task
+				}, function(segment){
+					$scope.getSegments.push(segment);
 				})
-				.then( function() {
-		          $location.path('/event/' + currentEvent);
-		        })
+				.then(function(){
+					// $location.reload();
+				})
 				.catch( function(err) {
 					err = err.data;
 					$scope.errors = {};
