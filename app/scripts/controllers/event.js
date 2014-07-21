@@ -131,7 +131,7 @@ angular.module('angularFullApp')
 			});
 
 		//get the event's categories for drop down
-		$http.get('/api/getCategorys/' + currentEvent).success(function(getCategorys) {
+		$http.get('/api/getCategorys').success(function(getCategorys) {
 				$scope.getCategorys = getCategorys;
 			});
 

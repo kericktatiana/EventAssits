@@ -25,9 +25,10 @@ angular.module('angularFullApp')
 					eventId: currentEvent,
 					category: $scope.crew.category,
 					crewMember: $scope.crew.crewMember
+				}, function(crew) {
+					$scope.getCrew.push(crew);
 				})
 				.then( function() {
-					$location.reload();
 				})
 				.catch( function(err) {
 					err = err.data;
@@ -50,7 +51,7 @@ angular.module('angularFullApp')
 			});
 
 		//get event's categories for crew
-		$http.get('/api/getCategorys/' + currentEvent).success(function(getCategorys) {
+		$http.get('/api/getCategorys').success(function(getCategorys) {
 				$scope.getCategorys = getCategorys;
 			});
 

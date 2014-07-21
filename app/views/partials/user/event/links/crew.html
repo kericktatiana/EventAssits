@@ -8,7 +8,7 @@
 
 <div class="appBG">
 
-<a href="/event/{{showEvent.id}}" id="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back</a>
+<a href="/event/{{showEvent.id}}" class="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back</a>
 
 <div class="row" id="crewForm">
 	<h1>Add Crew Members</h1>
@@ -17,7 +17,7 @@
 	<form class="form" name="form" id="addCrewForm" ng-submit="addCrew(form)" novalidate>
 
 		<!-- Category -->
-		<div class="form-group" ng-class="{ 'has-success': form.category.$valid && submitted, 'has-error': form.category.$invalid && submitted }">
+		<div class="form-group col-md-4" ng-class="{ 'has-success': form.category.$valid && submitted, 'has-error': form.category.$invalid && submitted }">
 
 			<label>Category:</label>
 
@@ -30,7 +30,7 @@
 		</div>
 
 		<!-- Crew Member -->
-		<div class="form-group" ng-class="{ 'has-success': form.crewMember.$valid && submitted, 'has-error': form.crewMember.$invalid && submitted }">
+		<div class="form-group col-md-8" ng-class="{ 'has-success': form.crewMember.$valid && submitted, 'has-error': form.crewMember.$invalid && submitted }">
 
 			<label>Crew Member(s):</label>
 
@@ -41,7 +41,7 @@
 			</p>
 		</div>
 
-		<button class="btn btn-sm" type="submit">Add Crew</button>
+		<button class="btn btn-sm col-md-12" type="submit">Add Crew</button>
 
 	</form>
 	</div>
