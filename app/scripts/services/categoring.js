@@ -31,14 +31,6 @@ angular.module('angularFullApp')
 					}).$promise;
 			},
 
-			/**
-			 * Gets all available informaition on categored category
-			 *
-			 * @return {Object} category
-			 */
-			currentCategory: function() {
-				return Category.get();
-			},
 
 		};//return
 

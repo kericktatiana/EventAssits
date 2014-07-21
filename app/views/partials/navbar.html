@@ -8,6 +8,8 @@
 
   	<li ng-show="currentUser" ng-class="{active: isActive('/dashboard')}"><a href="/dashboard"><span ng-show="currentUser">{{ currentUser.firstName }}</span></a></li>
 
+    <li ng-show="currentUser" ng-class="{active: isActive('categories')}"><a href="/categories">Categories</a></li>
+
   	<li ng-show="currentUser" ng-class="{active: isActive('/settings')}"><a href="/settings" >Account Settings</a></li>
 
     <li ng-hide="currentUser" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>

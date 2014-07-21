@@ -99,4 +99,10 @@ Monday July 14 - Sunday July 20
 -Segments, categories, and crew specific to currentEvent
 -crew sending/receiving from db
 
+Monday July 21 - Sunday July 28
+-------------------------------------------
+-Create event form and dashboard styleds
+-create event $location now working
+-Category now specific to currentUser
+-Category form now updating real time
 
