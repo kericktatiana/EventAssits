@@ -26,6 +26,10 @@ h3 {
   font-size: 25px;
 }
 
+hr {
+  color: rgba(255, 255, 255, 0.2);
+}
+
 
 /* Application wrapper */
 .wrapper {
@@ -195,12 +199,22 @@ ul.nav a.active {
   position: absolute;
   top: 25px;
   left: 700px;
-  font-size: 18px;
+  font-size: 16px;
+  background-color: #746080;
+  border-radius: 3px;
+  padding: 5px 7px;
+  color: #aeaeae;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#createEventLink:hover {
+  background-color: #5f456b;
+  color: #d6d6d6;
 }
 
 .eventList {
-  margin: 0 20px 0 20px;
-  padding-bottom: 50px;
+  margin: 0 20px 500px 20px;
 }
 
 .events h4 {
@@ -219,6 +233,10 @@ ul.nav a.active {
 
 .events:nth-child(even) {
   background-color: rgba(60, 60, 60, 0.9);
+}
+
+.events:hover {
+  background-color: rgba(119, 89, 119, 0.2);
 }
 
 
