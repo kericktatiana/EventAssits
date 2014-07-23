@@ -105,4 +105,5 @@ Monday July 21 - Sunday July 28
 -create event $location now working
 -Category now specific to currentUser
 -Category form now updating real time
+-Crew Styled and now updating
 

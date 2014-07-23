@@ -61,7 +61,7 @@ angular.module('angularFullApp', [
 
       //Event Settings
       .when('/event/:id/eventSettings', {
-        templateUrl: 'partials/user/event/link/eventSettings',
+        templateUrl: 'partials/user/event/links/eventSettings',
         controller: 'EventSettingsCtrl',
         authenticate: true
       })

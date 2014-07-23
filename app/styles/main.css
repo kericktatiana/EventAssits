@@ -359,6 +359,15 @@ ul.nav a.active {
   text-decoration: none;
 }
 
+/* Event Settings
+----------------------*/
+#eventSettingsForm {
+  background-color: rgba(27, 27, 27, 1);
+  padding: 5px 10px 50px 10px;
+  height: 400px;
+  margin-bottom: 50px;
+}
+
 /* CATEGORIES
 ----------------*/
 #cateForm,
@@ -430,4 +439,20 @@ ul.nav a.active {
 }
 
 
+/* ACCOUNT SETTINGS 
+----------------------------------------------*/
+#changePasswordForm {
+  background-color: rgba(27, 27, 27, 1);
+  padding: 5px 10px 50px 10px;
+  height: 280px;
+  margin-bottom: 50px;
+}
 
+#changePasswordForm h3 {
+  color: #45505d;
+}
+
+#changePasswordForm button {
+  padding: 3px 0 3px 0;
+}
+ 

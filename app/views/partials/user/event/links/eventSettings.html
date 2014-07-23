@@ -1,0 +1,67 @@
+<!-- 
+  * Event Settings - View
+  * Accessible to the currentEvent
+-->
+
+<div ng-include="'partials/navbar.html'"></div>
+
+<div class="appBG">
+
+<a href="/event/{{showEvent.id}}" class="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back</a>
+
+<div class="row col-md-12 ">
+	<h1>{{ showEvent.title }} Settings</h1>
+</div>
+
+<div class="col-md-12">
+<form class="form" name="form" id="eventSettingsForm" ng-submit="editEvent(form)" novalidate>
+	<h3>Edit Event</h3>
+
+	<!-- title -->
+	<div class="form-group">
+		<label>Event Title:</label>
+
+		<input class="form-control" ng-model="event.newTitle" mongoose-error  value="testing" />
+	</div>
+
+	<!-- date -->
+	<div class="form-group">
+		<label>Event Date:</label>
+
+		<input class="form-control" ng-model="event.newDate" mongoose-error /> 
+	</div>
+
+	<!-- set up -->
+	<div class="form-group col-md-4">
+		<label>Set up Time:</label>
+
+		<input class="form-control" ng-model="event.newSetUp" mongoose-error />
+	</div>
+
+	<!-- start -->
+	<div class="form-group col-md-4">
+		<label>Start Time:</label>
+
+		<input class="form-control" ng-model="event.newStartTime" />
+	</div>
+
+	<!-- strike -->
+	<div class="form-group col-md-4">
+		<label>Strike:</label>
+
+		<input class="form-control" ng-model "event.newStrike" />
+	</div>
+
+	<!-- description -->
+	<div class="form-group">
+		<label>Description:</label>
+
+		<textarea class="form-control" ng-model="event.newDescription"></textarea>
+	</div>
+
+	<button class="btn col-md-12" type="submit">Save Changes</button>
+</form>
+</div>
+</div> <!-- appBG -->
+
+

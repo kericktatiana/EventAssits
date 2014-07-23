@@ -37,6 +37,37 @@ angular.module('angularFullApp')
 					}).$promise;
 			},
 
+			/** 
+			 * Edit Event
+			 * 
+			 * @param - {String} - oldTitle - newTitle
+			 * @param - {String} - oldDate - oldDate
+			 * @param - {String} - oldSetUp - newSetUp
+			 * @param - {String} - oldStartTime - newStartTime
+			 * @param - {String} - oldStrike - newStrike
+			 * @param - {String} - oldDescription - newDescription
+			**/
+			editEvent: function(oldTitle, newTitle, oldDate, newDate, oldSetUp, newSetUp, oldStartTime, newStartTime, oldStrike, newStrike, oldDescription, newDescription, callback) {
+				var cb = callback || angular.noop;
+
+				return Event.update({
+					oldTitle: oldTitle,
+					newTitle: newTitle,
+					oldDate: oldDate,
+					newDate: newDate,
+					oldSetUp: oldSetUp,
+					newSetUp: newSetUp,
+					oldStrike: oldStrike,
+					newStrike: newStrike,
+					oldDescription: oldDescription,
+					newDescription: newDescription
+				}, function(event) {
+					return cb(event);
+				}, function(err) {
+					return cb(err);
+				}).$promise;
+			},
+
 			/**
 			 * Gets all available informaition on evented event
 			 *

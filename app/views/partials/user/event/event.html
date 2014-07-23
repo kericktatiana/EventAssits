@@ -136,7 +136,7 @@
 
 	<div id="segmentsList">
 
-		<div class="segment" ng-repeat="segment in getSegments track by $index">
+		<div class="segment" ng-repeat="segment in getSegments track by $index | orderBy:'time':true">
 			<div class="time pull-left">
 				<p>{{ segment.time }}</p>
 				<hr />

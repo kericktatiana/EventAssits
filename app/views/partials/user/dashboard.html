@@ -32,7 +32,7 @@
 
 		<div class="eventList" class="row">
 				
-			<div class="col-md-12 events" ng-repeat="event in getEvents">
+			<div class="col-md-12 events" ng-repeat="event in getEvents | orderBy:date:reverse">
 				<a href="/event/{{event._id}}">
 					<div class="col-md-4 mainInfo">
 						<h4>{{ event.title }}</h4>

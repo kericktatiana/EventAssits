@@ -7,13 +7,15 @@
 
 <div class="row">
   <div class="col-sm-12">
-    <h1>Change Password</h1>
+    <h1>Account Settings</h1>
   </div>
   <div class="col-sm-12">
-    <form class="form" name="form" ng-submit="changePassword(form)" novalidate>
+    <form class="form" name="form" id="changePasswordForm" ng-submit="changePassword(form)" novalidate>
+
+      <h3>Change Password</h3>
     	
       <div class="form-group">
-        <label>Current Password</label>
+        <label>Current Password:</label>
 
         <input type="password" name="password" class="form-control" ng-model="user.oldPassword"
                mongoose-error/>    
@@ -23,7 +25,7 @@
       </div>
 
       <div class="form-group">
-        <label>New Password</label>
+        <label>New Password:</label>
 
         <input type="password" name="newPassword" class="form-control" ng-model="user.newPassword" 
                ng-minlength="3"
@@ -36,7 +38,7 @@
 
       <p class="help-block"> {{ message }} </p>
 
-      <button class="btn btn-lg btn-primary" type="submit">Save changes</button>
+      <button class="btn btn-md col-md-12" type="submit">Save changes</button>
     </form>
   </div>
 </div>
