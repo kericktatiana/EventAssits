@@ -36,7 +36,7 @@ angular.module('angularFullApp')
 			$scope.submitted = true;
 
 			if(form.$valid) {
-				window.alert('are you sure');
+				window.alert('are you sure?');
 				// Eventing.deleteEvent({
 				// 	eventId: currentEvent
 				// })

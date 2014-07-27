@@ -31,6 +31,38 @@ angular.module('angularFullApp')
 					}).$promise;
 			},
 
+			/**
+			 * Edit Category
+			 * 
+			 * @param - {String} - newCategoryName
+			**/
+			editCategory: function(newCategoryName, callback) {
+				var cb = callback || angular.noop;
+
+				return Category.update({
+					newCategoryName: newCategoryName
+				}, function(category) {
+					return cb(category);
+				}, function(err) {
+					return cb(err);
+				}).$promise;
+			},
+
+
+
+			/**
+			 * Delete Category
+			 *
+			 * @param - {String} - categoryId
+			**
+			deleteCategory: function(categoryId, callback) {
+				var cb = callback || angular.noop;
+
+				*Delete functionality here
+			}
+
+			*/
+
 
 		};//return
 
