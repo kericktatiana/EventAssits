@@ -441,6 +441,16 @@ ul.nav a.active {
   text-decoration: none;
 }
 
+.deleteCategoryForm button {
+  background-color: rgba(0, 0, 0, 0);
+  color: #746080;
+  padding: 3px;
+  margin: 5px 8px 0 0;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
 
 /* CREW
 -----------*/

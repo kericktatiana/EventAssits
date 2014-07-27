@@ -22,3 +22,6 @@ Delete Event:
 COMPLETED
 -------------------------------------------------
 -Delete event form, functions in both controllers and service set up, not completed
+-Controllers for categories, crew, segment setings
+-views for categories, crew, segments
+-adjusting the schemas

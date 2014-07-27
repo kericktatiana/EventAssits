@@ -45,10 +45,22 @@ angular.module('angularFullApp', [
         authenticate: true
       })
 
+      //Segments
+      .when('/segment/:id', {
+        templateUrl: 'partials/user/event/segmentSettings',
+        controller: 'SegmentCtrl',
+        authenticate: true
+      })
+
       //Categories
       .when('/categories', {
         templateUrl: 'partials/user/event/links/category',
         controller: 'CategoryCtrl',
+        authenticate: true
+      })
+      .when('/categories/:id', {
+        templateUrl: 'partials/user/event/links/categorySettings',
+        controller: 'CategorySettingsCtrl',
         authenticate: true
       })
 
@@ -56,6 +68,11 @@ angular.module('angularFullApp', [
       .when('/event/:id/crew', {
         templateUrl: 'partials/user/event/links/crew',
         controller: 'CrewCtrl',
+        authenticate: true
+      })
+      .when('event/:id/crew/:id', {
+        templateUrl: 'partials/user/event/links/crewSettings',
+        controler: 'CrewSettingsCtrl',
         authenticate: true
       })
 
