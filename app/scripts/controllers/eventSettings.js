@@ -32,6 +32,17 @@ angular.module('angularFullApp')
 			}
 		};
 
+		$scope.deleteEvent = function(form) {
+			$scope.submitted = true;
+
+			if(form.$valid) {
+				window.alert('are you sure');
+				// Eventing.deleteEvent({
+				// 	eventId: currentEvent
+				// })
+			}
+		};
+
 		//get the event information
 		$http.get('/api/events/' + currentEvent).success(
 			function(showEvent) {

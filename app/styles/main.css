@@ -231,6 +231,11 @@ ul.nav a.active {
   padding-top: 8px;
 }
 
+.eventTrash {
+  color: #746080;
+  padding: 10px 10px 0 0;
+}
+
 .events:nth-child(even) {
   background-color: rgba(60, 60, 60, 0.9);
 }
@@ -372,8 +377,23 @@ ul.nav a.active {
 #editEventForm {
   background-color: rgba(27, 27, 27, 1);
   padding: 5px 10px 50px 10px;
-  height: 400px;
-  margin-bottom: 50px;
+  height: 440px;
+  margin-bottom: 20px;
+}
+
+#eventDeleteForm {
+  background-color: rgba(27, 27, 27, 1);
+  padding: 5px 10px 50px 10px;
+  height: 150px;
+  margin-top: 10px;
+}
+
+#eventDeleteForm button {
+  background-color: #7d414a;
+}
+
+#eventDeleteForm button:hover {
+  background-color: #6b3242;
 }
 
 /* CATEGORIES

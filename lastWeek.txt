@@ -14,3 +14,11 @@ Delete Event:
 
 -Display
 	-signify a segment/category/crew member added
+
+
+
+
+
+COMPLETED
+-------------------------------------------------
+-Delete event form, functions in both controllers and service set up, not completed

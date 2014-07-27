@@ -32,8 +32,10 @@
 
 		<div class="eventList" class="row">
 				
-			<div class="col-md-12 events" ng-repeat="event in getEvents | orderBy:date:reverse">
+			<div class="col-md-12 events" ng-repeat="event in getEvents | orderBy:date:reverse">	
+
 				<a href="/event/{{event._id}}">
+
 					<div class="col-md-4 mainInfo">
 						<h4>{{ event.title }}</h4>
 						<p>{{ event.date }} - {{ event.setUp }}</p>
@@ -52,12 +54,18 @@
 <script type="text/javascript">
 	var d = new Date();
 
+	//different greeting based on time
 	if(d.getHours() >= 0 && d.getHours() < 14) {
 		document.getElementById("greeting").innerHTML = "Hello, {{ currentUser.firstName }}"; 
 	} 
 	else {
 		document.getElementById("greeting").innerHTML = "Good evening, {{ currentUser.firstName }}"; 
 	} 
+
+
+	//trash
+
+
 
 	var day = d.getDate();
 	var month = "";
