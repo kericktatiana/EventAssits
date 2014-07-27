@@ -14,54 +14,64 @@
 </div>
 
 <div class="col-md-12">
-<form class="form" name="form" id="eventSettingsForm" ng-submit="editEvent(form)" novalidate>
+<form class="form" name="form" id="editEventForm" ng-submit="editEvent(form)" novalidate>
+
 	<h3>Edit Event</h3>
 
 	<!-- title -->
 	<div class="form-group">
 		<label>Event Title:</label>
 
-		<input class="form-control" ng-model="event.newTitle" mongoose-error  value="testing" />
-	</div>
+		<input type="text" name="newTitle" class="form-control" ng-model="event.newTitle" mongoose-error />
+
+	</div><!-- form-group -->
 
 	<!-- date -->
 	<div class="form-group">
 		<label>Event Date:</label>
 
-		<input class="form-control" ng-model="event.newDate" mongoose-error /> 
-	</div>
+		<input type="text" name="newDate" class="form-control" ng-model="event.newDate" mongoose-error />
+
+	</div><!-- form-group -->
 
 	<!-- set up -->
 	<div class="form-group col-md-4">
 		<label>Set up Time:</label>
 
-		<input class="form-control" ng-model="event.newSetUp" mongoose-error />
-	</div>
+		<input type="time" name="newSetUp" class="form-control" ng-model="event.newSetUp" mongoose-error />
 
-	<!-- start -->
+	</div><!-- form-group -->
+
+	<!-- start time -->
 	<div class="form-group col-md-4">
 		<label>Start Time:</label>
 
-		<input class="form-control" ng-model="event.newStartTime" />
-	</div>
+		<input type="time" name="newStartTime" class="form-control" ng-model="event.newStartTime" mongoose-error />
+
+	</div><!-- form-group -->
 
 	<!-- strike -->
 	<div class="form-group col-md-4">
-		<label>Strike:</label>
+		<label>Strike Time:</label>
 
-		<input class="form-control" ng-model "event.newStrike" />
-	</div>
+		<input type="time" name="newStrike" class="form-control" ng-model="event.newStrike" mongoose-error />
+
+	</div><!-- form-group -->
 
 	<!-- description -->
 	<div class="form-group">
-		<label>Description:</label>
+		<label>Event Discription:</label>
 
-		<textarea class="form-control" ng-model="event.newDescription"></textarea>
-	</div>
+		<textarea type="date" name="newDescription" class="form-control" ng-model="event.newDescription" mongoose-error></textarea>
 
-	<button class="btn col-md-12" type="submit">Save Changes</button>
+	</div><!-- form-group -->
+
+	<button class="btn col-md-12">Save Changes</button>
+
 </form>
-</div>
+
+
+</div><!-- col12 -->
 </div> <!-- appBG -->
 
 

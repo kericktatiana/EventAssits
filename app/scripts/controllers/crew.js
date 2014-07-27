@@ -48,6 +48,7 @@ angular.module('angularFullApp')
 			function(getCrew) {
 				$scope.getCrew = getCrew;
 
+				$scope.categorySort = 'category';
 			});
 
 		//get event's categories for crew

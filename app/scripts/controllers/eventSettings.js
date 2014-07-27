@@ -7,7 +7,9 @@
 
 angular.module('angularFullApp')
 	.controller('EventSettingsCtrl', function ($scope, Event, Eventing, $http, $routeParams) {
-		
+	
+		$scope.event = {};
+
 		//get the id of current event
 		var currentEvent = $routeParams.id;
 
@@ -18,17 +20,11 @@ angular.module('angularFullApp')
 
 			if(form.$valid) {
 				Eventing.editEvent(
-					$scope.event.oldTitle,
-					$scope.event.NewTitle,
-					$scope.event.oldDate,
-					$scope.event.newData,
-					$scope.event.oldSetUp,
+					$scope.event.newTitle,
+					$scope.event.newDate,
 					$scope.event.newSetUp,
-					$scope.event.oldStartTie,
 					$scope.event.newStartTime,
-					$scope.event.oldStrike,
 					$scope.event.newStrike,
-					$scope.event.oldDescription,
 					$scope.event.newDescription
 				).then( function() {
 					$scope.message = 'Event successfully updated.';
@@ -95,6 +91,16 @@ angular.module('angularFullApp')
 
 				//mongo date now human form
 				showEvent.shape.date = eventDate;
+
+				var monthEdit = date.getMonth()+1;
+
+				//set event info to form values
+				$scope.event.newTitle = showEvent.shape.title;
+				$scope.event.newDate = monthEdit + '/' + day + '/' + year;
+				$scope.event.newSetUp = showEvent.shape.setUp;
+				$scope.event.newStartTime = showEvent.shape.startTime;
+				$scope.event.newStrike = showEvent.shape.strike;
+				$scope.event.newDescription = showEvent.shape.description;
 
 				//time vars
 				var setUp = showEvent.shape.setUp;

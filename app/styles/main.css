@@ -342,7 +342,15 @@ ul.nav a.active {
 
 #helpIcons {
   padding: 5px 5px 0 0;
+  color: #746080;
+  font-size: 20px;
+  transition: color 0.3s ease;
 }
+
+#helpIcons span:hover {
+  color: #5f4e68;
+}
+
 
 
 /* EVENT LINKS - CATEGORY CREW and EDIT
@@ -361,7 +369,7 @@ ul.nav a.active {
 
 /* Event Settings
 ----------------------*/
-#eventSettingsForm {
+#editEventForm {
   background-color: rgba(27, 27, 27, 1);
   padding: 5px 10px 50px 10px;
   height: 400px;
@@ -437,6 +445,26 @@ ul.nav a.active {
   padding: 3px 0 3px 0;
   margin-bottom: 20px;
 }
+
+.crewMember {
+  margin: 8px 15px 8px 3px;
+  padding: 3px 0 3px 20px; 
+}
+
+.bold {
+  font-weight: bold;
+  display: inline;
+  padding-right: 20px;
+}
+
+.crewMember:nth-child(odd) {
+  background-color: rgba(60, 60, 60, 0.9);
+}
+
+.categoryHelp {
+  padding: 5px 10px 0 0;
+}
+
 
 
 /* ACCOUNT SETTINGS 

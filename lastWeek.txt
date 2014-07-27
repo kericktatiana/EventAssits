@@ -1,0 +1,16 @@
+What I need to accomplish in the last week and the major road blocks happening
+
+-Edit Event: 
+	-eventId is not being found, first parameter being sent null but there is a value
+	-cannot find api address if post, wants put, save errors out
+
+Delete Event:
+	-not too sure how to start this
+
+-Segments:
+	-document manipulation not working
+	-how to get the segements id for edit/delete
+	-need delete function to work
+
+-Display
+	-signify a segment/category/crew member added

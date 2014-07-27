@@ -136,17 +136,11 @@
 
 	<div id="segmentsList">
 
-		<div class="segment" ng-repeat="segment in getSegments track by $index | orderBy:'time':true">
+		<div class="segment" ng-repeat="segment in getSegments | toArray | orderBy:timeSort" >
 			<div class="time pull-left">
-				<p>{{ segment.time }}</p>
+				<p>{{ segment.time | date:shortTime }}</p>
 				<hr />
 				<p>{{ segment.duration }}</p>
-			</div>
-
-			<div class="pull-right" id="helpIcons">
-				<a href="#" alt="Delete Segment"><span class="glyphicon glyphicon-cog"></span></a>
-				<br />
-				<a href="#" alt="Segment Settings"><span class="glyphicon glyphicon-trash"></span></a>
 			</div>
 
 			<span class="segmentCat">{{ segment.category }}</span>
@@ -162,24 +156,36 @@
 </div><!-- appBG -->
 
 <script type="text/javascript">
+	
+	$(document).ready(function() {
+		// var edit = document.getElementsByClassName("editSegment");
 
-	var plus = document.getElementById("plus");
+		// console.log(edit);
 
-	var form = document.getElementById("addSegmentForm");
+		//toggle add segment view
+		var plus = document.getElementById("plus");
 
-	var clicked = 0
+		var form = document.getElementById("addSegmentForm");
 
-	plus.onclick = function (e) {
-		clicked++;
+		var clicked = 0;
 
-		if ( clicked % 2 ) {
-			form.style.visibility = "visible";
-			form.style.display = "block";
-		}
-		else {
-			form.style.visibility = "hidden";
-			form.style.display = "none";
-		}
-	}
+		plus.onclick = function (e) {
+			clicked++;
+
+			if ( clicked % 2 ) {
+				form.style.visibility = "visible";
+				form.style.display = "block";
+			}
+			else {
+				form.style.visibility = "hidden";
+				form.style.display = "none";
+			}
+		};
+
+	});
+
+
+
+
 	
 </script>

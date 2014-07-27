@@ -50,15 +50,19 @@
 <div id="crewList">
 	<h3>Event Crew</h3>
 
-	<div class="crewMember" ng-repeat="crew in getCrew | filter:category:audio">
-		{{ crew.category }} - 
-		{{ crew.crewMember }}
+	<div class="crewMember" ng-repeat="crew in getCrew | toArray | orderBy:categorySort">
+
+		<span class="glyphicon glyphicon-trash categoryHelp pull-right"><a></a></span>
+
+		<p class="bold pull-left">{{ crew.category }}: </p> 
+		<p class="member">{{ crew.crewMember }}</p>
 	</div><!-- crew member -->
 
 </div>
 
-
-
 </div><!-- appBG -->
 
 <div ng-include="'partials/footer.html'"></div>
+
+
+

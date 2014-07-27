@@ -40,26 +40,22 @@ angular.module('angularFullApp')
 			/** 
 			 * Edit Event
 			 * 
-			 * @param - {String} - oldTitle - newTitle
-			 * @param - {String} - oldDate - oldDate
-			 * @param - {String} - oldSetUp - newSetUp
-			 * @param - {String} - oldStartTime - newStartTime
-			 * @param - {String} - oldStrike - newStrike
-			 * @param - {String} - oldDescription - newDescription
+			 * @param - {String} - newTitle
+			 * @param - {String} - newDate
+			 * @param - {String} - newSetUp
+			 * @param - {String} - newStartTime
+			 * @param - {String} - newStrike
+			 * @param - {String} - newDescription
 			**/
-			editEvent: function(oldTitle, newTitle, oldDate, newDate, oldSetUp, newSetUp, oldStartTime, newStartTime, oldStrike, newStrike, oldDescription, newDescription, callback) {
+			editEvent: function(newTitle, newDate, newSetUp, newStartTime, newStrike, newDescription, callback) {
 				var cb = callback || angular.noop;
 
 				return Event.update({
-					oldTitle: oldTitle,
 					newTitle: newTitle,
-					oldDate: oldDate,
 					newDate: newDate,
-					oldSetUp: oldSetUp,
 					newSetUp: newSetUp,
-					oldStrike: oldStrike,
+					newStartTime: newStartTime,
 					newStrike: newStrike,
-					oldDescription: oldDescription,
 					newDescription: newDescription
 				}, function(event) {
 					return cb(event);
