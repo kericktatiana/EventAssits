@@ -3,3 +3,40 @@
   * Accessible from category page, after certain category has been clicked
   * Where one can edit/delete categories
  -->
+
+ <div ng-include="'partials/navbar.html'"></div>
+
+<div class="appBG">
+
+<a href="/categories" class="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Categories</a>
+
+<div class="col-md-12">
+	<h1>Category: {{ showCategory.categoryName }}</h1>
+</div>
+
+<div class="col-md-12" id="editCategoryForm">
+
+	<form class="form" name="form" ng-submit="editCategory(form)" novalidate>
+		<h3>Edit Category</h3>
+
+		<div class="form-group">
+			<label>Category Name</label>
+
+			<input type="text" name="newCategoryName" class="form-control" ng-model="category.newCategoryName" mongoose-error />
+		</div><!-- form-group -->
+
+		<button class="btn col-md-12">Save Changes</button>
+	</form>
+</div><!-- editCategoryForm -->
+
+<div class="col-md-12" id="deleteCategoryForm">
+
+	<form class="form" name="form" ng-submit="deleteCategory(form)" novalidate>
+		<h3>Delete {{showCategory.categoryName}} category?</h3>
+
+		<button id="deleteCategoryBtn" class="btn col-md-12">Yes, I want to delete category</button>
+	</form>
+
+</div><!-- deleteCategoryForm -->
+
+</div><!-- appBG -->

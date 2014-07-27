@@ -39,12 +39,9 @@
 <div id="categoryList">
 	<h3>Your Event's Categories</h3>
 	<div class="categoryName" ng-repeat="category in getCategorys track by $index">
-		<div class="pull-right">
-			<form name="form" class="deleteCategoryForm" ng-submit="deleteCategory(form)">
-				<button class="categorySettings" alt="delete category"><span class="glyphicon glyphicon-cog"></span></button>
-			</form>
-		</div>
-		<h5>{{category.categoryName}}</h5>
+		<a href="/category/{{category._id}}">
+			<h5>{{category.categoryName}}</h5>
+		</a>
 	</div>
 </div><!-- categoryList -->
 

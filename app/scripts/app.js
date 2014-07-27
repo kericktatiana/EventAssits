@@ -58,7 +58,7 @@ angular.module('angularFullApp', [
         controller: 'CategoryCtrl',
         authenticate: true
       })
-      .when('/categories/:id', {
+      .when('/category/:id', {
         templateUrl: 'partials/user/event/links/categorySettings',
         controller: 'CategorySettingsCtrl',
         authenticate: true

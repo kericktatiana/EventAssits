@@ -441,16 +441,29 @@ ul.nav a.active {
   text-decoration: none;
 }
 
-.deleteCategoryForm button {
-  background-color: rgba(0, 0, 0, 0);
-  color: #746080;
-  padding: 3px;
-  margin: 5px 8px 0 0;
-  border: none;
-  border-radius: 3px;
-  font-size: 14px;
+
+/* CATEGORY SETTINGS
+-------------------------*/
+#editCategoryForm,
+#deleteCategoryForm {
+  background-color: rgba(27, 27, 27, 1);
+  width: 900px;
+  margin: 10px 0 10px 30px;
+  padding: 10px 12px 20px 12px;
 }
 
+#editCategoryForm h3,
+#deleteCategoryForm h3 {
+  color: #45505d;
+}
+
+#deleteCategoryBtn {
+  background-color: #7d414a;
+}
+
+#deleteCategoryBtn:hover {
+  background-color: #6b3242;
+}
 
 /* CREW
 -----------*/
