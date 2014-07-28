@@ -29,6 +29,11 @@ angular.module('angularFullApp')
 			}
 		};
 
+		//categories for drop down
+		$http.get('/api/getCategorys').success(function(getCategorys) {
+				$scope.getCategorys = getCategorys;
+			});
+
 		$scope.deleteSegment = function(form) {
 			$scope.submitted = true;
 

@@ -8,6 +8,72 @@
 
 <div class="appBG">
 
-<a href="/event/{{showSegment.eventID}}" class="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back to Event</a>
+<a href="/event/{{showSegment.eventId}}" class="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back to Event</a>
+
+<div class="col-md-12">
+	<h1>Segment at: {{showSegment.time}}</h1>
+</div>
+
+<div class="col-md-12" id="editSegmentForm">
+
+	<form class="form" name="form" ng-submit="editSegment(form)" novalidate>
+		<h3>Edit Segment</h3>
+
+		<!-- time -->
+		<div class="form-group col-md-6">
+			<label>Time:</label>
+
+			<input type="time" name="newTime" class="form-control" ng-model="segment.newTime" mongoose-error />
+		</div><!-- form-group -->
+
+		<!-- duration -->
+		<div class="form-group col-md-6">
+			<label>Duration:</label>
+
+			<select name="newDuration" class="form-control" ng-model="segment.newDuration">
+				<option>15 min</option>
+				<option>30 min</option>
+				<option>45 min</option>
+				<option>1 hr</option>
+				<option>1 hr 15 min</option>
+				<option>1 hr 30 min</option>
+				<option>1 hr 45 min</option>
+				<option>2 hrs</option>
+			</select>
+		</div><!-- form-group -->
+
+		<!-- category -->
+		<div class="form-group">
+			<label>Category:</label>
+
+			<select name="newCategory" class="form-control" ng-model="segment.newCategory">
+					<option ng-repeat="category in getCategorys" value="{{ category.categoryName }}">
+						{{ category.categoryName }}
+					</option>
+				</select>
+		</div><!-- form-group -->
+
+		<!-- task -->
+		<div class="form-group">
+			<label>Task:</label>
+
+			<textarea name="newTask" class="form-control" ng-model="segment.newTask"></textarea>
+		</div><!-- form-group -->
+
+		<button class="btn col-md-12">Save Changes</button>
+
+	</form>
+</div><!-- editSegmentForm -->
+
+
+<div class="col-md-12" id="deleteSegmentForm">
+
+	<form class="form" name="form" ng-submit="deleteSegment(form)" novalidate>
+		<h3>Delete This Segment?</h3>
+
+		<button id="deleteSegmentBtn" class="btn col-md-12">Yes, I want to delete segment</button>
+	</form>
+
+</div><!-- deleteSegmentForm -->
 
 </div><!-- appBG -->

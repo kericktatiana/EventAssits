@@ -8,11 +8,10 @@
 angular.module('angularFullApp')
 	.controller('EventSettingsCtrl', function ($scope, Event, Eventing, $http, $routeParams) {
 	
-		$scope.event = {};
-
 		//get the id of current event
 		var currentEvent = $routeParams.id;
 
+		$scope.event = {};
 		$scope.errors = {};
 
 		$scope.editEvent = function(form) {

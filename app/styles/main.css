@@ -349,15 +349,27 @@ ul.nav a.active {
   color: #616e7c;
 }
 
-#helpIcons {
-  padding: 5px 5px 0 0;
-  color: #746080;
-  font-size: 20px;
-  transition: color 0.3s ease;
+/* Segment Settings
+-----------------------*/
+#editSegmentForm,
+#deleteSegmentForm {
+  background-color: rgba(27, 27, 27, 1);
+  width: 900px;
+  margin: 10px 0 10px 30px;
+  padding: 10px 12px 20px 12px;
 }
 
-#helpIcons span:hover {
-  color: #5f4e68;
+#editSegmentForm h3,
+#deleteSegmentForm h3 {
+  color: #45505d;
+}
+
+#deleteSegmentBtn {
+  background-color: #7d414a;
+}
+
+#deleteSegmentBtn:hover {
+  background-color: #6b3242;
 }
 
 
