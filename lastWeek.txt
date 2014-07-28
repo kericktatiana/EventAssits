@@ -14,6 +14,7 @@ Delete Event:
 
 -Display
 	-signify a segment/category/crew member added
+	-message upon successful edit
 
 
 
@@ -25,3 +26,5 @@ COMPLETED
 -Controllers for categories, crew, segment setings
 -views for categories, crew, segments
 -adjusting the schemas
+-View for categorySettings built and styled
+-delete/edit category functionality in service and font/back end controllers

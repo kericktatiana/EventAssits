@@ -37,6 +37,7 @@ angular.module('angularFullApp')
 		$http.get('/api/categorys/' + currentCategory).success(
 			function(showCategory) {
 				$scope.showCategory = showCategory.shape;
+
 			});
 
 	});//controller

@@ -328,6 +328,10 @@ ul.nav a.active {
   height: 100px;
 }
 
+.segment p {
+  color: #aeaeae;
+}
+
 .segment:nth-child(odd) {
   background-color: rgba(60, 60, 60, 0.9);
 }
