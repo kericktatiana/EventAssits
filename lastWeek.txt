@@ -28,3 +28,5 @@ COMPLETED
 -adjusting the schemas
 -View for categorySettings built and styled
 -delete/edit category functionality in service and font/back end controllers
+-View for segmentSettings built and styled
+-delete/edit segment function in font end/service

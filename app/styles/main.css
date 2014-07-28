@@ -349,6 +349,11 @@ ul.nav a.active {
   color: #616e7c;
 }
 
+.segmentCog {
+  padding: 10px 10px 0 0;
+  font-size: 20px;
+}
+
 /* Segment Settings
 -----------------------*/
 #editSegmentForm,
@@ -455,6 +460,10 @@ ul.nav a.active {
 .categoryName a:hover {
   color: #5f4e68;
   text-decoration: none;
+}
+
+.categoryCog {
+  padding: 8px 10px 0 0;
 }
 
 

@@ -48,7 +48,10 @@ angular.module('angularFullApp')
 			function(showSegment) {
 				$scope.showSegment = showSegment.shape;
 
-				console.log(showSegment.shape);
+				$scope.segment.newTime = showSegment.shape.time;
+				$scope.segment.newDuration = showSegment.shape.duration;
+				$scope.segment.newCategory = showSegment.shape.category;
+				$scope.segment.newTask = showSegment.shape.task;
 			});
 
 	});//controller

@@ -10,7 +10,7 @@ angular.module('angularFullApp')
 
 		var currentCategory = $routeParams.id;
 
-		$scope.event = {};
+		$scope.category = {};
 		$scope.errors = {};
 
 		$scope.editCategory = function(form) {
@@ -37,6 +37,8 @@ angular.module('angularFullApp')
 		$http.get('/api/categorys/' + currentCategory).success(
 			function(showCategory) {
 				$scope.showCategory = showCategory.shape;
+
+				$scope.category.newCategoryName = showCategory.shape.categoryName;
 
 			});
 

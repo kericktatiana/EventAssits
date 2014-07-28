@@ -137,16 +137,19 @@
 	<div id="segmentsList">
 
 		<div class="segment" ng-repeat="segment in getSegments | toArray | orderBy:timeSort" >
-			<a href="/segment/{{segment._id}}">
-				<div class="time pull-left">
-					<p>{{ segment.time | date:shortTime }}</p>
-					<hr />
-					<p>{{ segment.duration }}</p>
-				</div>
+			
+			<div class="time pull-left">
+				<p>{{ segment.time | date:shortTime }}</p>
+				<hr />
+				<p>{{ segment.duration }}</p>
+			</div>
 
-				<span class="segmentCat">{{ segment.category }}</span>
-				<p>{{ segment.task }}</p>
-			</a>
+			<div class="pull-right segmentCog">
+				<a href="/segment/{{segment._id}}"><span class="glyphicon glyphicon-cog"></span></a>
+			</div>
+
+			<span class="segmentCat">{{ segment.category }}</span>
+			<p>{{ segment.task }}</p>
 
 		</div>
 

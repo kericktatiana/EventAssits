@@ -39,9 +39,14 @@
 <div id="categoryList">
 	<h3>Your Event's Categories</h3>
 	<div class="categoryName" ng-repeat="category in getCategorys track by $index">
-		<a href="/category/{{category._id}}">
-			<h5>{{category.categoryName}}</h5>
-		</a>
+		
+		<div class="pull-right categoryCog">
+			<a href="/category/{{category._id}}">
+				<span class="glyphicon glyphicon-cog"></span>
+			</a>
+		</div>
+
+		<h5>{{category.categoryName}}</h5>
 	</div>
 </div><!-- categoryList -->
 
