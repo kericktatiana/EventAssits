@@ -529,10 +529,39 @@ ul.nav a.active {
   background-color: rgba(60, 60, 60, 0.9);
 }
 
-.categoryHelp {
-  padding: 5px 10px 0 0;
+.crewCog a {
+  padding: 8px 10px 0 0;
+  color: #745080;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
+.crewCog a:hover {
+  color: #5f4e68;
+}
+
+/* CREW SETTINGS
+-------------------------*/
+#editCrewForm,
+#deleteCrewForm {
+  background-color: rgba(27, 27, 27, 1);
+  width: 900px;
+  margin: 10px 0 10px 30px;
+  padding: 10px 12px 20px 12px;
+}
+
+#editCrewForm h3,
+#deleteCrewForm h3 {
+  color: #45505d;
+}
+
+#deleteCrewBtn {
+  background-color: #7d414a;
+}
+
+#deleteCrewBtn:hover {
+  background-color: #6b3242;
+}
 
 
 /* ACCOUNT SETTINGS 

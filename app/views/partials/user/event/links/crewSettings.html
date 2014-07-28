@@ -3,3 +3,52 @@
   * Accessible from crew page from event, after certain crew cluster has been clicked
   * Where one can edit/delete crew members clusters
  -->
+
+<div ng-include="'partials/navbar.html'"></div>
+
+<div class="appBG">
+
+<a href="/event/{{showCrew.eventId}}/crew" class="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Crew</a>
+
+<div class="col-md-12">
+	<h1>Edit Crew for: {{showCrew.category}}</h1>
+</div>
+
+<div class="col-md-12" id="editCrewForm">
+
+	<form class="form" name="form" ng-submit="editCrew(form)" novalidate>
+		<h3>Edit Crew</h3>
+
+		<!-- category -->
+		<div class="form-group col-md-4">
+			<label>Category:</label>
+
+			<select name="newCategory" class="form-control" ng-model="crew.newCategory" required>
+				<option ng-repeat="category in getCategorys" value="{{ category.categoryName }}">
+					{{ category.categoryName }}
+				</option>
+			</select>
+		</div><!-- form-group -->
+
+		<!-- crew members -->
+		<div class="form-group col-md-8">
+			<label>Crew Member(s):</label>
+
+			<textarea name="newCrewMember" class="form-control" ng-model="crew.newCrewMember"></textarea>
+		</div>
+
+		<button class="btn col-md-12">Save Changes</button>
+	</form>
+</div><!-- editCrewForm -->
+
+
+<div class="col-md-12" id="deleteCrewForm">
+	<form class="form" name="form" ng-submit="deleteCrew(form)" novalidate>
+		<h3>Delete This Crew?</h3>
+
+		<button id="deleteCrewBtn" class="btn col-md-12">Yes, I want to delete crew</button>
+	</form>
+</div><!-- deletCrewForm -->
+
+</div><!-- appBG -->
+

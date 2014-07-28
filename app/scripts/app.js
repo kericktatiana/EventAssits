@@ -70,9 +70,9 @@ angular.module('angularFullApp', [
         controller: 'CrewCtrl',
         authenticate: true
       })
-      .when('event/:id/crew/:id', {
+      .when('/crew/:id', {
         templateUrl: 'partials/user/event/links/crewSettings',
-        controler: 'CrewSettingsCtrl',
+        controller: 'CrewSettingsCtrl',
         authenticate: true
       })
 

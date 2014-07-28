@@ -31,6 +31,38 @@ angular.module('angularFullApp')
 					}).$promise;
 			},
 
+
+			/**
+			 * Edit Crew
+			 *
+			 * @param - {String} - newCategory
+			 * @param = {String} - newCrewMember
+			 **/
+			editCrew: function(newCategory, newCrewMember, callback) {
+				var cb = callback || angular.noop;
+
+				return Crew.update({
+					newCategory: newCategory,
+					newCrewMember: newCrewMember
+				}, function(crew) {
+					return cb(crew);
+				}, function(err) {
+					return cb(err);
+				}).$promise;
+			},
+
+			 /** Delete Crew
+			  * 
+			  * @param - {String} - crewId
+			  *
+			 **
+			 deleteCrew: function(crewId, callback) {
+				var cb = callback || angular.noop;
+
+				delete functionality here
+			 }**/
+
+
 			/**
 			 * Gets all available informaition on categored category
 			 *

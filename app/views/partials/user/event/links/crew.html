@@ -52,7 +52,9 @@
 
 	<div class="crewMember" ng-repeat="crew in getCrew | toArray | orderBy:categorySort">
 
-		<span class="glyphicon glyphicon-trash categoryHelp pull-right"><a></a></span>
+		<div class="pull-right crewCog">
+			<a href="/crew/{{crew._id}}"><span class="glyphicon glyphicon-cog"></span></a>
+		</div>
 
 		<p class="bold pull-left">{{ crew.category }}: </p> 
 		<p class="member">{{ crew.crewMember }}</p>
