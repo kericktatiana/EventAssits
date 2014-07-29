@@ -16,6 +16,10 @@
 <div class="col-md-12">
 <form class="form" name="form" id="editEventForm" ng-submit="editEvent(form)" novalidate>
 
+	<p class="help-block successful" ng-show="form.$valid && submitted">
+		Event Edited Successfully
+	</p>
+
 	<h3>Edit Event</h3>
 
 	<!-- title -->

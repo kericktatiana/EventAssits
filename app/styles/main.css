@@ -581,4 +581,15 @@ ul.nav a.active {
 #changePasswordForm button {
   padding: 3px 0 3px 0;
 }
+
+
+
+/* USER FEEDBACK
+-----------------------------------------------*/
+.successful {
+  color: #417d5c;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
  
