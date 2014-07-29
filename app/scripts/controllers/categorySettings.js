@@ -13,6 +13,7 @@ angular.module('angularFullApp')
 		$scope.category = {};
 		$scope.errors = {};
 
+		//edit the current category
 		$scope.editCategory = function(form) {
 			$scope.submitted = true;
 
@@ -26,6 +27,7 @@ angular.module('angularFullApp')
 			}
 		};
 
+		//delete the current category
 		$scope.deleteCategory = function(form) {
 			$scope.submitted = true;
 

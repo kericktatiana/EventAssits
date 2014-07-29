@@ -60,8 +60,7 @@ angular.module('angularFullApp')
 				var cb = callback || angular.noop;
 
 				return Category.delete({
-					id: id
-
+					categoryId: id,
 				}, function(category) {
 					return cb(category);
 				}, function(err) {
