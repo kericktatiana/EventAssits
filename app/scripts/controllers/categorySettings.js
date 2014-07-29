@@ -18,6 +18,7 @@ angular.module('angularFullApp')
 
 			if(form.$valid) {
 				Categoring.editCategory(
+					currentCategory,
 					$scope.category.newCategoryName
 				).then( function() {
 					$scope.message = 'Category successfully updated';
@@ -30,6 +31,11 @@ angular.module('angularFullApp')
 
 			if(form.$valid) {
 				window.alert('are you sure?');
+				Categoring.deleteCategory(
+					currentCategory
+				).then( function() {
+					$scope.message = 'Category successfully deleted';
+				});
 			}
 		};
 

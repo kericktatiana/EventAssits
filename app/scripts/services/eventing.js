@@ -47,10 +47,11 @@ angular.module('angularFullApp')
 			 * @param - {String} - newStrike
 			 * @param - {String} - newDescription
 			**/
-			editEvent: function(newTitle, newDate, newSetUp, newStartTime, newStrike, newDescription, callback) {
+			editEvent: function(id, newTitle, newDate, newSetUp, newStartTime, newStrike, newDescription, callback) {
 				var cb = callback || angular.noop;
 
 				return Event.update({
+					newId: id,
 					newTitle: newTitle,
 					newDate: newDate,
 					newSetUp: newSetUp,

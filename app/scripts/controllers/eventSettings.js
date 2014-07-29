@@ -19,6 +19,7 @@ angular.module('angularFullApp')
 
 			if(form.$valid) {
 				Eventing.editEvent(
+					currentEvent,
 					$scope.event.newTitle,
 					$scope.event.newDate,
 					$scope.event.newSetUp,

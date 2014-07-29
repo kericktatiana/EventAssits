@@ -19,6 +19,7 @@ angular.module('angularFullApp')
 
 			if(form.$valid) {
 				Segmenting.editSegment(
+					currentSegment,
 					$scope.segment.newTime,
 					$scope.segment.newDuration,
 					$scope.segment.newCategory,
@@ -47,6 +48,7 @@ angular.module('angularFullApp')
 		$http.get('/api/segments/' + currentSegment).success(
 			function(showSegment) {
 				$scope.showSegment = showSegment.shape;
+
 
 				$scope.segment.newTime = showSegment.shape.time;
 				$scope.segment.newDuration = showSegment.shape.duration;

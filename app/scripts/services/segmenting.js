@@ -42,10 +42,11 @@ angular.module('angularFullApp')
 			 * @param - {String} - newCategory
 			 * @param - {String} - newTask
 			**/
-			editSegment: function(newTime, newDuration, newCategory, newTask, callback) {
+			editSegment: function(id, newTime, newDuration, newCategory, newTask, callback) {
 				var cb = callback || angular.noop;
 
 				return Segment.update({
+					newId: id,
 					newTime: newTime,
 					newDuration: newDuration,
 					newCategory: newCategory,

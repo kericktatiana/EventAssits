@@ -36,10 +36,11 @@ angular.module('angularFullApp')
 			 * 
 			 * @param - {String} - newCategoryName
 			**/
-			editCategory: function(newCategoryName, callback) {
+			editCategory: function(id, newCategoryName, callback) {
 				var cb = callback || angular.noop;
 
 				return Category.update({
+					newId: id,
 					newCategoryName: newCategoryName
 				}, function(category) {
 					return cb(category);
@@ -54,14 +55,19 @@ angular.module('angularFullApp')
 			 * Delete Category
 			 *
 			 * @param - {String} - categoryId
-			**
-			deleteCategory: function(categoryId, callback) {
+			**/
+			deleteCategory: function(id, callback) {
 				var cb = callback || angular.noop;
 
-				*Delete functionality here
-			}
+				return Category.delete({
+					id: id
 
-			*/
+				}, function(category) {
+					return cb(category);
+				}, function(err) {
+					return cb(err);
+				}).$promise;
+			},
 
 
 		};//return

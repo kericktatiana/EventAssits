@@ -213,8 +213,8 @@ ul.nav a.active {
   color: #d6d6d6;
 }
 
-.eventList {
-  margin: 0 20px 500px 20px;
+#eventList {
+  margin: 0 20px 100px 20px;
 }
 
 .events h4 {
@@ -523,6 +523,7 @@ ul.nav a.active {
   font-weight: bold;
   display: inline;
   padding-right: 20px;
+  width: 150px;
 }
 
 .crewMember:nth-child(odd) {
