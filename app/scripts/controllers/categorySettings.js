@@ -6,7 +6,7 @@
 'use strict';
 
 angular.module('angularFullApp')
-	.controller('CategorySettingsCtrl', function ($scope, $http, $routeParams, Category, Categoring) {
+	.controller('CategorySettingsCtrl', function ($scope, $http, $routeParams, Category, Categoring, $location) {
 
 		var currentCategory = $routeParams.id;
 
@@ -32,12 +32,14 @@ angular.module('angularFullApp')
 			$scope.submitted = true;
 
 			if(form.$valid) {
-				window.confirm('are you sure?');
-				Categoring.deleteCategory(
-					currentCategory
-				).then( function() {
-					$scope.message = 'Category successfully deleted';
-				});
+				if (window.confirm('are you sure?')) {
+					Categoring.deleteCategory(
+						currentCategory
+					).then( function() {
+						$location.path('/categories')
+						$scope.message = 'Category successfully deleted';
+					});
+				}
 			}
 		};
 
