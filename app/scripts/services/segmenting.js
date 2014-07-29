@@ -59,17 +59,17 @@ angular.module('angularFullApp')
 			},
 
 
-			/** 
-			 * Delete Segment
-			 * 
-			 * @param - {String} - segmentId
-			**
-			deleteSegment: function(segmentId, callback) {
+			deleteSegment: function(id, callback) {
 				var cb = callback || angular.noop;
 
-				delete functionality here
-			}**/
-
+				return Segment.delete({
+					segmentId: id,
+				}, function(segment) {
+					return cb(segment);
+				}, function(err) {
+					return cb(err);
+				}).$promise;
+			},
 
 			currentSegment: function() {
 				return Segment.get();

@@ -36,7 +36,7 @@ angular.module('angularFullApp')
 					Categoring.deleteCategory(
 						currentCategory
 					).then( function() {
-						$location.path('/categories')
+						$location.path('/categories');
 						$scope.message = 'Category successfully deleted';
 					});
 				}
