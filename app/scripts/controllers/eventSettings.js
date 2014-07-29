@@ -6,7 +6,7 @@
 'use strict';
 
 angular.module('angularFullApp')
-	.controller('EventSettingsCtrl', function ($scope, Event, Eventing, $http, $routeParams) {
+	.controller('EventSettingsCtrl', function ($scope, Event, Eventing, $http, $routeParams, $location) {
 	
 		//get the id of current event
 		var currentEvent = $routeParams.id;
@@ -36,10 +36,14 @@ angular.module('angularFullApp')
 			$scope.submitted = true;
 
 			if(form.$valid) {
-				window.alert('are you sure?');
-				// Eventing.deleteEvent({
-				// 	eventId: currentEvent
-				// })
+				if(window.confirm('Are you sure?')) {
+					Eventing.deleteEvent(
+						currentEvent
+					).then( function() {
+						$location.path('/dashboard');
+						$scope.message = 'Event successfully deleted';
+					});
+				}
 			}
 		};
 

@@ -65,12 +65,23 @@ angular.module('angularFullApp')
 				}).$promise;
 			},
 
-			// deleteEvent: function(eventId, callback) {
-				// var cb = callback || angular.noop;
+			/**
+			 * Delete Event
+			 *
+			 * @param - {String} - eventId
+			 *
+			**/
+			deleteEvent: function(id, callback) {
+				var cb = callback || angular.noop;
 
-
-				//delete functionality here
-			//},
+				return Event.delete({
+					eventId: id,
+				}, function(event) {
+					return cb(event);
+				}, function(err) {
+					return cb(err);
+				}).$promise;
+			},
 
 			/**
 			 * Gets all available informaition on evented event

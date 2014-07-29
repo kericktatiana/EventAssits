@@ -32,7 +32,7 @@ angular.module('angularFullApp')
 			$scope.submitted = true;
 
 			if(form.$valid) {
-				window.alert('are you sure?');
+				window.confirm('are you sure?');
 				Categoring.deleteCategory(
 					currentCategory
 				).then( function() {
