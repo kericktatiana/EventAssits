@@ -64,6 +64,10 @@
 	<div class="col-md-12">
 		<form class="form" name="form" id="addSegmentForm" ng-submit="addSegment(form)" novalidate>
 
+			<p class="help-block successful" ng-show="form.$valid && submitted">
+				Segment Added to Event
+			</p>
+
 			<!-- time -->
 			<div class="form-group col-md-6" ng-class="{ 'has-success': form.time.$valid && submitted, 'has-error': form.time.$invalid && submitted }">
 

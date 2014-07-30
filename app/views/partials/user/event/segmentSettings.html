@@ -17,6 +17,11 @@
 <div class="col-md-12" id="editSegmentForm">
 
 	<form class="form" name="form" ng-submit="editSegment(form)" novalidate>
+		
+		<p class="help-block successful" ng-show="form.$valid && submitted">
+			Segment Edited Successfully
+		</p>
+
 		<h3>Edit Segment</h3>
 
 		<!-- time -->

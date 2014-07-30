@@ -16,6 +16,10 @@
 	<div class="col-md-12">
 	<form class="form" name="form" id="addCrewForm" ng-submit="addCrew(form)" novalidate>
 
+		<p class="help-block successful" ng-show="form.$valid && submitted">
+			Category successfully added
+		</p>
+
 		<!-- Category -->
 		<div class="form-group col-md-4" ng-class="{ 'has-success': form.category.$valid && submitted, 'has-error': form.category.$invalid && submitted }">
 

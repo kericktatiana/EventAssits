@@ -25,8 +25,6 @@ angular.module('angularFullApp')
 				}, function(category) {
 					$scope.getCategorys.push(category);
 				})
-				.then( function() {
-				})
 				.catch( function(err) {
 					err = err.data;
 					$scope.errors = {};
@@ -36,6 +34,10 @@ angular.module('angularFullApp')
 						form[field].$setValidity('mongoose', false);
 						$scope.errors[field] = error.message;
 					});
+				})
+				.then( function() {
+					$scope.submitted = false;
+					$scope.category = {};
 				});
 			}
 		};

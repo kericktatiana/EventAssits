@@ -12,7 +12,7 @@ angular.module('angularFullApp')
 		//get the id of current event
 		var currentEvent = $routeParams.id;
 
-		$scope.segment = {};
+		//$scope.segment = {};
 		$scope.errors = {};
 
 		$scope.addSegment = function(form) {
@@ -28,8 +28,6 @@ angular.module('angularFullApp')
 				}, function(segment){
 					$scope.getSegments.push(segment);
 				})
-				.then(function(){
-				})
 				.catch( function(err) {
 					err = err.data;
 					$scope.errors = {};
@@ -39,6 +37,10 @@ angular.module('angularFullApp')
 						form[field].$setValidity('mongoose', false);
 						$scope.errors[field] = error.message;
 					});
+				})
+				.then(function(){
+					$scope.submitted = false;
+					$scope.segment = {};
 				});
 			}
 		};
@@ -139,11 +141,7 @@ angular.module('angularFullApp')
 		$http.get('/api/getSegments/' + currentEvent).success( function(getSegments) {
 			$scope.getSegments = getSegments;
 
-			console.log(getSegments);
-
 			$scope.timeSort = 'time';
-
-
 
 		});
 

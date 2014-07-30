@@ -17,6 +17,11 @@
 <div class="col-md-12" id="editCategoryForm">
 
 	<form class="form" name="form" ng-submit="editCategory(form)" novalidate>
+
+		<p class="help-block successful" ng-show="form.$valid && submitted">
+			Category Edited Successfully
+		</p>
+
 		<h3>Edit Category</h3>
 
 		<div class="form-group">
